@@ -48,8 +48,8 @@ class Navbars extends Component {
 
           <ul className={barStyle}>
             <div className="brand desktop">
-              <a href="https://lzarchery.com">
-                <img className="navbar-logo-m" src={logo} alt="立禪射藝射箭標誌" />
+              <a href="/">
+                <img className="navbar-logo-m" src={logo} alt="公司Logo" />
               </a>
             </div>
 

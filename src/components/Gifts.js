@@ -3,7 +3,8 @@ import styles from "./gifts.module.css";
 import award from "../public/assets/images/award.jpg";
 import line from "../public/assets/images/line.png";
 import { FormattedMessage } from "react-intl";
-import video from "../public/assets/videos/video.mp4";
+import video_en from "../public/assets/videos/video_en.mp4";
+import video_zh from "../public/assets/videos/video_zh.mp4";
 
 const Gifts = (props) => {
   return (
@@ -21,11 +22,11 @@ const Gifts = (props) => {
         </p>
         <div className={styles.giftWrapper}>
           <video className={props.lang.includes('zh') ? `${styles.show}` : `${styles.hide}`}  controls>
-            <source src={video} type="video/mp4" />
+            <source src={video_zh} type="video/mp4" />
           </video>
 
           <video className={props.lang === "en" ? `${styles.show}` : `${styles.hide}`}  controls>
-            <source src={video} type="video/mp4" />
+            <source src={video_en} type="video/mp4" />
           </video>
         </div>
       </div>
