@@ -1,0 +1,95 @@
+.wrapper {
+  text-align: center;
+  background-image: url("../public/assets/images/bg/BG_3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+  height: 100vh;
+}
+
+.mapContainer {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  flex-direction: column;
+  width: 80%;
+  margin: auto;
+}
+
+.treesContainer {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.treeContainer {
+  position: relative;
+}
+
+.roadContainer {
+  position: relative;
+}
+
+.percentageContainer {
+  position: relative;
+  top: -40px;
+}
+
+.counterContainer {
+  position: relative;
+}
+
+.formContainer {
+  position: relative;
+  margin-top: 2em;
+}
+
+.tree {
+  /* position: absolute; */
+  width: 250px;
+}
+
+.coin {
+  width: 200px;
+  position: absolute;
+  left: 25px;
+  top: -10px;
+}
+
+.road {
+}
+
+.rabbit {
+  height: 100px;
+  top: 130px;
+}
+
+@media only screen and (max-width: 1100px) {
+  .mapContainer {
+    width: 100%;
+  }
+
+  .roadContainer {
+    width: 100%;
+  }
+  .roadContainer img {
+    width: inherit;
+  }
+
+  .tree {
+    /* position: absolute; */
+    width: 120px;
+  }
+  .rabbit {
+    height: 50px;
+    top: 60px;
+  }
+
+  .coin {
+    width: 100px;
+    position: absolute;
+    left: 10px;
+    top: -10px;
+  }
+}

@@ -1,0 +1,134 @@
+.wrapper {
+  background-image: url("../public/assets/images/bg/BG_6.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+}
+
+.rulesContent {
+  color: #000;
+}
+
+.lowerWrapper {
+  display: flex;
+  padding: 1em;
+  justify-content: center;
+}
+
+.upperImg img {
+  margin: auto;
+  display: block;
+}
+
+.lowerWrapper img {
+  border-radius: 50%;
+  margin-right: 2em;
+  height: 200px;
+}
+
+.lowerWrapper ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.boxWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.voteButton {
+  padding: 2px 4px;
+}
+
+.button {
+  background-image: url("../public/assets/images/button.png");
+  width: 440px;
+  display: block;
+  height: 90px;
+  text-align: center;
+  align-items: center;
+  margin: auto;
+}
+
+.button::after {
+  content: "馬上報名";
+  position: relative;
+  top: 30px;
+  font-size: 1.5em;
+}
+
+.emailAddress {
+  border: 1px #fff solid;
+  padding: 1em;
+  text-align: left;
+  max-width: 1200px;
+  margin: 4em auto;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.rules {
+  position: relative;
+  max-width: 900px;
+  padding: 5px 20px;
+  box-sizing: border-box;
+  background-color: #fff;
+  margin: 20px auto;
+  border-radius: 3;
+  z-index: 2;
+  text-align: left;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+}
+
+.pic {
+  box-sizing: border-box;
+  position: relative;
+  width: 20%;
+}
+
+.pic img {
+  width: 100%;
+}
+.selected {
+  box-sizing: border-box;
+}
+
+.selected:after {
+  width: 25%;
+  height: 25%;
+  content: "";
+  position: absolute;
+  color: red;
+  top: 37.5%;
+  left: 37.5%;
+  background-image: url("../public/assets/icons/plurk.png");
+  /* background-position: center; */
+  background-size: 50px;
+  background-repeat: no-repeat;
+}
+
+@media only screen and (max-width: 1100px) {
+  .wrapper {
+    height: 120vh;
+  }
+  .lowerWrapper img {
+    display: none;
+  }
+  .rules {
+    width: 300px;
+  }
+  .lowerWrapper {
+    width: 80%;
+    margin: auto;
+  }
+  .button {
+    max-width: 300px;
+    background-size: contain;
+    height: 65px;
+  }
+  .button::after {
+    top: 15px;
+  }
+}

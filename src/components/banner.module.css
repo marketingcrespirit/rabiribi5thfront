@@ -1,0 +1,20 @@
+.bannerWrapper {
+  margin: 0;
+  height: 100vh;
+}
+
+.fixedWidth {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  padding: 2em;
+  height: 100vh;
+}
+
+.imgWrapper {
+  height: 90%;
+}
+
+.imgWrapper img {
+  height: inherit;
+}

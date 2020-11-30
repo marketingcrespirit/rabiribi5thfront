@@ -1,0 +1,60 @@
+.wrapper {
+  text-align: center;
+  background-image: url("../public/assets/images/bg/BG_3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+  height: 100vh;
+}
+
+.errorMessages {
+  position: fixed;
+  top: 50%;
+  left: 35%;
+  height: 20%;
+  width: 30%;
+  background-color: black;
+  color: red;
+
+}
+
+.emailWarning {
+  margin-left: 1em;
+  color: red;
+}
+.hidden {
+  display: none;
+}
+
+.vote {
+  color: #000;
+}
+
+.show {
+    visibility: visible;
+    color: red;
+}
+
+.success {
+    color: green
+}
+
+.warning {
+    color: red
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.pics {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.closeButton {
+  text-align: right;
+
+}

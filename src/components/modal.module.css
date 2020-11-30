@@ -1,0 +1,15 @@
+.board {
+}
+
+.vote {
+    background-color: yellow;
+    height: 80vh;
+    position: static
+}
+
+.pics {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    box-sizing: border-box;
+}

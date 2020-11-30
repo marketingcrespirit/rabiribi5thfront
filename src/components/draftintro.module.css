@@ -1,0 +1,52 @@
+.draftIntroWrapper {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.wrapper {
+  background-image: url("../public/assets/images/bg/BG_1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover  ;
+  color: #f1eae5;
+}
+
+.dark {
+  color: #b7b1ac;
+  margin-bottom: 1em;
+}
+
+.specWrapper {
+  display: flex;
+  margin: 2em auto;
+  color: #f1eae5;
+  align-items: center;
+  width: 70%;
+}
+
+.specTxt {
+  margin-left: 5%;
+}
+
+.specTxt li {
+  font-size: large;
+}
+
+.specImg {
+}
+
+.line {
+  width: 100%;
+}
+
+@media only screen and (max-width: 1100px) {
+  .wrapper {
+    height: auto;
+  }
+  .specWrapper {
+    display: block;
+  }
+  .specImg {
+    text-align: center;
+    margin-bottom: 1.5em;
+  }
+}

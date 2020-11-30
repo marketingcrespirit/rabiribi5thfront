@@ -1,0 +1,106 @@
+.footer {
+  background-color: #000;
+  font-size: 1rem;
+  color: #fafaf6;
+  padding: 2em 0;
+}
+
+.footerLogo {
+  width: 300px;
+}
+
+.footer .webmap li,
+.footer .webmapli {
+  list-style: none;
+}
+
+.footer .webmap li a {
+  text-decoration: none !important;
+  color: #e8ffe8;
+  font-weight: 200;
+}
+
+.footer .webmap li a:hover {
+  color: #fafaf6;
+  font-weight: 400;
+}
+
+.footer .webmap .title {
+  color: #fafaf6;
+  font-weight: 600;
+}
+
+.footer .footerInfo h1 {
+  font-size: 1rem;
+}
+
+.footerInfo img {
+  margin: auto;
+  padding-bottom: 2rem;
+}
+
+.footer .footerCopyright,
+.footerInfo {
+  text-align: center;
+  margin: 0;
+}
+
+.footerCopy {
+  padding-top: 1rem;
+}
+
+.webmap,
+.footerInfo,
+.footerCopyright .footerCopy {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.navSocial {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5em;
+}
+
+.navSocialIcon {
+  margin: 0 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navSocialIconTxt {
+  position: relative;
+  top: 0;
+}
+
+.navSocialIcon img {
+  height: 30px;
+  padding: 0;
+}
+
+.navSocialIcon span {
+  margin-left: 0.5em;
+  font-size: 20px;
+}
+
+.rabbit {
+  position: relative;
+  left: 100px;
+  width: 190px;
+  height: 240px;
+  /* background: url("../public/assets/images/rabbit.png") left center; */
+  /* animation: play .8s steps(10) infinite; */
+}
+
+@keyframes play {
+  100% {
+    background-position: -1900px;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .footerLogo {
+    width: 100px;
+  }
+}
