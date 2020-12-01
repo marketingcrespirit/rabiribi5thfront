@@ -32,7 +32,7 @@ const en = {
   "app.p2-6": "2020/1/18(Mon) Announce winners (5 best+5 populated)",
   "app.p2-7": "2020/1/19(Tue) Contact winners",
   "app.p2-8": "Warning",
-  "app.p2-9": "We will contact winner by Jan. 20, 2021 thought the e-mail you submit art. In case we missed the connection in massive information, we are welcome winners contact us for price. Once we do not get any message from winner by 1/25/2021, we will see the winner give up the right of receiving price. If the winner does not receive the price by a month after the price shipped, please contact CreSpirit.",
+  "app.p2-9": "We will contact winner by Jan. 20, 2021 thought the e-mail you submit art. In case we missed the connection in massive information, we are welcome winners contact us for price. Once we do not get any message from winner by Jan. 25, 2021, we will see the winner give up the right of receiving price. If the winner does not receive the price by a month after the price shipped, please contact CreSpirit. All the date and time are based on the time zone GMT+8.",
   "app.p3-1": "Rule",
   "app.p3-2": "One contributor or one address can only receive on price.",
   "app.p3-3": "The Best",

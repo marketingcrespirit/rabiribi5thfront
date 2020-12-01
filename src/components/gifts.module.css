@@ -29,10 +29,14 @@
   .wrapper {
     height: auto;
   }
-  .giftWrapper {
-    width: 100%;
-  }
+  
   .giftWrapper video {
     width: inherit;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .giftWrapper {
+    width: 100%;
   }
 }
