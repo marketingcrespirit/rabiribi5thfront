@@ -35,7 +35,6 @@ a {
   font-size: 18px;
 }
 
-
 .desktop {
   display: block;
 }
@@ -172,7 +171,6 @@ a {
   background-color: #fff;
 }
 
-
 table {
   width: 100%;
   margin-top: 20px;
@@ -290,7 +288,6 @@ div.note > textarea {
   background-size: 0.65em auto, 100%;
 }
 
-
 .rulesWrapper {
   width: 80%;
   margin: auto;
@@ -389,6 +386,16 @@ div.note > textarea {
 
   .navbar-logo-m {
     height: 60px;
+    display: none;
+  }
+
+  .navbar-menu li a:active,
+  .navbar-menu li a.active {
+    color: #bfbfbf
+  }
+
+  .navbar-menu li a:active:after,
+  .navbar-menu li a.active:after {
     display: none;
   }
 

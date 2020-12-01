@@ -3,11 +3,12 @@
   background-repeat: no-repeat;
   background-size: cover;
   color: #fff;
+  height: 110vh;
 }
 
 .rulesContent {
   color: #000;
-  white-space: pre-line
+  white-space: pre-line;
 }
 
 .lowerWrapper {
@@ -54,6 +55,21 @@
   text-align: center;
 }
 
+.rightButton {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.rightButton button {
+  background-color: red;
+  border: 0;
+  padding: 5px 10px;
+  color: #fff;
+  width: 150;
+  display: block;
+  border-radius: 3px;
+}
+
 .rules {
   position: relative;
   width: 800px;
@@ -69,7 +85,7 @@
 
 @media only screen and (max-width: 1100px) {
   .wrapper {
-    height:60vh;
+    height: 60vh;
   }
   .lowerWrapper img {
     display: none;
@@ -82,19 +98,21 @@
     margin: auto;
   }
   .button {
-      max-width: 300px;
-      background-size: contain;
-      height: 65px;
-      line-height: 65px;
+    max-width: 300px;
+    background-size: contain;
+    height: 65px;
+    line-height: 65px;
   }
   .button::after {
-      top: 15px;
+    top: 15px;
   }
 }
 
-
 @media only screen and (max-width: 700px) {
   .wrapper {
-    height: 140vh;
+    height: 110vh;
+  }
+  .emailAddress {
+    margin: 2em auto;
   }
 }

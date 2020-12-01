@@ -94,7 +94,7 @@ const mainStyle = {
   cancelButton: {
     backgroundColor: "red",
     border: 0,
-    padding: "12px 20px",
+    padding: "5px 10px",
     color: "#fff",
     margin: "0 auto",
     width: 150,
@@ -211,10 +211,18 @@ class ModalUnit extends Component {
               </span>
 
               <Modal isModalOpen={this.state.isBoardModalOpen} style={modalStyle}>
-                <p className={styles.rulesContent}>
-                  <FormattedMessage id="app.p5-10" />
-                </p>
-                <input onClick={this.hideHandler} type="checkbox" />
+                <div className={styles.rightButton}>
+                  <button onClick={this.closeBoardModal}>X</button>
+                </div>
+                <div className={styles.rulesContent}>
+                  <p className={this.state.hide ? "" : "hidden"}>
+                    <FormattedMessage id="app.p5-10" />
+                  </p>
+                  <p className={this.state.hide ? "hidden" : "emailStrong"}>
+                    <FormattedMessage id="app.p5-8" />
+                  </p>
+                </div>
+                <input className={this.state.hide ? "" : "hidden"} onClick={this.hideHandler} type="checkbox" />
                 <span className={styles.rulesContent}>
                   <FormattedMessage id="app.p5-11" />
                 </span>
