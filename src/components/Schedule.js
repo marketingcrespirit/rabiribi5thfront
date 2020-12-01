@@ -1,25 +1,10 @@
 import React from "react";
 
-import button from "../public/assets/icons/button.png";
-import triangle from "../public/assets/icons/triangle.png";
+// import button from "../public/assets/icons/button.png";
+// import triangle from "../public/assets/icons/triangle.png";
 import styles from "./schedule.module.css";
-import line from '../public/assets/images/line.png'
+// import line from '../public/assets/images/line.png'
 import {FormattedMessage} from 'react-intl'
-
-const mainStyle = {
-  scheduleWrapper: {
-    width: "100%",
-    height: "100vh",
-  },
-  schedule: {
-    margin: "auto",
-    textAlign: "center",
-    width: "500px",
-  },
-  scheduleUnit: {
-    display: "flex",
-  },
-};
 
 export default function Schedule(props) {
   return (

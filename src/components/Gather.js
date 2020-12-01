@@ -6,7 +6,7 @@ import road from "../public/assets/images/road.png";
 import rabbit from "../public/assets/images/1.png";
 import axios from "axios";
 
-const NET_SERVER_URL = "http://localhost:3001";
+const NET_SERVER_URL = "https://rabiribi5thserver.herokuapp.com/";
 
 function validateName(name) {
   var re = /^[\w\u4E00-\u9FA5\uF900-\uFA2D]{1,5}$/;

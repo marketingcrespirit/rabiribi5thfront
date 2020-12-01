@@ -41,31 +41,29 @@ class Footer extends Component {
     }
   };
   render() {
-    let { config } = this.props;
-
     let options = [];
 
     if (this.props.routes && this.props.routes === true) return <ul className="sub">{options}</ul>;
     return (
       <footer className={styles.footer}>
         <div className={styles.footerInfo}>
-          <img className={styles.footerLogo} src={logo} />
+          <img alt="company logo" className={styles.footerLogo} src={logo} />
           <div className={`${styles.navSocial}`}>
             <div className={`${styles.navSocialIcon}`}>
-              <a target="_blank" href="https://www.facebook.com/gaming/RabiRibiGame">
-                <img src={facebook} />
+              <a target="_blank" rel="noreferrer" href="https://www.facebook.com/gaming/RabiRibiGame">
+                <img  alt="facebook logo"  src={facebook} />
               </a>
             </div>
 
             <div className={`${styles.navSocialIcon}`}>
-              <a target="_blank" href="https://store.steampowered.com/app/400910/RabiRibi/">
-                <img src={steam} />
+              <a target="_blank" rel="noreferrer" href="https://store.steampowered.com/app/400910/RabiRibi/">
+                <img  alt="steam logo"  src={steam} />
               </a>
             </div>
 
             <div className={`${styles.navSocialIcon}`}>
-              <a target="_blank" href="https://twitter.com/rabiribigame">
-                <img src={twitter} />
+              <a target="_blank" rel="noreferrer" href="https://twitter.com/rabiribigame">
+                <img  alt="twitter logo"  src={twitter} />
               </a>
             </div>
           </div>

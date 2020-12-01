@@ -11,7 +11,7 @@ import Gallery from "./Gallery";
 import Pic from "./Pic";
 import axios from "axios";
 
-const NET_SERVER_URL = "http://localhost:3001";
+const NET_SERVER_URL = "https://rabiribi5thserver.herokuapp.com/";
 
 function validateEmail(email) {
   var re = /\S+@\S+\.\S+/;

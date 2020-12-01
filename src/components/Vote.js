@@ -20,7 +20,7 @@ function validatePhone(phone) {
   return re.test(phone);
 }
 
-const NET_SERVER_URL = "http://localhost:3001";
+const NET_SERVER_URL = "https://rabiribi5thserver.herokuapp.com/";
 
 const mainStyle = {
   app: {

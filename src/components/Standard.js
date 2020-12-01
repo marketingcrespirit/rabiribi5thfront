@@ -13,18 +13,6 @@ const judge = [
   { src: judge_3, name: "app.p3-19", title: "app.p3-20", content: "selfintro" },
 ];
 
-const mainStyle = {
-  tableWrapper: {
-    margin: "0",
-    backgroundColor: "#000",
-    padding: "1em",
-    color: "#fff",
-  },
-  tr: {
-    backgroundColor: "lightblue",
-    color: "#000",
-  },
-};
 
 export default function Standard() {
   return (

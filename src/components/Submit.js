@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import { FormattedMessage } from "react-intl";
 import style from "./modal.module.css";
-import Board from "./Bulletin";
-import FifthVideo from "./FifthVideo";
-import Rules from "./Rules";
-import Testimonial from "./Testimonal";
+// import Board from "./Bulletin";
+// import FifthVideo from "./FifthVideo";
+// import Rules from "./Rules";
+// import Testimonial from "./Testimonal";
 import Cookies from "js-cookie";
 import styles from "./submit.module.css";
 import line from "../public/assets/images/line.png";
@@ -116,12 +116,10 @@ class ModalUnit extends Component {
       username: Cookies.get("username"),
       hide: true,
     };
-
     // bind functions
     this.closeBoardModal = this.closeBoardModal.bind(this);
     this.openBoardModal = this.openBoardModal.bind(this);
   }
-
   // close modal (set isModalOpen, true)
   closeBoardModal() {
     this.setState({
@@ -158,7 +156,7 @@ class ModalUnit extends Component {
     return (
       <div className={styles.wrapper}>
         <div className="wrapper">
-          <img className="line" src={line} />
+          <img alt="分隔線" className="line" src={line} />
 
           <div style={mainStyle.app}>
             <div className={style.board}>
@@ -169,7 +167,7 @@ class ModalUnit extends Component {
                 </h1>
 
                 <div className={styles.lowerWrapper}>
-                  <img src={image} />
+                  <img alt="button" src={image} />
                   <ul>
                     <li>
                       <p>

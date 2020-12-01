@@ -2,10 +2,10 @@ import React, { Component } from "react";
 import "./App.css";
 
 import Navbars from "./sections/Navbars";
-import LessonSlide from "./components/Carousel";
-import Award from "./components/Award";
-import FifthVideo from "./components/FifthVideo";
-import Latest from "./components/Latest";
+// import LessonSlide from "./components/Carousel";
+// import Award from "./components/Award";
+// import FifthVideo from "./components/FifthVideo";
+// import Latest from "./components/Latest";
 import Standard from "./components/Standard";
 import Sumbit from "./components/Submit";
 import Schedule from "./components/Schedule";
@@ -13,12 +13,12 @@ import DraftIntro from "./components/DraftIntro";
 import Gifts from "./components/Gifts";
 import Footer from "./components/Footer";
 import Firefly from "./components/Firefly";
-import Board from "./components/Bulletin";
-import Gallerys from "./components/Gallerys";
-import Vote from "./components/Vote";
-import Bulletin from "./components/Bulletin";
-import Gather from "./components/Gather";
-import Sticker from "./components/Sticker";
+// import Board from "./components/Bulletin";
+// import Gallerys from "./components/Gallerys";
+// import Vote from "./components/Vote";
+// import Bulletin from "./components/Bulletin";
+// import Gather from "./components/Gather";
+// import Sticker from "./components/Sticker";
 
 const navs = [
   { tag: "#intro", content: "活動介紹", id: "nav1" },
@@ -28,7 +28,6 @@ const navs = [
   { tag: "#join", content: "報名方式", id: "nav5" },
 ];
 
-// 從 props 取得從 index 傳入的 setLocale 方法
 class App extends Component {
   constructor(props) {
     super(props);
@@ -138,13 +137,10 @@ class App extends Component {
           <Sumbit />
           <div ref={this.joinRef}></div>
           {/* <Sticker />
-
           <div ref={this.joinRef}></div>
           <Gather />
-
           <div ref={this.joinRef}></div>
           <Gallerys /> */}
-
           <Footer />
         </main>
       </div>

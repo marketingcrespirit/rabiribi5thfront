@@ -1,11 +1,6 @@
 import React, { Component } from "react";
-
 import Navbar from "../components/Navbar";
 import logo from "../public/assets/icons/logo_b.png";
-
-// const logo = require("../../asset/icon/logo.png");
-// const icon = require("../../asset/icon/call_center.png");
-// const facebook = require("../../asset/icon/facebook.png");
 
 class Navbars extends Component {
   state = {
@@ -57,17 +52,6 @@ class Navbars extends Component {
               {this.props.navs.map((el, index) => {
                 return <Navbar clicked={this.toggleHandler} key={index} activated={index === this.props.activatedIndex} tag={el.tag} content={el.content} id={el.id} />;
               })}
-              {/* <li className="reserve">
-                <a href="/form">預約體驗</a>
-              </li>
-              <li>
-                <a href="#contact">
-                </a>
-              </li>
-              <li>
-                <a href="https://www.facebook.com/LZarchery/" target="_blank" rel="noopener noreferrer">
-                </a>
-              </li> */}
               <div className="select-wrapper">
                 <select className="select-css" onChange={this.props.changed} value={this.props.locale}>
                   <option value="zh">中文</option>

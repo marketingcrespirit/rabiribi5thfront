@@ -28,7 +28,7 @@ const DraftIntro = () => {
 
         <div className={styles.specWrapper}>
           <div className={styles.specImg}>
-            <img src={imageOne} />
+            <img alt="point one" src={imageOne} />
           </div>
           <div className={styles.specTxt}>
             <h2 className={styles.dark}>
@@ -53,7 +53,7 @@ const DraftIntro = () => {
 
         <div className={styles.specWrapper}>
           <div className={styles.specImg}>
-            <img src={imageTwo} />
+            <img  alt="point two" src={imageTwo} />
           </div>
           <div className={styles.specTxt}>
             <h2 className={styles.dark}>
@@ -78,7 +78,7 @@ const DraftIntro = () => {
             </ul>
           </div>
         </div>
-        <img className="line" src={line} />
+        <img  alt="seperate line" className="line" src={line} />
       </div>
     </div>
   );

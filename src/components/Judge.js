@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import styles from "./judge.module.css";
 import judge_1 from "../public/assets/images/judge/judge_1.png";
 import judge_2 from "../public/assets/images/judge/judge_2.png";

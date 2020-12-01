@@ -1,12 +1,8 @@
 import React, { Component } from "react";
-import { render } from "react-dom";
-import { Stage, Layer, Rect, Text, Circle, Image } from "react-konva";
-import Konva from "konva";
+import { Stage, Layer, Image } from "react-konva";
 import firefly from "../public/assets/icons/firefly.png";
 import useImage from "use-image";
 import styles from "./firefly.module.css";
-import { FormattedMessage } from "react-intl";
-import bannerTxt from "../public/assets/images/banner_txt.png";
 
 const w = window.innerWidth;
 const h = window.innerHeight;
@@ -32,9 +28,6 @@ class Firefly {
     if (this.y < 0 || this.y > h) {
       this.y = h / 2;
     }
-    // if (this.x > w * 0.2 && this.x < w * 0.55) {
-    //   this.x = w * 0.6;
-    // }
     this.x += this.v * Math.cos(this.ang);
     this.y += this.v * Math.sin(this.ang);
     this.ang += (Math.random() * 20 * Math.PI) / 180 - (10 * Math.PI) / 180;
@@ -84,9 +77,6 @@ class ColoredRect extends React.Component {
 
 class Banner extends Component {
   render() {
-    // Stage is a div container
-    // Layer is actual canvas element (so you may have several canvases in the stage)
-    // And then we have canvas shapes inside the Layer
     return (
       <div className="bannerWrapper">
         <div className={styles.bannerTxt}></div>
