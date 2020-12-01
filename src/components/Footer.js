@@ -10,7 +10,7 @@ import logo from "../public/assets/icons/logo_t.png";
 
 const info = {
   address: "",
-  email: "rabribi@crespirit.com",
+  email: "rabiribi@crespirit.com",
 };
 
 class Footer extends Component {
@@ -58,7 +58,7 @@ class Footer extends Component {
             </div>
 
             <div className={`${styles.navSocialIcon}`}>
-              <a target="_blank" href="https://www.facebook.com/gaming/RabiRibiGame/">
+              <a target="_blank" href="https://store.steampowered.com/app/400910/RabiRibi/">
                 <img src={steam} />
               </a>
             </div>
