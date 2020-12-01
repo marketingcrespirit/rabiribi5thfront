@@ -288,6 +288,10 @@ div.note > textarea {
   background-size: 0.65em auto, 100%;
 }
 
+.select-css option {
+  color: #000;
+}
+
 .rulesWrapper {
   width: 80%;
   margin: auto;

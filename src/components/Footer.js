@@ -67,15 +67,7 @@ class Footer extends Component {
               </a>
             </div>
           </div>
-          <p>
-            <FormattedMessage id="app.companyName" />
-          </p>
-          <p>
-            <FormattedMessage id="app.address" />：<FormattedMessage id="app.addressContent" />
-          </p>
-          <p>
-            <FormattedMessage id="app.tel" />：{info.email}
-          </p>
+         
         </div>
         <div className={`${styles.footerCopyright}`}>
           <p className={`${styles.footerCopy}`}>
