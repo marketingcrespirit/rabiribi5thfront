@@ -5,6 +5,7 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { IntlProvider } from "react-intl";
 import { useState } from "react";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import en from "./i18n/en";
 import zh from "./i18n/zh";
 import ja from "./i18n/ja";
@@ -25,9 +26,13 @@ const Root = () => {
   }
 
   return (
-    <IntlProvider locale={locale} key={locale} defaultLocale="zh" messages={messages}>
-      <App defaultLocale="zh" changed={changeHandler} locale={locale} setLocale={setLocale} />
-    </IntlProvider>
+    <Router>
+      <Route path="/event/rabi5th-contribution">
+        <IntlProvider locale={locale} key={locale} defaultLocale="zh" messages={messages}>
+          <App defaultLocale="zh" changed={changeHandler} locale={locale} setLocale={setLocale} />
+        </IntlProvider>
+      </Route>
+    </Router>
   );
 };
 
