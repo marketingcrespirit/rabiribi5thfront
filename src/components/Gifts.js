@@ -24,10 +24,10 @@ const Gifts = (props) => {
         </p>
 
         <div className={styles.giftWrapper}>
-          <video className={props.lang.includes('zh')? `${styles.show}`: `${styles.hide}`} controls poster={poster_zh} controlsList="nodownload">
+          <video preload="auto" className={props.lang.includes('zh')? `${styles.show}`: `${styles.hide}`} controls poster={poster_zh} controlsList="nodownload">
             <source src={video_zh} type="video/mp4" />
           </video>
-          <video className={props.lang.includes('en')? `${styles.show}`: `${styles.hide}`} controls poster={poster_en} controlsList="nodownload">
+          <video preload="auto" className={props.lang.includes('en')? `${styles.show}`: `${styles.hide}`} controls poster={poster_en} controlsList="nodownload">
             <source src={video_en} type="video/mp4" />
           </video>
         </div>
