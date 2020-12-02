@@ -9,7 +9,7 @@ const en = {
   nav4: "Prize",
   nav5: "Apply",
   "app.p0-1": "5th Anniversary Art Contest",
-  "app.p1-1": "Start from Now till Dec. 27,2020 ",
+  "app.p1-1": "Start from Now till Jan. 3,2021",
   "app.p1-2": "(GMT+8)",
   "app.p1-3": "Intro",
   "app.p1-4": "To celebrate the 5th Anniversary of Rabi-Ribi, we are going to host an art contest and welcome you to party with us! ",
