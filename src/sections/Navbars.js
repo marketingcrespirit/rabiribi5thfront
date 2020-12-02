@@ -6,7 +6,7 @@ class Navbars extends Component {
   state = {
     showPanel: false,
     activeIndex: null,
-    locale: "zh",
+    locale: this.props.locale,
   };
 
   toggleHandler = () => {
@@ -53,9 +53,9 @@ class Navbars extends Component {
                 return <Navbar clicked={this.toggleHandler} key={index} activated={index === this.props.activatedIndex} tag={el.tag} content={el.content} id={el.id} />;
               })}
               <div className="select-wrapper">
-                <select className="select-css" onChange={this.props.changed} value={this.props.locale}>
+                <select className="select-css" onChange={this.props.changed} value={this.state.locale}>
                   <option value="zh">中文</option>
-                  <option value="en">English</option>
+                  <option value="en-US">English</option>
                 </select>
               </div>
             </div>
