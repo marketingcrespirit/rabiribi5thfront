@@ -58,7 +58,7 @@ const en = {
   "app.p4-3": "Rabi-Ribi 5th Anniversary Symphony Deluxe Box",
   "app.p5-1": "How to participate",
   "app.p5-2": "Must content Character from Rabi-Ribi.",
-  "app.p5-3": "The submit deadline is Dec. 27, 2020 23:59 GMT+8",
+  "app.p5-3": "The submit deadline is Jan. 3, 2021 23:59 GMT+8",
   "app.p5-4": "Include “Rabi-Ribi 5th Anniversary Art Contest” in the mail title.",
   "app.p5-5": "Leave your pen name so we know how to call you.",
   "app.p5-6": "We will reply you through the mail address as contact information.",
