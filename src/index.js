@@ -8,7 +8,7 @@ import { useState } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import en from "./i18n/en";
 import zh from "./i18n/zh";
-import ja from "./i18n/ja";
+// import ja from "./i18n/ja";
 
 const Root = () => {
   const [locale, setLocale] = useState(navigator.language);
@@ -19,10 +19,10 @@ const Root = () => {
   // 根據使用者選擇的語系 locale 切換使用不同的 messages
   if (locale.includes("en")) {
     messages = en;
-  } else if (locale.includes("ja")) {
-    messages = ja;
-  } else {
+  } else if (locale.includes("zh")) {
     messages = zh;
+  } else {
+    messages = en;
   }
 
   return (
