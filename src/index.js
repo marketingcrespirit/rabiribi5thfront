@@ -32,6 +32,12 @@ const Root = () => {
           <App defaultLocale="zh" changed={changeHandler} locale={locale} setLocale={setLocale} />
         </IntlProvider>
       </Route>
+
+      <Route path="/">
+        <IntlProvider locale={locale} key={locale} defaultLocale="zh" messages={messages}>
+          <App defaultLocale="zh" changed={changeHandler} locale={locale} setLocale={setLocale} />
+        </IntlProvider>
+      </Route>
     </Router>
   );
 };
