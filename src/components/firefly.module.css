@@ -1,7 +1,7 @@
 .bannerTxt {
   position: absolute;
-  top: 50%;
-  left: 46%;
+  top: calc(100vh - 70%);
+  right: 8%;
   background-image: url("../public/assets/images/banner_txt.png");
   width: 800px;
   height: 500px;
@@ -17,7 +17,7 @@
   }
 }
 
-@media only screen and (max-width: 1100px) {
+@media only screen and (max-width: 1400px) {
   .bannerTxt {
     left: 0;
     top: 50%;
@@ -25,3 +25,4 @@
     background-size: 600px;
   }
 }
+

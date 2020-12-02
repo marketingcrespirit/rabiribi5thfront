@@ -119,6 +119,10 @@ header:before,
   border-right: 20px solid #0f1422;
 }
 
+.blank {
+  white-space: pre-wrap;
+}
+
 .btn {
   padding: 5px 15px;
   text-decoration: none;

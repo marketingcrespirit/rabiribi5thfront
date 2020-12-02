@@ -58,7 +58,7 @@ export default function Schedule(props) {
           
         </div>
         <p className="subtitle"><FormattedMessage id="app.p2-8" /></p>
-        <p><FormattedMessage id="app.p2-9" /></p>
+        <p className={styles.blank}><FormattedMessage id="app.p2-9" /></p>
       </div>
 
     </div>
