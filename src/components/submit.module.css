@@ -3,7 +3,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   color: #fff;
-  height: 110vh;
+  height: fit-content;
 }
 
 .rulesContent {
