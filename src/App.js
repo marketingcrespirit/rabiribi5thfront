@@ -136,11 +136,11 @@ class App extends Component {
           <div ref={this.prizeRef}></div>
           <Sumbit />
           <div ref={this.joinRef}></div>
-          {/* <Sticker />
+          <Sticker />
           <div ref={this.joinRef}></div>
           <Gather />
           <div ref={this.joinRef}></div>
-          <Gallerys /> */}
+          <Gallerys />
           <Footer />
         </main>
       </div>
