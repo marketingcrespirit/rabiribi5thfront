@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Bulletin from "./Bulletin";
 import axios from "axios";
 
-const NET_SERVER_URL = "https://rabiribi5thserver.herokuapp.com/";
+const NET_SERVER_URL = "https://rabiribi5thserver.herokuapp.com";
 
 const Sticker = () => {
   const [data, setData] = useState([]);

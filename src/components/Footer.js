@@ -1,17 +1,11 @@
 import React, { Component } from "react";
 import Navbar from "../components/Navbar";
 import styles from "./footer.module.css";
-import { FormattedMessage } from "react-intl";
 
 import facebook from "../public/assets/icons/facebook.svg";
 import twitter from "../public/assets/icons/twitter.png";
 import steam from "../public/assets/icons/steam.png";
 import logo from "../public/assets/icons/logo_t.png";
-
-const info = {
-  address: "",
-  email: "rabiribi@crespirit.com",
-};
 
 class Footer extends Component {
   getMenuItemTitle = (menuItem, index, depthLevel) => {

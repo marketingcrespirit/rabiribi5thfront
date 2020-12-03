@@ -14,11 +14,11 @@ import Gifts from "./components/Gifts";
 import Footer from "./components/Footer";
 import Firefly from "./components/Firefly";
 // import Board from "./components/Bulletin";
-// import Gallerys from "./components/Gallerys";
+import Gallerys from "./components/Gallerys";
 // import Vote from "./components/Vote";
 // import Bulletin from "./components/Bulletin";
-// import Gather from "./components/Gather";
-// import Sticker from "./components/Sticker";
+import Gather from "./components/Gather";
+import Sticker from "./components/Sticker";
 
 const navs = [
   { tag: "#intro", content: "活動介紹", id: "nav1" },

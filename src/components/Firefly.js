@@ -19,14 +19,26 @@ class Firefly {
     this.s = Math.random() * 6;
     this.ang = Math.random() * 2 * Math.PI;
     this.v = (this.s * this.s) / 8;
+    if (this.x < w * 0.5 && this.x > w * 0.25) {
+      this.x = 0;
+    }
   }
   move() {
-    if (this.x < 0 || this.x > w) {
-      this.x = w / 2;
+    if (this.x > w) {
+      this.x = 0;
     }
-
-    if (this.y < 0 || this.y > h) {
-      this.y = h / 2;
+    if (this.x < 0) {
+      this.x = w;
+    }
+    if (this.y < 0) {
+      this.y = h;
+    }
+    if (this.y > h) {
+      this.y = 0;
+    }
+    if (this.x < w * 0.5 && this.x > w * 0.25) {
+      this.v *= -1;
+      // this.x =  w;
     }
     this.x += this.v * Math.cos(this.ang);
     this.y += this.v * Math.sin(this.ang);
@@ -82,7 +94,7 @@ class Banner extends Component {
         <div className={styles.bannerTxt}></div>
         <Stage className="banner" width={window.innerWidth} height={window.innerHeight}>
           <Layer className="bannerImg">
-            {/* <ColoredRect /> */}
+            <ColoredRect />
           </Layer>
         </Stage>
       </div>

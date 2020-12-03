@@ -1,17 +1,16 @@
 import React, { Component } from "react";
 import { FormattedMessage } from "react-intl";
-import Board from "./Bulletin";
-import FifthVideo from "./FifthVideo";
-import Rules from "./Rules";
-import Testimonial from "./Testimonal";
-import Cookies from "js-cookie";
+// import Board from "./Bulletin";
+// import FifthVideo from "./FifthVideo";
+// import Rules from "./Rules";
+// import Testimonial from "./Testimonal";
 import styles from "./gallerys.module.css";
-import line from "../public/assets/images/line.png";
+// import line from "../public/assets/images/line.png";
 import Gallery from "./Gallery";
-import Pic from "./Pic";
+// import Pic from "./Pic";
 import axios from "axios";
 
-const NET_SERVER_URL = "https://rabiribi5thserver.herokuapp.com/";
+const NET_SERVER_URL = "https://rabiribi5thserver.herokuapp.com";
 
 function validateEmail(email) {
   var re = /\S+@\S+\.\S+/;
@@ -24,69 +23,10 @@ function validateName(name) {
 }
 
 function validatePhone(phone) {
-  var re = /^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/;
+  var re = /^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s./0-9]*$/;
   return re.test(phone);
 }
 
-class Modal extends Component {
-  constructor(props) {
-    super(props);
-
-    this.outerStyle = {
-      position: "fixed",
-      top: "120px",
-      left: 0,
-      width: "100%",
-      height: "80%",
-      overflow: "auto",
-      zIndex: 5,
-    };
-
-    // default style
-    this.style = {
-      modal: {
-        position: "relative",
-        width: "800px",
-        padding: 20,
-        boxSizing: "border-box",
-        backgroundColor: "#fff",
-        margin: "40px auto",
-        borderRadius: 3,
-        zIndex: 2,
-        textAlign: "left",
-        boxShadow: "0 20px 30px rgba(0, 0, 0, 0.2)",
-        ...this.props.style.modal,
-      },
-      overlay: {
-        position: "fixed",
-        top: 0,
-        bottom: 0,
-        left: 0,
-        right: 0,
-        width: "100%",
-        height: "100%",
-        backgroundColor: "rgba(0,0,0,0.5)",
-        ...this.props.style.overlay,
-      },
-    };
-  }
-
-  // render modal
-  render() {
-    return (
-      <div
-        style={{
-          ...this.outerStyle,
-          display: this.props.isModalOpen ? "block" : "none",
-        }}
-      >
-        <div style={this.style.overlay} onClick={this.props.closeModal} />
-        <div onClick={this.props.closeModal} />
-        <div className={styles.rules}>{this.props.children}</div>
-      </div>
-    );
-  }
-}
 
 // overwrite style
 const modalStyle = {
@@ -116,6 +56,25 @@ const pics = [
   { small: "https://picsum.photos/200/200?random=17", big: "https://picsum.photos/640/640?random=17" },
   { small: "https://picsum.photos/200/200?random=18", big: "https://picsum.photos/640/640?random=18" },
   { small: "https://picsum.photos/200/200?random=19", big: "https://picsum.photos/640/640?random=19" },
+  { small: "https://picsum.photos/200/200?random=20", big: "https://picsum.photos/640/640?random=20" },
+  { small: "https://picsum.photos/200/200?random=20", big: "https://picsum.photos/640/640?random=20" },
+  { small: "https://picsum.photos/200/200?random=20", big: "https://picsum.photos/640/640?random=20" },
+  { small: "https://picsum.photos/200/200?random=20", big: "https://picsum.photos/640/640?random=20" },
+  { small: "https://picsum.photos/200/200?random=20", big: "https://picsum.photos/640/640?random=20" },
+  { small: "https://picsum.photos/200/200?random=20", big: "https://picsum.photos/640/640?random=20" },
+  { small: "https://picsum.photos/200/200?random=20", big: "https://picsum.photos/640/640?random=20" },
+  { small: "https://picsum.photos/200/200?random=20", big: "https://picsum.photos/640/640?random=20" },
+  { small: "https://picsum.photos/200/200?random=20", big: "https://picsum.photos/640/640?random=20" },
+  { small: "https://picsum.photos/200/200?random=20", big: "https://picsum.photos/640/640?random=20" },
+  { small: "https://picsum.photos/200/200?random=20", big: "https://picsum.photos/640/640?random=20" },
+  { small: "https://picsum.photos/200/200?random=20", big: "https://picsum.photos/640/640?random=20" },
+  { small: "https://picsum.photos/200/200?random=20", big: "https://picsum.photos/640/640?random=20" },
+  { small: "https://picsum.photos/200/200?random=20", big: "https://picsum.photos/640/640?random=20" },
+  { small: "https://picsum.photos/200/200?random=20", big: "https://picsum.photos/640/640?random=20" },
+  { small: "https://picsum.photos/200/200?random=20", big: "https://picsum.photos/640/640?random=20" },
+  { small: "https://picsum.photos/200/200?random=20", big: "https://picsum.photos/640/640?random=20" },
+  { small: "https://picsum.photos/200/200?random=20", big: "https://picsum.photos/640/640?random=20" },
+  { small: "https://picsum.photos/200/200?random=20", big: "https://picsum.photos/640/640?random=20" },
   { small: "https://picsum.photos/200/200?random=20", big: "https://picsum.photos/640/640?random=20" },
 ];
 
@@ -362,10 +321,11 @@ class ModalUnit extends Component {
                             {this.state.votes.includes(index) ? "取消" : "投我"}
                           </button>
                         </div>
-                        <img src={el.big} />
+                        <img alt={index} src={el.big} />
                       </div>
                     </Gallery>
                   );
+                  return true
               })}
               <button className={styles.changePageR} onClick={this.addPage}>
                 加一頁

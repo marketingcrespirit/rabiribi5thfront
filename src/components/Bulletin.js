@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-import ReactDOM from "react-dom";
-import $ from "jquery";
 
 class Note extends Component {
   // Setting up little functions
@@ -15,11 +13,6 @@ class Note extends Component {
       transform: "rotate(" + this.randomBetween(-15, 15) + "deg)",
     };
   };
-
-  //   componentDidMount = () => {
-  //     $(this.getDOMNode()).draggable();
-
-  //   };
 
   randomBetween = (min, max) => {
     return min + Math.ceil(Math.random() * max);
@@ -64,16 +57,6 @@ class Note extends Component {
 }
 
 class Board extends Component {
-  // propTypes: {
-  //   count =(p =>rops, propName) {
-  //     if (typeof props[propName] !== number) {
-  //       return new Error("The count property must be a number");
-  //     }
-  //     if (props[propName] > 100) {
-  //       return new Error("Creating " + props[propName] + " notes is ridiculous");
-  //     }
-  //   },
-  // },
   state = {
     count: this.props.data.length,
     notes: [],
@@ -86,13 +69,13 @@ class Board extends Component {
 
   show = () => {
     setInterval(() => {
-      if (this.state.count < this.props.data.length ) {
+      if (this.state.count < this.props.data.length) {
         this.add(this.props.data[this.state.count]);
         let newCount = this.state.count;
         newCount++;
         this.setState({ count: newCount });
       }
-    }, 1000);
+    }, 300);
   };
 
   add = (text) => {
