@@ -1,0 +1,95 @@
+.wrapper {
+  background-image: url("../public/assets/images/bg/p2_bg_3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+  height: 100vh;
+  text-align: center;
+}
+
+.bottomWrapper {
+  width: 80%;
+  padding: 3rem 8rem;
+  border: #fff 2px solid;
+  position: relative;
+  background: linear-gradient(to right, #0f1422 0%, rgb(195, 198, 206, 0.005) 100%);
+  border: 4px solid;
+  border-image-slice: 1;
+  box-sizing: border-box;
+  border-right: none;
+  border-image-source: linear-gradient(to right, #fff 0%, rgb(195, 198, 206, 0.005) 100%);
+}
+
+.lightWrapper {
+  position: relative;
+}
+
+.arrow {
+  position: absolute;
+  top: 35%;
+  left: 100%;
+}
+
+.stepsWrapper > div:nth-child(4) > .arrow {
+  display: none;
+}
+
+.bottomWrapper h2 {
+  margin: 0 0.5em;
+}
+
+.bottomWrapper p {
+  line-height: 2em;
+}
+
+.txtWrapper {
+  margin: 2em 0;
+  text-align: left;
+}
+
+.txtHeadWrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5em;
+}
+
+.imgWrapper {
+  position: absolute;
+  left: 90%;
+  top: 10%;
+}
+
+.imgWrapper img {
+  height: 100%;
+}
+
+@media only screen and (max-width: 1500px) {
+  .bottomWrapper {
+    padding: 2rem 4rem;
+  }
+  .stepsWrapper {
+    margin: 0;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .wrapper {
+    background-image: url("../public/assets/images/bg/p2_bg_mobile.jpg");
+  }
+  .stepsWrapper {
+    display: block;
+  }
+  .bottomWrapper {
+    border: none;
+    background: none;
+    width: 100%;
+    padding: 0;
+  }
+  .imgWrapper {
+    display: none;
+  }
+
+  .txtHeadWrapper {
+    display: block;
+  }
+}

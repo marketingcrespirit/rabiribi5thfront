@@ -1,0 +1,26 @@
+.centerWrapper {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.board {
+  background-image: url("../public/assets/images/bg/gather_bg.jpg");
+  width: 100%;
+  height: 95vh;
+}
+
+.innerWrapper {
+  background-image: url("../public/assets/images/gather_center.png");
+  width: 100%;
+  background-repeat: no-repeat;
+  height: 55%;
+  background-size: contain;
+  background-position-x: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}

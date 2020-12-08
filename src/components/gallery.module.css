@@ -71,8 +71,8 @@
 
 .rules {
   position: relative;
-  max-width: 900px;
-  padding: 5px 20px;
+  width: 70%;
+  padding: 20px 20px;
   box-sizing: border-box;
   background-color: #fff;
   margin: 20px auto;
@@ -80,6 +80,7 @@
   z-index: 2;
   text-align: left;
   box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+  height: 95%;
 }
 
 .pic {
@@ -130,5 +131,11 @@
   }
   .button::after {
     top: 15px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .pic {
+    width: 50%;
   }
 }

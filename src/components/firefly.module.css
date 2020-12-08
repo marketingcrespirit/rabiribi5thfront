@@ -1,19 +1,36 @@
 .bannerTxt {
   position: absolute;
-  top: calc(100vh - 70%);
-  right: 8%;
+  top: calc(100vh - 50%);
+  right: 5%;
   background-image: url("../public/assets/images/banner_txt.png");
-  width: 800px;
-  height: 500px;
+  width: 700px;
+  height: 450px;
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
 }
 
+.bug {
+  position: absolute;
+  top: calc(100vh - 110px);
+  left: 75%;
+  z-index: 3;
+}
+
+.flyleft {
+  float: left;
+  width: 20%;
+}
+
+.flyright {
+  float: right;
+}
+
 @media only screen and (max-width: 1500px) {
   .bannerTxt {
-    width: 700px;
-    height: 400px;
+    width: 600px;
+    height: 350px;
+    right: 0;
   }
 }
 
@@ -26,3 +43,9 @@
   }
 }
 
+
+@media only screen and (max-width: 1100px) {
+  .bug {
+    display: none;
+  }
+}

@@ -1,68 +1,35 @@
 .wrapper {
-  text-align: center;
-  background-image: url("../public/assets/images/bg/BG_3.jpg");
+  background-image: url("../public/assets/images/bg/p2_bg_2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   color: #fff;
   height: 100vh;
-}
-
-.mapContainer {
-  display: flex;
-  position: relative;
-  justify-content: center;
-  flex-direction: column;
-  width: 80%;
-  margin: auto;
-}
-
-.treesContainer {
-  position: relative;
-  display: flex;
-  justify-content: flex-end;
-  width: 100%;
-}
-
-.treeContainer {
   position: relative;
 }
 
-.roadContainer {
-  position: relative;
+
+
+
+.inputArea {
+  display: inline-block;
+  margin: 0 3em;
 }
 
-.percentageContainer {
-  position: relative;
-  top: -40px;
-}
 
 .counterContainer {
   position: relative;
+  text-align: center;
+  margin: 2em 0;
 }
 
 .formContainer {
   position: relative;
   margin-top: 2em;
+  text-align: center;
 }
 
 .tree {
-  /* position: absolute; */
-  width: 250px;
-}
-
-.coin {
-  width: 200px;
-  position: absolute;
-  left: 25px;
-  top: -10px;
-}
-
-.road {
-}
-
-.rabbit {
-  height: 100px;
-  top: 130px;
+  height: 25vh;
 }
 
 
@@ -101,31 +68,168 @@
   color: red;
 }
 
-@media only screen and (max-width: 1100px) {
-  .mapContainer {
-    width: 100%;
-  }
+.rabbit {
+  width: 120px;
+  height: 130px;
+  background-image: url(../public/assets/images/walking.png);
+  animation: moveX 1s steps(6) infinite;
+}
 
-  .roadContainer {
-    width: 100%;
-  }
-  .roadContainer img {
-    width: inherit;
-  }
+.dancing {
+  width: 160px;
+  height: 160px;
+  bottom: 7em;
+  background-image: url(../public/assets/images/dancing.png);
+  animation: dancing 1s steps(5) infinite;
+}
 
-  .tree {
-    /* position: absolute; */
-    width: 120px;
+@keyframes moveX {
+  from {
+    background-position-x: 0px;
+  }
+  to {
+    background-position-x: -810px;
+  }
+}
+
+
+
+
+@keyframes dancing {
+  from {
+    background-position-x: 0px;
+  }
+  to {
+    background-position-x: -810px;
+  }
+}
+
+.outer {
+  width: 70%;
+  margin: auto;
+  margin-top: 3em;
+  height: fit-content;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.pillars {
+  display: flex;
+  justify-content: space-evenly;
+  height: 80%;
+  align-items: flex-end;
+}
+
+.road {
+  width: 100%;
+}
+
+.coin {
+  position: relative;
+}
+
+.coin:after {
+  content: "";
+  background-image: url('../public/assets/images/coin_after.png');
+  width: 250%;
+  height: 160%;
+  position: absolute;
+  top: -60%;
+  left: -70%;
+  background-size: contain;
+}
+
+.road img {
+  width: 100%;
+}
+.pillar {
+  width: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.pillars > div:nth-child(2) > img:nth-child(2) {
+  height: 250px;
+}
+
+.pillars > div:nth-child(1) > img:nth-child(2),
+.pillars > div:nth-child(3) > img:nth-child(2) {
+  height: 180px;
+}
+
+.pillar img {
+  width: 100%;
+}
+.rabbit {
+  position: absolute;
+  top: calc(53%);
+}
+.rabbit img {
+  width: 100%;
+}
+
+.button {
+  display: inline-block;
+  margin: 1em 0 2em 0;
+  background-color: #0f1422;
+  color: #fff;
+  font-size: 1em;
+  padding: 0.5em 2em;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 0.5em;
+  border-bottom: 0.25em solid #0f5177;
+  -moz-transition: 0.1s;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+  box-shadow: 0 2px 3px #ccc;
+  position: relative;
+}
+
+@media only screen and (max-width: 1500px) {
+}
+
+@media only screen and (max-width: 900px) {
+  .wrapper {
+    height: fit-content;
+    background-image: url("../public/assets/images/bg/p2_bg_mobile.jpg");
+  }
+  .pillar {
+    width: 20%;
   }
   .rabbit {
+    top: 60%;
+    animation: moveXmobile 1s steps(6) infinite;
+    width: 45px;
+    background-size: cover;
     height: 50px;
-    top: 60px;
   }
+  .pillars > div:nth-child(2) > img:nth-child(2) {
+    height: 120px;
+  }
+  
+  .pillars > div:nth-child(1) > img:nth-child(2),
+  .pillars > div:nth-child(3) > img:nth-child(2) {
+    height: 80px;
+  }
+  .road {
+    height: 30px;
+  }
+  .road img {
+    height: 100%;
+  }
+  .inputArea {
+    text-align: left;
+  }
+}
 
-  .coin {
-    width: 100px;
-    position: absolute;
-    left: 10px;
-    top: -10px;
+@keyframes moveXmobile {
+  from {
+    background-position-x: 0px;
+  }
+  to {
+    background-position-x: -300px;
   }
 }

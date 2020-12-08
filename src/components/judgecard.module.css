@@ -11,38 +11,68 @@
   display: flex;
   justify-content: center;
   color: #fff;
+  height: 90%;
 }
 .judgeCard {
-  width: 300px;
-  margin-top: 1em;
-  margin-bottom: 1em;
-  padding: 1em;
+  width: 40%;
   background-color: #000;
   color: #fff;
+  background-color: #0f1422;
+  padding: 0 2em 2em 2em;
+  min-height: fit-content;
+  background: linear-gradient(180deg, rgba(218, 240, 252, 0) 20%, #29355f 58%, #111627 100%);
+  border: 4px solid;
+  border-top: 0;
+  border-image-slice: 1;
+  box-sizing: border-box;
+  border-image-source: linear-gradient(180deg, rgba(218, 240, 252, 0.005) 00%, rgb(195, 198, 206, 0.5) 100%);
 }
 
 .judgeImg {
-  max-width: 100%;
+  display: block;
+  margin: auto;
+  width: 30%;
 }
 
 .judgeTxtWrapper {
-  margin-top: 3em;
+  margin-top: 1em;
   color: #fff;
   text-align: center;
 }
 
-.judgeCard {
-  background-color: #0f1422;
-  max-width: 300px;
-  max-height: 500px;
-  padding: 2em;
+.judgeTxtContentWrapper {
+  text-align: left;
+  margin-top: 2em;
+}
+
+@media only screen and (max-width: 1500px) {
+  .judgeCard {
+    
+  }
 }
 
 @media only screen and (max-width: 1100px) {
   .judgeCardWrapper {
-    display: block;
+    
   }
   .judgeCard {
     margin: 1em auto;
+    width: 100%;
+
+    border: none;
+    background: none;
+  }
+  .imgWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .imgWrapper h2 {
+    margin: 0;
+  }
+  .imgWrapper img {
+    width: 15%;
+    margin: 0 .5em 0 0;
   }
 }

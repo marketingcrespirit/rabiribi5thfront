@@ -1,0 +1,45 @@
+.introWrapper {
+  background-image: url("../public/assets/images/bg/p2_bg_1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+  height: 100vh;
+}
+
+.introWrapper:after {
+  content: "";
+  width: 100%;
+  height: 6px;
+  /* background-image: url("../public/assets/images/hr.png"); */
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  background-size: cover;
+  z-index: 3;
+}
+
+.introCardWrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 3em;
+}
+
+.introCardWrapper > div:nth-child(1) {
+  border-right: none;
+}
+
+@media only screen and (max-width: 1500px) {
+  .introCardWrapper {
+    margin: 0;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .introWrapper {
+    height: fit-content;
+    background-image: url("../public/assets/images/bg/p2_bg_mobile.jpg");
+  }
+  .introCardWrapper {
+    display: block;
+  }
+}

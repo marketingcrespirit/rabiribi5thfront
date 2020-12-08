@@ -3,9 +3,11 @@ import styles from "./gather.module.css";
 import tree from "../public/assets/images/tree.png";
 import coin from "../public/assets/images/coin.png";
 import road from "../public/assets/images/road.png";
-import rabbit from "../public/assets/images/1.png";
 import axios from "axios";
-
+import { FormattedMessage } from "react-intl";
+import title_left from "../public/assets/images/title_l.png";
+import title_right from "../public/assets/images/title_r.png";
+import walking from "../public/assets/images/walking.png";
 const NET_SERVER_URL = "https://rabiribi5thserver.herokuapp.com";
 
 const mainStyle = {
@@ -47,7 +49,7 @@ function validateContent(content) {
 const Gather = () => {
   const [name, setName] = useState("");
   const [content, setContent] = useState("");
-  const [amount, setAmount] = useState(0);
+  const [amount, setAmount] = useState(1000);
 
   // const [stageOne, setStageOne] = useState(false);
   // const [stageTwo, setstageTwo] = useState(false);
@@ -56,8 +58,6 @@ const Gather = () => {
   const [nameError, setNameError] = useState(false);
   const [contentError, setContentError] = useState(false);
   const [sendSucceed, setSendSucceed] = useState(false);
-
-  const [position, setPosition] = useState(5);
   // let date = new Date().getDate();
 
   const nameInputHandler = (e) => {
@@ -87,7 +87,7 @@ const Gather = () => {
       }).then((response) => {
         console.log(response);
         if (response.status === 201) {
-          window.location = "http://localhost:3000";
+          window.location = "/";
         } else if (response.status === 204) {
         }
         setSendSucceed(true);
@@ -101,30 +101,23 @@ const Gather = () => {
       setErrorDisplay(true);
     }
   };
-  useEffect(() => {
-    axios({
-      method: "get",
-      url: NET_SERVER_URL + "/messages",
-    }).then(({ data }) => {
-      setAmount(data.length);
-    });
-  }, []);
 
-  useEffect(() => {
-    if (position <= 83) {
-      const interval = setInterval(() => {
-        let newPosition = position;
-        newPosition += 13;
-        setPosition(newPosition);
-      }, 1000);
-      return () => clearInterval(interval);
-    } else if (position > 83) {
-      setPosition(5);
-    }
-  }, [position]);
-  // 31% one  36% step
-  // 57% two
-  // 83% three
+  // 5%  start
+  // 21% one
+  // 46% two
+  // 71% three
+
+  let position;
+
+  if (amount === 1000) {
+    position = 17;
+  } else if (amount === 3000) {
+    position = 44;
+  } else if (amount === 5000) {
+    position = 70;
+  } else {
+    position = (amount / 5000) * 70;
+  }
 
   let style = {
     position: "absolute",
@@ -133,65 +126,66 @@ const Gather = () => {
 
   return (
     <div className={styles.wrapper}>
-      <div className="wrapper">
-        <div id="schedule" className="buffer"></div>
-        <h1 className="bigHeader">集氣進度</h1>
-        <div className={styles.mapContainer}>
-          <div className={styles.treesContainer}>
-            <div className={styles.treeContainer}>
-              <img alt="tree" className={styles.tree} src={tree} />
-              <img alt="coin" className={styles.coin} src={coin} />
-            </div>
-            <div className={styles.treeContainer}>
-              <img alt="tree" className={styles.tree} src={tree} />
-              <img alt="coin" className={styles.coin} src={coin} />
-            </div>
-            <div className={styles.treeContainer}>
-              <img alt="tree" className={styles.tree} src={tree} />
-              <img alt="coin" className={styles.coin} src={coin} />
-            </div>
-          </div>
-
+      <div className="wrapper oneblock">
+        <div id="gather" className="buffer"></div>
+        <h1 className="bigHeader">
+          <img src={title_left} />
+          <FormattedMessage id="app.p2-p2-1" />
+          <img src={title_right} />
+        </h1>
+        <div className={styles.outer}>
           <div className={styles.rabbitContainer}>
-            <img alt="rabbit" style={style} className={styles.rabbit} src={rabbit} />
+            <div style={style} className={amount === 5000 ? `${styles.rabbit} ${styles.hidden}` : `${styles.rabbit}`} />
+            <div style={style} className={amount === 5000 ? `${styles.dancing} ` : `${styles.dancing} ${styles.hidden}`} />
           </div>
-
-          <div className={styles.roadContainer}>
-            <img alt="raod" className={styles.road} src={road} />
+          <div className={styles.pillars}>
+            <div className={styles.pillar}>
+              <div className={styles.coin}>
+                <img src={coin} />
+              </div>
+              <img className="" src={tree} />
+            </div>
+            <div className={styles.pillar}>
+              <div className={styles.coin}>
+                <img src={coin} />
+              </div>
+              <img className="" src={tree} />
+            </div>
+            <div className={styles.pillar}>
+              <div className={styles.coin}>
+                <img src={coin} />
+              </div>
+              <img className="" src={tree} />
+            </div>
           </div>
-
-          <div className={styles.percentageContainer}>
-            <h1>{`${amount / 10000}%`}</h1>
+          <div className={styles.road}>
+            <img src={road} />
           </div>
-          <div className={styles.counterContainer}>
-            <h2>累積人數：{amount}/解鎖人數：10000</h2>
-          </div>
-          <div className={styles.formContainer}>
-            <form>
+        </div>
+        <div className={styles.counterContainer}>
+          <h2>累積人數：{amount}/5000</h2>
+        </div>
+        <div className={styles.formContainer}>
+          <form className={styles.form}>
+            <div className={styles.inputArea}>
               <label>暱稱</label>
               <input onChange={nameInputHandler} value={name} />
+            </div>
+            <div className={styles.inputArea}>
               <label>留言</label>
               <input onChange={contentInputHandler} value={content} />
-              <input type="submit" onClick={submitMessage} />
-            </form>
-          </div>
-          <div className={errorDisplay ? `${styles.errorMessages}` : `${styles.errorMessages} ${styles.hidden}`}>
-            <p className={nameError ? `${styles.emailWarning}` : `${styles.emailWarning} ${styles.hidden}`}>請輸入您的姓名 請勿輸入特殊符號或是空白鍵</p>
-            <p className={contentError ? `${styles.emailWarning}` : `${styles.emailWarning} ${styles.hidden}`}>留言字數不可超過XX字</p>
-            <p className={sendSucceed ? `${styles.emailWarning}` : `${styles.emailWarning} ${styles.hidden}`}>成功留言 感謝您的支持</p>
+            </div>
+            <input type="submit" onClick={submitMessage} className={styles.button} />
+          </form>
+        </div>
+        <div className={errorDisplay ? `${styles.errorMessages}` : `${styles.errorMessages} ${styles.hidden}`}>
+          <p className={nameError ? `${styles.emailWarning}` : `${styles.emailWarning} ${styles.hidden}`}>請輸入您的姓名 請勿輸入特殊符號或是空白鍵</p>
+          <p className={contentError ? `${styles.emailWarning}` : `${styles.emailWarning} ${styles.hidden}`}>留言字數不可超過XX字</p>
+          <p className={sendSucceed ? `${styles.emailWarning}` : `${styles.emailWarning} ${styles.hidden}`}>成功留言 感謝您的支持</p>
 
-            <button
-              style={{
-                ...mainStyle.submitButton,
-                margin: 0,
-                width: "auto",
-                marginTop: 10,
-              }}
-              onClick={clearMessages}
-            >
-              關閉
-            </button>
-          </div>
+          <button className={styles.button} onClick={clearMessages}>
+            關閉
+          </button>
         </div>
       </div>
     </div>
