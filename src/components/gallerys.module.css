@@ -364,7 +364,7 @@
   font-weight: 600;
   font-size: 2em;
   position: absolute;
-  bottom: -2%;
+  bottom: 3%;
   left: calc(37.5%);
   border-radius: 5px;
   border-left: 5px solid #293e7d;
@@ -651,12 +651,12 @@
   .changePageL {
     top: 105%;
     left: 0%;
-    z-index: 5;
+    z-index: 4;
   }
   .changePageR {
     top: 105%;
     right: 0%;
-    z-index: 5;
+    z-index: 4;
   }
   .page {
     margin-top: 2em;
@@ -730,7 +730,9 @@
     display: none
   }
   .button {
-    z-index: 10;
+    z-index: 4;
   }
-  
+  .txtWrapper {
+    display: block;
+  }
 }
