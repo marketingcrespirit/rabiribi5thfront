@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Navbar from "../components/Navbar";
 import styles from "./footer.module.css";
-
 import facebook from "../public/assets/icons/facebook.svg";
 import twitter from "../public/assets/icons/twitter.png";
 import steam from "../public/assets/icons/steam.png";
@@ -54,7 +53,6 @@ class Footer extends Component {
                 <img  alt="steam logo"  src={steam} />
               </a>
             </div>
-
             <div className={`${styles.navSocialIcon}`}>
               <a target="_blank" rel="noreferrer" href="https://twitter.com/rabiribigame">
                 <img  alt="twitter logo"  src={twitter} />

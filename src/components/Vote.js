@@ -161,7 +161,7 @@ class Vote extends Component {
         if (response.status === 201) {
           this.setState({ errorDisplay: true });
           this.setState({ succeed: true });
-          window.location = "http://localhost:3000/";
+          window.location = "/art-contest";
           const data = response.data;
           console.log(data);
         } else if (response.status === 204) {
@@ -320,7 +320,7 @@ class Vote extends Component {
                       }}
                       onClick={this.clearMessages}
                     >
-                      關閉
+                      <FormattedMessage id="app.p2-w-13" /> 
                     </button>
                   </div>
                 </form>

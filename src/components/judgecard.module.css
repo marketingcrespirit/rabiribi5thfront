@@ -12,9 +12,10 @@
   justify-content: center;
   color: #fff;
   height: 90%;
+  white-space: pre;
 }
 .judgeCard {
-  width: 40%;
+  width: 25%;
   background-color: #000;
   color: #fff;
   background-color: #0f1422;
@@ -25,13 +26,13 @@
   border-top: 0;
   border-image-slice: 1;
   box-sizing: border-box;
-  border-image-source: linear-gradient(180deg, rgba(218, 240, 252, 0.005) 00%, rgb(195, 198, 206, 0.5) 100%);
+  border-image-source: linear-gradient(180deg, rgba(218, 240, 252, 0.005) 0%, #866c4b 100%);
 }
 
 .judgeImg {
   display: block;
-  margin: auto;
-  width: 30%;
+  margin: 2em auto;
+  width: 70%;
 }
 
 .judgeTxtWrapper {
@@ -40,31 +41,35 @@
   text-align: center;
 }
 
-.judgeTxtContentWrapper {
-  text-align: left;
+.judgeTxtContentWrapper p {
   margin-top: 2em;
+  color: #b7b1ac;
+  white-space: pre-wrap;
 }
+
+.imgWrapper {
+  text-align: center;
+  white-space: pre-wrap;
+  
+}
+
+
 
 @media only screen and (max-width: 1500px) {
   .judgeCard {
-    
   }
 }
 
 @media only screen and (max-width: 1100px) {
   .judgeCardWrapper {
-    
   }
   .judgeCard {
     margin: 1em auto;
     width: 100%;
-
-    border: none;
-    background: none;
   }
   .imgWrapper {
     width: 100%;
-    display: flex;
+    /* display: flex; */
     justify-content: flex-start;
     align-items: center;
   }
@@ -72,7 +77,6 @@
     margin: 0;
   }
   .imgWrapper img {
-    width: 15%;
-    margin: 0 .5em 0 0;
+    margin: 2em auto;
   }
 }

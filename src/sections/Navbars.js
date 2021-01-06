@@ -33,7 +33,7 @@ class Navbars extends Component {
       <div className="navbar">
         <div className="fixed-width-nav">
           <div className="brand mobile-brand mobile">
-            <a href="#top">
+            <a href="/">
               <img src={logo} alt="" />{" "}
             </a>
           </div>

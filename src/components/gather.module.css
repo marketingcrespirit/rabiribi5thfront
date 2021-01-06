@@ -1,20 +1,16 @@
 .wrapper {
-  background-image: url("../public/assets/images/bg/p2_bg_2.jpg");
+  background-image: url("../public/assets/images/bg/p2_bg_3.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   color: #fff;
-  height: 100vh;
+  height: fit-content;
   position: relative;
 }
-
-
-
 
 .inputArea {
   display: inline-block;
   margin: 0 3em;
 }
-
 
 .counterContainer {
   position: relative;
@@ -28,10 +24,41 @@
   text-align: center;
 }
 
+.buttonWrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 1em;
+}
+
+.buttonWrapper a {
+  text-decoration: none;
+}
+
+.buttonWrapper a:hover {
+  color: #fff
+}
+
+.spotlight {
+  width: 40%;
+  position: absolute;
+}
+
+.pillars > img:nth-child(1) {
+  left: -10%;
+}
+.pillars > img:nth-child(3) {
+  left: 17.5%;
+}
+.pillars > img:nth-child(5) {
+  left: 42.5%;
+}
+.pillars > img:nth-child(7) {
+  left: 70%;
+}
+
 .tree {
   height: 25vh;
 }
-
 
 .errorMessages {
   position: fixed;
@@ -41,6 +68,8 @@
   width: 30%;
   background-color: black;
   color: red;
+  padding: 2em;
+  text-align: center;
 }
 
 .emailWarning {
@@ -72,7 +101,7 @@
   width: 120px;
   height: 130px;
   background-image: url(../public/assets/images/walking.png);
-  animation: moveX 1s steps(6) infinite;
+  animation: moveX .5s steps(6) infinite;
 }
 
 .dancing {
@@ -81,18 +110,24 @@
   bottom: 7em;
   background-image: url(../public/assets/images/dancing.png);
   animation: dancing 1s steps(5) infinite;
+  left: 40%;
+  top: 62%;
+}
+
+@keyframes rotateY {
+  to {
+    transform: rotateY(360deg);
+  }
 }
 
 @keyframes moveX {
-  from {
+  0% {
     background-position-x: 0px;
   }
-  to {
-    background-position-x: -810px;
+  100% {
+    background-position-x: -798px;
   }
 }
-
-
 
 
 @keyframes dancing {
@@ -107,7 +142,6 @@
 .outer {
   width: 70%;
   margin: auto;
-  margin-top: 3em;
   height: fit-content;
   position: relative;
   display: flex;
@@ -127,17 +161,34 @@
 
 .coin {
   position: relative;
+  left: -38%;
+  
 }
 
-.coin:after {
+.pillars > div:nth-child(4) > div > div > div > div {
+  animation-delay: .5s;
+}
+.pillars > div:nth-child(6) > div > div > div > div {
+  animation-delay: 1s;
+}
+
+.coin img {
+  /* animation: rotateY 3s infinite linear; */
+}
+
+.coin.active:after {
   content: "";
-  background-image: url('../public/assets/images/coin_after.png');
-  width: 250%;
+  background-image: url("../public/assets/images/coin_after.png");
+  width: 150%;
   height: 160%;
   position: absolute;
-  top: -60%;
-  left: -70%;
+  z-index: 0;
+  top: 42%;
+  left: 8%;
   background-size: contain;
+  background-repeat: no-repeat;
+  transition: all 1s linear;
+  animation: light 0.5s infinite linear;
 }
 
 .road img {
@@ -150,12 +201,12 @@
   justify-content: flex-end;
 }
 
-.pillars > div:nth-child(2) > img:nth-child(2) {
+.pillars > div:nth-child(4) > img {
   height: 250px;
 }
 
-.pillars > div:nth-child(1) > img:nth-child(2),
-.pillars > div:nth-child(3) > img:nth-child(2) {
+.pillars > div:nth-child(2) > img,
+.pillars > div:nth-child(6) > img {
   height: 180px;
 }
 
@@ -164,28 +215,47 @@
 }
 .rabbit {
   position: absolute;
-  top: calc(53%);
+  top: calc(67%);
 }
 .rabbit img {
   width: 100%;
 }
 
-.button {
-  display: inline-block;
-  margin: 1em 0 2em 0;
-  background-color: #0f1422;
+.lightWrapper {
+  position: absolute;
+  top: 250px;
+  left: -100px;
+}
+
+.buttonL {
+  width: 70px;
+  height: 200px;
+  font-weight: 600;
+  position: relative;
+  border-radius: 5px;
+  border-left: 5px solid #293e7d;
+  border-top: 5px solid #546db8;
+  border-right: 5px solid #293e7d;
+  border-bottom: 5px solid #15254e;
+  background: linear-gradient(0deg, rgba(84, 109, 184, 1) 0%, rgba(84, 109, 184, 1) 76%, rgba(176, 191, 238, 1) 99%);
+  transition: all 0.1s;
+  color: #fff;
+}
+
+.buttonL:hover {
+  border-radius: 5px;
+  border-bottom: 5px solid #546db8;
+  border-top: 5px solid #15254e;
+  background: linear-gradient(180deg, rgba(84, 109, 184, 1) 0%, rgba(84, 109, 184, 1) 76%, rgba(176, 191, 238, 1) 99%);
+}
+
+.submit {
+  height: 50px;
+  width: 200px;
+  margin: 0.5em;
   color: #fff;
   font-size: 1em;
-  padding: 0.5em 2em;
-  text-decoration: none;
-  text-transform: uppercase;
-  border-radius: 0.5em;
-  border-bottom: 0.25em solid #0f5177;
-  -moz-transition: 0.1s;
-  -webkit-transition: 0.1s;
-  transition: 0.1s;
-  box-shadow: 0 2px 3px #ccc;
-  position: relative;
+  font-weight: bolder;
 }
 
 @media only screen and (max-width: 1500px) {
@@ -200,16 +270,22 @@
     width: 20%;
   }
   .rabbit {
-    top: 60%;
+    top: 69%;
     animation: moveXmobile 1s steps(6) infinite;
-    width: 45px;
+    width: 70px;
     background-size: cover;
-    height: 50px;
+    height: 75px;
   }
-  .pillars > div:nth-child(2) > img:nth-child(2) {
-    height: 120px;
+  .pillars > div:nth-child(2) > img:nth-child(2),
+  .pillars > div:nth-child(6) > img:nth-child(2) {
+    height: 90px;
   }
-  
+
+  .pillars > div:nth-child(4) > img:nth-child(2) {
+    height: 150px
+
+  }
+
   .pillars > div:nth-child(1) > img:nth-child(2),
   .pillars > div:nth-child(3) > img:nth-child(2) {
     height: 80px;
@@ -223,13 +299,32 @@
   .inputArea {
     text-align: left;
   }
+  .coin.active:after {
+    top: 48%;
+  }
+  .lightWrapper {
+    display: none;
+  }
 }
+
+
 
 @keyframes moveXmobile {
   from {
     background-position-x: 0px;
   }
   to {
-    background-position-x: -300px;
+    background-position-x: -443px;
+  }
+}
+
+
+@media only screen and (max-width: 500px) {
+  .dancing {
+    top: 68%;
+    animation: moveXmobile 1s steps(6) infinite;
+    width: 70px;
+    background-size: cover;
+    height: 75px;
   }
 }

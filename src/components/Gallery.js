@@ -13,7 +13,7 @@ class Gallery extends Component {
       top: "120px",
       left: 0,
       width: "100%",
-      height: "80%",
+      height: "85%",
       overflow: "auto",
       zIndex: 5,
     };
@@ -53,13 +53,14 @@ class Gallery extends Component {
   clicked = (index) => {
     console.log(index)
   }
+  
 
   // render modal
   render() {
     return (
       <>
-        <div className={this.props.selected ? `${styles.pic} ${styles.selected}` : `${styles.pic}`}>
-          <img src={this.props.src} onClick={this.toggle} />
+        <div className={this.props.selected ? `${styles.pic} ${styles.selected}`  : `${styles.pic}`}  onClick={this.toggle}>
+          <img src={this.props.src} />
         </div>
         <div
           style={{

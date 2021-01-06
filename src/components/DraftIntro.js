@@ -18,7 +18,7 @@ const DraftIntro = () => {
           </small>
         </h1>
         <section>
-          <p className="subtitle">
+          <p className="subtitle_p1">
             <FormattedMessage id="app.p1-3" />
           </p>
           <p>
@@ -78,7 +78,6 @@ const DraftIntro = () => {
             </ul>
           </div>
         </div>
-        <img  alt="seperate line" className="line" src={line} />
       </div>
     </div>
   );

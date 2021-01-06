@@ -1,15 +1,14 @@
 .wrapper {
-  background-image: url("../public/assets/images/bg/p2_bg_3.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   color: #fff;
-  height: 100vh;
+  height: fit-content;
   text-align: center;
 }
 
 .bottomWrapper {
   width: 80%;
-  padding: 3rem 8rem;
+  padding: 3rem 6rem 3rem 8rem;
   border: #fff 2px solid;
   position: relative;
   background: linear-gradient(to right, #0f1422 0%, rgb(195, 198, 206, 0.005) 100%);
@@ -17,11 +16,14 @@
   border-image-slice: 1;
   box-sizing: border-box;
   border-right: none;
-  border-image-source: linear-gradient(to right, #fff 0%, rgb(195, 198, 206, 0.005) 100%);
+  border-image-source: linear-gradient(to right, #866c4b 0%, rgb(195, 198, 206, 0.005) 100%);
 }
 
 .lightWrapper {
-  position: relative;
+  position: absolute;
+  right: -20%;
+  top: 70%;
+  z-index: 1;
 }
 
 .arrow {
@@ -51,6 +53,10 @@
   display: flex;
   align-items: center;
   margin-bottom: 0.5em;
+}
+
+.txtWrapper p{
+  color: #b7b1ac 
 }
 
 .imgWrapper {
@@ -88,8 +94,10 @@
   .imgWrapper {
     display: none;
   }
+  .lightWrapper {
+      display: none;
+  }
 
   .txtHeadWrapper {
-    display: block;
   }
 }

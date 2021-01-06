@@ -3,7 +3,7 @@
 }
 
 .wrapper {
-  background-image: url("../public/assets/images/bg/BG_4.jpg");
+  background-image: url("../public/assets/images/bg/p2_bg_new.jpg");
   color: #fff;
   background-size: cover;
 }
@@ -55,12 +55,12 @@
 
 .judgeWrapper {
   text-align: center;
-  background-image: url("../public/assets/images/bg/BG_3.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   color: #fff;
   height: 100vh;
 }
+
 
 .judgeHead {
   padding: 1em;

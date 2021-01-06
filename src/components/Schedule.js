@@ -12,7 +12,7 @@ export default function Schedule(props) {
       <div className="wrapper">
         <div id="schedule" className="buffer"></div>
         <h1 className="bigHeader"><FormattedMessage id="app.p2-1" /></h1>
-        <div id={styles.timeline}>
+        <div className={styles.timeline}  id={styles.timeline}>
           <div className={styles.timelineItem}>
             <div className={styles.timelineIcon}>
               {/* <img src={button} /> */}
@@ -57,7 +57,7 @@ export default function Schedule(props) {
 
           
         </div>
-        <p className="subtitle"><FormattedMessage id="app.p2-8" /></p>
+        <p className="subtitle_p1"><FormattedMessage id="app.p2-8" /></p>
         <p className={styles.blank}><FormattedMessage id="app.p2-9" /></p>
       </div>
 

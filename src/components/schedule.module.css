@@ -1,5 +1,5 @@
 .wrapper {
-    background-image: url('../public/assets/images/bg/BG_2.jpg');
+    background-image: url('../public/assets/images/bg/p2_bg_new.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     color: #fff;
@@ -28,16 +28,6 @@ header:before,
   transition: all 0.4s ease;
 }
 
-#timeline:before {
-  content: "";
-  width: 3px;
-  height: 85%;
-  background: #0f1422;
-  left: 50%;
-  top: 0;
-  position: absolute;
-}
-
 #timeline:after {
   content: "";
   clear: both;
@@ -52,7 +42,7 @@ header:before,
 }
 
 #timeline .timelineItem .timelineIcon {
-  background: #0f1422;
+  background: #181818;
   width: 15px;
   height: 15px;
   position: absolute;
@@ -61,6 +51,7 @@ header:before,
   overflow: hidden;
   margin-left: -6px;
   border-radius: 50%;
+  border: 2px solid #6b5941
 }
 
 
@@ -79,6 +70,16 @@ header:before,
   color: #fff;
   transition: all 0.5s linear;
   z-index: 5;
+  border: 2px solid #6b5941
+}
+.timeline:before {
+  content: "";
+  width: 3px;
+  height: 85%;
+  background: #6b5941;
+  left: 50%;
+  top: 0;
+  position: absolute;
 }
 
 #timeline .timelineItem .timelineContent h2 {
@@ -123,33 +124,7 @@ header:before,
   white-space: pre-wrap;
 }
 
-.btn {
-  padding: 5px 15px;
-  text-decoration: none;
-  background: transparent;
-  border: 2px solid #f27c7c;
-  color: #f27c7c;
-  display: inline-block;
-  position: relative;
-  text-transform: uppercase;
-  font-size: 12px;
-  border-radius: 5px;
-  -webkit-transition: background 0.3s ease;
-  transition: background 0.3s ease;
-  -webkit-box-shadow: 2px 2px 0 #f27c7c;
-  -ms-box-shadow: 2px 2px 0 #f27c7c;
-  box-shadow: 2px 2px 0 #f27c7c;
-}
 
-.btn:hover {
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  top: 2px;
-  left: 2px;
-  -webkit-box-shadow: 2px 2px 0 transparent;
-  -ms-box-shadow: 2px 2px 0 transparent;
-  box-shadow: 2px 2px 0 transparent;
-}
 
 @media screen and (max-width: 768px) {
   #timeline {
@@ -164,13 +139,7 @@ header:before,
     width: 90%;
     float: right;
   }
-  #timeline .timelineItem .timelineContent:before,
-  #timeline .timelineItem .timelineContent.right:before {
-    left: 10%;
-    margin-left: -6px;
-    border-left: 0;
-    border-right: 7px solid #0f1422;
-  }
+  
   #timeline .timelineItem .timelineIcon {
     left: 0;
   }

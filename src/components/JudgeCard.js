@@ -6,7 +6,9 @@ export default function JudgeCard(props) {
   return (
     <div className={styles.judgeCard}>
       <div className={styles.imgWrapper}>
-        <img alt="評審照片" className={styles.judgeImg} src={props.el.src} />
+        <a className={props.index === 3 ? "disable" : ""} href={`${props.href}`}>
+          <img alt="評審照片" className={styles.judgeImg} src={props.el.src} />
+        </a>
         <h2>
           <FormattedMessage id={`${props.el.name}`} />
         </h2>

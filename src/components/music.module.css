@@ -1,0 +1,31 @@
+.musicWrapper {
+  background-image: url("../public/assets/images/bg/p2_bg_new.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+  padding: 3rem 0;
+}
+
+.music {
+  max-width: 1000px;
+  margin: 4rem auto;
+}
+
+.musicLower {
+  display: flex;
+  flex-direction: row;
+  margin-top: 2rem;
+}
+
+.carouselWrapper {
+    width: 50%;
+}
+
+.musicLowerTxt {
+    width: 50%;
+    margin: 5rem 0;
+}
+
+.musicLower p{
+  margin-left: 2rem;
+}

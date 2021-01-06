@@ -1,0 +1,36 @@
+.subbannerWrapper {
+  background-image: url("../public/assets/images/bg/p2_bg_new.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+  height: fit-content;
+  position: relative;
+  padding: 6rem 0 1rem 0;
+}
+
+.subbannerBlock {
+  max-width: 800px;
+  border: 2px solid #6b5941;
+  margin: 1em auto 8em;
+  padding: 6em 4em;
+  color: #fff;
+  background-color: #181818;
+}
+
+.subbannerBlockHead {
+  white-space: pre-wrap;
+}
+
+.subbannerBlock h1 {
+  font-size: 3em;
+  margin-bottom: 1em;
+}
+
+.subbannerBlock h2 {
+  font-size: 2em;
+}
+
+
+.buttonwrapper {
+    margin-bottom: 8rem;
+}

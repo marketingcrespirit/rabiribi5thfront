@@ -22,7 +22,7 @@ export default function Standard() {
         <h1 className="bigHeader"><FormattedMessage id="app.p3-1" /></h1>
         <h2 className="center"><FormattedMessage id="app.p3-2" /></h2>
         <div className={styles.sectionWrapper}>
-          <p className="subtitle"><FormattedMessage id="app.p3-3" /></p>
+          <p className="subtitle_p1"><FormattedMessage id="app.p3-3" /></p>
           <p><FormattedMessage id="app.p3-4" /></p>
           <p><FormattedMessage id="app.p3-5" /></p>
           <table className={styles.tg}>
@@ -49,7 +49,7 @@ export default function Standard() {
           </table>
         </div>
         <div className={styles.sectionWrapper}>
-          <p className="subtitle"><FormattedMessage id="app.p3-10" /></p>
+          <p className="subtitle_p1"><FormattedMessage id="app.p3-10" /></p>
           <p><FormattedMessage id="app.p3-11" /></p>
           <table className={styles.tg}>
             <thead>
@@ -67,7 +67,7 @@ export default function Standard() {
           </table>
         </div>
         <div>
-          <p className="subtitle"><FormattedMessage id="app.p3-14" /></p>
+          <p className="subtitle_p1"><FormattedMessage id="app.p3-14" /></p>
           <div className={styles.judgeCardWrapper}>
             {judge.map((el, i) => {
               return (

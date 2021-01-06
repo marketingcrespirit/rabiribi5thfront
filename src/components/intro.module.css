@@ -1,10 +1,14 @@
 .introWrapper {
-  background-image: url("../public/assets/images/bg/p2_bg_1.jpg");
+  background-image: url("../public/assets/images/bg/p2_bg_new.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   color: #fff;
-  height: 100vh;
+  height: fit-content;
+  padding: 2rem 0;
 }
+
+
+
 
 .introWrapper:after {
   content: "";
@@ -21,10 +25,11 @@
 .introCardWrapper {
   display: flex;
   justify-content: center;
-  margin-top: 3em;
+  margin-top: 2em;
 }
 
-.introCardWrapper > div:nth-child(1) {
+.introCardWrapper > div:nth-child(1),
+.introCardWrapper > div:nth-child(2)  {
   border-right: none;
 }
 
@@ -41,5 +46,8 @@
   }
   .introCardWrapper {
     display: block;
+  }
+  .introCardWrapper > div:nth-child(1) {
+    border-right: 4px solid;
   }
 }

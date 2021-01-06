@@ -1,5 +1,5 @@
 .wrapper {
-  background-image: url("../public/assets/images/bg/p2_bg_6.jpg");
+  background-image: url("../public/assets/images/bg/p2_bg_new.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   color: #fff;
@@ -17,7 +17,7 @@
   width: 80%;
   padding: 3rem 8rem;
   border: #fff 2px solid;
-  margin-top: 7rem;
+  margin-top: 10rem;
   display: flex;
   position: relative;
   background: linear-gradient(to right, #0f1422 0%, rgb(195, 198, 206, 0.005) 100%);
@@ -26,11 +26,77 @@
   border-image-slice: 1;
   box-sizing: border-box;
   border-right: none;
-  border-image-source: linear-gradient(to right, rgba(218, 240, 252, 0.005) 00%, rgb(195, 198, 206, 0.005) 100%);
+  border-image-source: linear-gradient(to right, rgba(218, 240, 252, 0.005) 0%, rgb(195, 198, 206, 0.005) 100%);
+}
+
+.stepsWrapper > div:nth-child(2):after {
+  animation-delay: 1s;
+}
+.stepsWrapper > div:nth-child(3):after {
+  animation-delay: 2s;
+}
+.stepsWrapper > div:nth-child(4):after {
+  animation-delay: 3s;
+}
+
+.bugWrapper {
+  position: absolute;
+  top: -65%;
+  left: -5vw;
+  z-index: 1;
 }
 
 .lightWrapper {
   position: relative;
+  text-align: center;
+  width: 25%;
+  z-index: 1;
+}
+
+.lightWrapper:after {
+  content: "";
+  top: -15%;
+  left: 30%;
+  z-index: -1;
+  height: 40%;
+  width: 40%;
+  position: absolute;
+  background-image: url("../public/assets/images/lighthouse_light.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: fade 4s infinite linear;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 0.3;
+  }
+  40% {
+    opacity: 0.9;
+  }
+  60% {
+    opacity: 0.2;
+  }
+  80% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+  /* 0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  } */
 }
 
 .arrow {
@@ -39,7 +105,7 @@
   left: 100%;
 }
 
-.stepsWrapper > div:nth-child(4) > .arrow {
+.stepsWrapper > div:nth-child(5) > .arrow {
   display: none;
 }
 
@@ -72,8 +138,8 @@
 }
 
 @media only screen and (max-width: 900px) {
-  .wrapper  {
-    background-image: url("../public/assets/images/bg/p2_bg_mobile.jpg")
+  .wrapper {
+    background-image: url("../public/assets/images/bg/p2_bg_mobile.jpg");
   }
   .stepsWrapper {
     display: block;
@@ -86,6 +152,11 @@
     box-sizing: border-box;
     border-right: none;
     border-image-source: linear-gradient(to right, #fff 0%, rgb(195, 198, 206, 0.005) 100%);
+    width: 100%;
+  }
+
+  .bugWrapper {
+    display: none;
   }
 
   .stepsWrapper :nth-child(1),
@@ -100,11 +171,11 @@
   }
 
   .txtTimelineWrapper :nth-child(1) {
-   display: block;
-   width: 50%;
+    display: block;
+    width: 50%;
   }
 
-  .txtTimelineWrapper  p{
+  .txtTimelineWrapper p {
     margin: 0;
   }
   .lightWrapper img {

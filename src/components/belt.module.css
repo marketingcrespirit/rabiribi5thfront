@@ -1,0 +1,62 @@
+.beltWrapper {
+  background-image: url("../public/assets/images/banner_purchase_01.jpg");
+  background-size: cover;
+  position: relative;
+  background-size: 100% 100%;
+}
+
+.beltWrapper img {
+  position: relative;
+  top: -100px;
+}
+
+.subbannerBlock {
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  height: 450px;
+  color: #fff;
+}
+
+.subbannerBlockHead {
+  white-space: pre-wrap;
+}
+
+.subbannerBlock h1 {
+  font-size: 3em;
+  margin-bottom: 1em;
+  line-height: 1.5;
+}
+
+.subbannerBlock h2 {
+  font-size: 2em;
+  background-color: #6b5941;
+  width: fit-content;
+  padding: 0.5em 1em;
+  border-radius: 40px;
+}
+
+@media only screen and (max-width: 500px) {
+  .beltWrapper {
+    background-size: cover;
+    background-position: 44%;
+  }
+  .beltWrapper img {
+    width: 50%;
+    top: 100px;
+  }
+  .subbannerBlock {
+    width: 90%;
+    align-items: flex-start;
+    padding: 2em 0;
+    height: 400px;
+  }
+  .subbannerBlock h1 {
+    font-size: 2.5em;
+  }
+  .subbannerBlock h2 {
+    font-size: 1em;
+  }
+}

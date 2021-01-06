@@ -1,67 +1,37 @@
 import React, { useState, useEffect } from "react";
 import styles from "./gather.module.css";
 import tree from "../public/assets/images/tree.png";
-import coin from "../public/assets/images/coin.png";
 import road from "../public/assets/images/road.png";
 import axios from "axios";
 import { FormattedMessage } from "react-intl";
-import title_left from "../public/assets/images/title_l.png";
-import title_right from "../public/assets/images/title_r.png";
-import walking from "../public/assets/images/walking.png";
+import Coin from "./Coin";
+import spotlight from "../public/assets/images/spotlight.png";
+import NextPageBtn from "./NextPageBtn";
 const NET_SERVER_URL = "https://rabiribi5thserver.herokuapp.com";
 
-const mainStyle = {
-  app: {
-    margin: "0",
-  },
-  submitButton: {
-    backgroundColor: "#408cec",
-    border: 0,
-    padding: "5px 8px",
-    color: "#fff",
-    margin: "0 auto",
-    width: 150,
-    display: "inline",
-    borderRadius: 3,
-  },
-  cancelButton: {
-    backgroundColor: "red",
-    border: 0,
-    padding: "5px 10px",
-    color: "#fff",
-    margin: "0 auto",
-    width: 150,
-    display: "block",
-    borderRadius: 3,
-  },
-};
-
 function validateName(name) {
-  var re = /^[\w\u4E00-\u9FA5\uF900-\uFA2D]{1,5}$/;
-  return re.test(name);
+  return name.length > 0 && name.length <= 5;
 }
 
 function validateContent(content) {
-  var re = /^[\w\u4E00-\u9FA5\uF900-\uFA2D]{1,25}$/;
-  return re.test(content);
+  return content.trim().length <= 15 && content.trim().length !== 0;
 }
 
-const Gather = () => {
+const Gather = (props) => {
   const [name, setName] = useState("");
   const [content, setContent] = useState("");
-  const [amount, setAmount] = useState(1000);
-
-  // const [stageOne, setStageOne] = useState(false);
-  // const [stageTwo, setstageTwo] = useState(false);
-  // const [stageThree, setstageThree] = useState(false);
+  const [amount, setAmount] = useState(0);
   const [errorDisplay, setErrorDisplay] = useState(false);
+  const [loading, setLoading] = useState(false);
   const [nameError, setNameError] = useState(false);
   const [contentError, setContentError] = useState(false);
   const [sendSucceed, setSendSucceed] = useState(false);
   // let date = new Date().getDate();
 
   const nameInputHandler = (e) => {
-    setName(e.target.value);
+    if (e.target.value !== " ") {
+      setName(e.target.value);
+    }
   };
 
   const clearMessages = (e) => {
@@ -72,9 +42,13 @@ const Gather = () => {
     setSendSucceed(false);
   };
   const contentInputHandler = (e) => {
-    setContent(e.target.value);
+    if (e.target.value !== " ") {
+      setContent(e.target.value);
+    }
   };
   const submitMessage = (e) => {
+    setErrorDisplay(true);
+    setLoading(true);
     e.preventDefault();
     if (validateName(name) && validateContent(content)) {
       axios({
@@ -86,26 +60,61 @@ const Gather = () => {
         },
       }).then((response) => {
         console.log(response);
-        if (response.status === 201) {
-          window.location = "/";
-        } else if (response.status === 204) {
-        }
+        setLoading(false);
         setSendSucceed(true);
         setErrorDisplay(true);
+        if (response.status === 201) {
+          window.location = "/go-bunny-go";
+        } else if (response.status === 204) {
+        }
       });
+    } else if (!validateName(name) && !validateContent(content)) {
+      setLoading(false);
+      setNameError(true);
+      setContentError(true);
+      setErrorDisplay(true);
     } else if (!validateName(name)) {
+      setLoading(false);
       setNameError(true);
       setErrorDisplay(true);
     } else if (!validateContent(content)) {
+      setLoading(false);
       setContentError(true);
       setErrorDisplay(true);
     }
   };
+  useEffect(() => {
+    const day = new Date();
+    const month = day.getMonth();
+    const date = day.getDate();
+    let amountFixed = props.amount;
+    if (month === 1 && date >= 13 && amountFixed < 5000) {
+      amountFixed += 5000;
+    } else if (month === 1 && date >= 10 && amountFixed < 3000) {
+      amountFixed += 3000;
+    } else if (month === 1 && date >= 7 && amountFixed < 1000) {
+      amountFixed += 1000;
+    } else {
+      amountFixed = props.amount;
+    }
+    console.log(amountFixed);
+    setAmount(amountFixed);
+  }, [props.amount]);
 
-  // 5%  start
-  // 21% one
-  // 46% two
-  // 71% three
+  let stageOne = false;
+  let stageTwo = false;
+  let stageThree = false;
+
+  if (amount >= 5000) {
+    stageOne = true;
+    stageTwo = true;
+    stageThree = true;
+  } else if (amount >= 3000) {
+    stageOne = true;
+    stageTwo = true;
+  } else if (amount >= 1000) {
+    stageOne = true;
+  }
 
   let position;
 
@@ -113,8 +122,8 @@ const Gather = () => {
     position = 17;
   } else if (amount === 3000) {
     position = 44;
-  } else if (amount === 5000) {
-    position = 70;
+  } else if (amount >= 5000) {
+    position = 40;
   } else {
     position = (amount / 5000) * 70;
   }
@@ -127,65 +136,96 @@ const Gather = () => {
   return (
     <div className={styles.wrapper}>
       <div className="wrapper oneblock">
-        <div id="gather" className="buffer"></div>
-        <h1 className="bigHeader">
-          <img src={title_left} />
-          <FormattedMessage id="app.p2-p2-1" />
-          <img src={title_right} />
-        </h1>
+        <div id="unlock"></div>
         <div className={styles.outer}>
           <div className={styles.rabbitContainer}>
-            <div style={style} className={amount === 5000 ? `${styles.rabbit} ${styles.hidden}` : `${styles.rabbit}`} />
-            <div style={style} className={amount === 5000 ? `${styles.dancing} ` : `${styles.dancing} ${styles.hidden}`} />
+            <div style={style} className={amount >= 5000 ? `${styles.rabbit} ${styles.hidden}` : `${styles.rabbit}`} />
+            <div style={style} className={amount >= 5000 ? `${styles.dancing} ` : `${styles.dancing} ${styles.hidden}`} />
           </div>
           <div className={styles.pillars}>
+            <img className={styles.spotlight} src={spotlight} />
             <div className={styles.pillar}>
-              <div className={styles.coin}>
-                <img src={coin} />
+              <div className={stageOne ? `${styles.coin} ${styles.active}` : `${styles.coin}`}>
+                <Coin bg={stageOne ? 1 : 0} />
               </div>
               <img className="" src={tree} />
             </div>
+            <img className={styles.spotlight} src={spotlight} />
             <div className={styles.pillar}>
-              <div className={styles.coin}>
-                <img src={coin} />
+              <div className={stageTwo ? `${styles.coin} ${styles.active}` : `${styles.coin}`}>
+                <Coin bg={stageTwo ? 2 : 0} />
               </div>
               <img className="" src={tree} />
             </div>
+            <img className={styles.spotlight} src={spotlight} />
             <div className={styles.pillar}>
-              <div className={styles.coin}>
-                <img src={coin} />
+              <div className={stageThree ? `${styles.coin} ${styles.active}` : `${styles.coin}`}>
+                <Coin bg={stageThree ? 3 : 0} />
               </div>
               <img className="" src={tree} />
             </div>
+            <img className={styles.spotlight} src={spotlight} />
           </div>
           <div className={styles.road}>
             <img src={road} />
           </div>
         </div>
-        <div className={styles.counterContainer}>
-          <h2>累積人數：{amount}/5000</h2>
+        <div  className={styles.counterContainer} >
+          <h2 className={amount !== 0 ? null : `${styles.hidden}`}>
+            <FormattedMessage id="app.p2-p2-3" />：{amount}/5000
+          </h2>
+          <h2 className={amount !== 0 ?  `${styles.hidden}` : null }>
+            <FormattedMessage id="app.p2-p2-11" />
+          </h2>
         </div>
         <div className={styles.formContainer}>
           <form className={styles.form}>
             <div className={styles.inputArea}>
-              <label>暱稱</label>
-              <input onChange={nameInputHandler} value={name} />
+              <label>
+                <FormattedMessage id="app.p2-p2-4" />
+              </label>
+              <small className={name.length <= 5 && name.length > 0 ? `${styles.success}` : `${styles.warning}`}>
+                <FormattedMessage id={name.length <= 5 ? "app.p2-p2-5" : "app.p2-p2-6"} />
+              </small>
+              <small className={name.length <= 5 && name.length > 0 ? `${styles.success}` : `${styles.warning}`}>{name.length <= 5 ? 5 - name.length : Math.abs(name.length - 5)}</small>
+              <small className={name.length <= 5 && name.length > 0 ? `${styles.success}` : `${styles.warning}`}>
+                <FormattedMessage id="app.p2-p2-7" />
+              </small>
+              <br />
+              <input onChange={nameInputHandler} value={name} id="name" />
             </div>
             <div className={styles.inputArea}>
-              <label>留言</label>
-              <input onChange={contentInputHandler} value={content} />
+              <label>
+                <FormattedMessage id="app.p2-p2-8" />
+              </label>
+              <small className={content.length <= 15 && content.length > 0 ? `${styles.success}` : `${styles.warning}`}>
+                <FormattedMessage id={content.length <= 15 ? "app.p2-p2-5" : "app.p2-p2-6"} />
+              </small>
+              <small className={content.length <= 15 && content.length > 0 ? `${styles.success}` : `${styles.warning}`}>{content.length <= 5 ? 15 - content.length : Math.abs(content.length - 15)}</small>
+              <small className={content.length <= 15 && content.length > 0 ? `${styles.success}` : `${styles.warning}`}>
+                <FormattedMessage id="app.p2-p2-7" />
+              </small>
+              <br />
+              <input onChange={contentInputHandler} value={content} id="content" />
             </div>
-            <input type="submit" onClick={submitMessage} className={styles.button} />
+            <button name="submit" type="submit" id="submit" onClick={submitMessage} className={`${styles.buttonL} ${styles.submit}`}>
+              <FormattedMessage id="app.p2-p2-10" />
+            </button>
           </form>
         </div>
-        <div className={errorDisplay ? `${styles.errorMessages}` : `${styles.errorMessages} ${styles.hidden}`}>
-          <p className={nameError ? `${styles.emailWarning}` : `${styles.emailWarning} ${styles.hidden}`}>請輸入您的姓名 請勿輸入特殊符號或是空白鍵</p>
-          <p className={contentError ? `${styles.emailWarning}` : `${styles.emailWarning} ${styles.hidden}`}>留言字數不可超過XX字</p>
-          <p className={sendSucceed ? `${styles.emailWarning}` : `${styles.emailWarning} ${styles.hidden}`}>成功留言 感謝您的支持</p>
-
-          <button className={styles.button} onClick={clearMessages}>
-            關閉
+        <div id="status" className={errorDisplay ? `${styles.errorMessages}` : `${styles.errorMessages} ${styles.hidden}`}>
+          <p className={loading ? `${styles.emailWarning}` : `${styles.emailWarning} ${styles.hidden}`}> <FormattedMessage id="app.p2-w-9" /></p>
+          <p className={nameError ? `${styles.emailWarning}` : `${styles.emailWarning} ${styles.hidden}`}><FormattedMessage id="app.p2-w-10" /></p>
+          <p className={contentError ? `${styles.emailWarning}` : `${styles.emailWarning} ${styles.hidden}`}><FormattedMessage id="app.p2-w-11" /></p>
+          <p className={sendSucceed ? `${styles.emailWarning} ${styles.success}` : `${styles.emailWarning} ${styles.hidden}`}><FormattedMessage id="app.p2-w-12" /></p>
+          <button name="clear" id="clear" className={`${styles.buttonL} ${styles.submit}`} onClick={clearMessages}>
+            <FormattedMessage id="app.p2-p2-9" />
           </button>
+        </div>
+        <div className={styles.buttonWrapper}>
+        <NextPageBtn href="/art-contest" >
+          <FormattedMessage id="app.p2-p8-1"/><i className="fas fa-caret-right"></i>
+        </NextPageBtn>
         </div>
       </div>
     </div>

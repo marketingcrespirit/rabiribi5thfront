@@ -1,0 +1,40 @@
+.button {
+  background-color: transparent;
+  border: none;
+}
+
+
+.mainContainer {
+  margin: 2rem auto;
+  color: #fff;
+  background-color: #181818; /* fallback for old browsers */
+  border: #a68654 2px solid
+}
+
+.mainContainer i {
+    font-size: 1.5em;
+    color:  #a68654;
+}
+
+.playlist {
+  padding: 0 4rem;
+}
+
+.image {
+  visibility: hidden;
+}
+
+.content {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  margin: 2rem auto;
+}
+
+.dashboard {
+  padding:2rem 4rem;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  border-top: #a68654 2px solid
+}

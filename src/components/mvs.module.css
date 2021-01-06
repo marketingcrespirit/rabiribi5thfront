@@ -1,0 +1,27 @@
+.mvsWrapper {
+  background-image: url("../public/assets/images/bg/p2_bg_new.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+  padding: 3em 0;
+}
+
+.mv {
+  max-width: 1000px;
+  margin: 4em auto;
+}
+
+.mv video {
+  width: 100%;
+}
+
+.textWrapper {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.carouselWrapper {
+  max-width: 1200px;
+  margin: auto;
+}
+

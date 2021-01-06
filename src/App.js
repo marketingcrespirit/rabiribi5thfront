@@ -21,6 +21,7 @@ import Sticker from "./components/Sticker";
 import Intro from "./components/Intro";
 import Timeline from "./components/Timeline";
 import Award from "./components/Award";
+import Test from './components/Test'
 
 // for p1
 // const navs = [
@@ -33,10 +34,7 @@ import Award from "./components/Award";
 
 // for p2
 const navs = [
-  { tag: "#intro", id: "app.p2-nav1" },
-  { tag: "#gather", id: "app.p2-nav2" },
-  { tag: "#vote", id: "app.p2-nav3" },
-  { tag: "#timeline", id: "app.p2-nav4" },
+  
 ];
 
 class App extends Component {
@@ -64,6 +62,7 @@ class App extends Component {
     prizeTop: 0,
     joinTop: 0,
     activatedIndex: "",
+    amount: 0,
     locale: "zh",
   };
 
@@ -73,6 +72,9 @@ class App extends Component {
 
   componentWillUnmount() {
     window.removeEventListener("scroll", this.listenToScroll);
+  }
+  amountChange = (amount) => {
+    this.setState({amount: amount})
   }
 
   listenToScroll = () => {
@@ -196,15 +198,19 @@ class App extends Component {
           <Sumbit />
           <div ref={this.joinRef}></div> */}
           <Intro />
-          <div ref={this.introRef}></div>
-          <Sticker />
+          {/* <div ref={this.introRef}></div>
           <div ref={this.gatherRef}></div>
-          <Gather />
+          <Sticker amountChange={(amount) => this.amountChange(amount)} /> */}
+          {/* <Test /> */}
+          
+          {/* <Gather amount={this.state.amount} />
           <Award/>
           <div ref={this.voteRef}></div>
           <Gallerys />
           <div ref={this.timelineRef}></div>
-          <Timeline />
+          <Timeline /> */}
+
+        
 
           <Footer />
         </main>

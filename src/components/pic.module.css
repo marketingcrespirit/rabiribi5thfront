@@ -23,9 +23,3 @@
     background-size: 50px;
     background-repeat: no-repeat;
 }
-
-@media only screen and (max-width: 1100px) {
-    .pic {
-        width: 50%;
-    }
-}
