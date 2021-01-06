@@ -78,7 +78,7 @@
   z-index: 5;
   text-align: left;
   box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
-  height: 90%;
+  height: 80%;
 }
 .rules::after {
   background-image: url("../public/assets/images/bg/vote.png");

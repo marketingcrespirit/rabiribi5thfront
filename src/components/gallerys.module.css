@@ -347,8 +347,8 @@
 }
 
 .voteButton {
-  width: 25%;
-  height: 10%;
+  width: 150px;
+  height: 60px;
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-color: transparent;
@@ -359,13 +359,13 @@
 }
 
 .buttonL {
-  width: 25%;
-  height: 10%;
+  width: 150px;
+  height: 60px;
   font-weight: 600;
   font-size: 2em;
   position: absolute;
   bottom: 3%;
-  left: calc(37.5%);
+  left: calc(50% - 75px);
   border-radius: 5px;
   border-left: 5px solid #293e7d;
   border-top: 5px solid #546db8;
@@ -699,7 +699,7 @@
   }
   .innerVoteButton {
     left: 25%;
-    width: 50%;
+    width: 150px;
   }
   .fullImageWrapper {
     margin: 0 auto;
@@ -707,7 +707,7 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
   }
   .fullImageWrapper img {
     height: auto;
