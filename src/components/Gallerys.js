@@ -343,8 +343,8 @@ const players = [
   "Red Rain",
 ];
 
-// const NET_SERVER_URL = "https://rabiribi5thserver.herokuapp.com";
-const NET_SERVER_URL = "http://localhost:3001";
+const NET_SERVER_URL = "https://rabiribi5thserver.herokuapp.com";
+// const NET_SERVER_URL = "http://localhost:3001";
 const max = 8;
 function validateEmail(email) {
   var re = /\S+@\S+\.\S+/;
