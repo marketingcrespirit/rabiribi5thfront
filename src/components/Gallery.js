@@ -60,7 +60,7 @@ class Gallery extends Component {
     return (
       <>
         <div className={this.props.selected ? `${styles.pic} ${styles.selected}`  : `${styles.pic}`}  onClick={this.toggle}>
-          <img src={this.props.src} />
+          {/* <img src={this.props.src} /> */}
         </div>
         <div
           style={{

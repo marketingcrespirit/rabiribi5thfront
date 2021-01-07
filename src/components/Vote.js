@@ -161,7 +161,7 @@ class Vote extends Component {
         if (response.status === 201) {
           this.setState({ errorDisplay: true });
           this.setState({ succeed: true });
-          window.location = "/art-contest";
+          window.location = "/rabi5th/art-contest";
           const data = response.data;
           console.log(data);
         } else if (response.status === 204) {

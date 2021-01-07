@@ -64,7 +64,7 @@ const Gather = (props) => {
         setSendSucceed(true);
         setErrorDisplay(true);
         if (response.status === 201) {
-          window.location = "/go-bunny-go";
+          window.location = "/rabi5th/go-bunny-go";
         } else if (response.status === 204) {
         }
       });
@@ -88,11 +88,12 @@ const Gather = (props) => {
     const month = day.getMonth();
     const date = day.getDate();
     let amountFixed = props.amount;
-    if (month === 1 && date >= 13 && amountFixed < 5000) {
+    if (month === 0 && date >= 13 && amountFixed < 5000) {
       amountFixed += 5000;
-    } else if (month === 1 && date >= 10 && amountFixed < 3000) {
+    } else if (month === 0 && date >= 10 && amountFixed < 3000) {
       amountFixed += 3000;
-    } else if (month === 1 && date >= 7 && amountFixed < 1000) {
+    } else if (month === 0 && date > 7 && amountFixed < 1000) {
+      
       amountFixed += 1000;
     } else {
       amountFixed = props.amount;
@@ -223,7 +224,7 @@ const Gather = (props) => {
           </button>
         </div>
         <div className={styles.buttonWrapper}>
-        <NextPageBtn href="/art-contest" >
+        <NextPageBtn href="/rabi5th/art-contest" >
           <FormattedMessage id="app.p2-p8-1"/><i className="fas fa-caret-right"></i>
         </NextPageBtn>
         </div>

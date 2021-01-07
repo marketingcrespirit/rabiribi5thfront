@@ -79,7 +79,7 @@
 .fullImageWrapper {
   width: 70%;
   margin: auto;
-  height: 85%;
+  height: 80%;
   padding: 1em 0;
   overflow: hidden;
 }
@@ -163,7 +163,7 @@
   align-items: flex-start;
   justify-content: flex-start;
   z-index: 1;
-  height: 61%;
+  height: 60%;
   border: 1px solid #866c4b;
 }
 
@@ -540,7 +540,7 @@
   }
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1300px) {
   .frameWrapper,
   .formBg,
   .voteBg {
@@ -618,6 +618,7 @@
   .board {
     width: 250px;
     margin-top: 5em;
+    height: 620px
   }
   .message {
     margin-top: 1em;
@@ -708,6 +709,7 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
+    height: 55%;
   }
   .fullImageWrapper img {
     height: auto;

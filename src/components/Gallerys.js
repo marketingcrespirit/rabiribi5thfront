@@ -445,6 +445,7 @@ class ModalUnit extends Component {
       this.closeBoardModal();
     }
   };
+  
 
   componentDidMount() {
     document.body.addEventListener("keydown", this.keyListener);
@@ -504,7 +505,7 @@ class ModalUnit extends Component {
         if (response.status === 201) {
           this.setState({ errorDisplay: true });
           this.setState({ succeed: true });
-          window.location = "/art-contest";
+          window.location = "/rabi5th/art-contest";
           const data = response.data;
           console.log(data);
         } else if (response.status === 204) {
@@ -648,7 +649,7 @@ class ModalUnit extends Component {
             </div>
 
             <div className={styles.boardFrame}>
-              <div id="voteArea" className={styles.board}>
+              <div id="voteArea" className={`${styles.board} gallerybg  gallerybg${this.state.page}`} >
                 <button disabled={this.state.page >= max ? true : false} className={`${styles.button} ${styles.changePageR}`} onClick={this.addPage}>
                   <i className="fas fa-angle-double-right"></i>
                 </button>
@@ -683,8 +684,8 @@ class ModalUnit extends Component {
                               <FormattedMessage id="app.p2-p10-4" />：{players[index]}
                             </p>
                           </div>
-                          <div className={styles.fullImageWrapper}>
-                            <img alt={index} src={el.big} />
+                          <div className={`${styles.fullImageWrapper} gallerybgUnit gallerybgUnit${index}`}>
+                            {/* <img alt={index} src={el.big} /> */}
                           </div>
                           <button className={`${styles.buttonL} ${styles.innerVoteButton}`} onClick={() => this.clickHandler(index)}>
                             {this.state.votes.includes(index) ? <FormattedMessage id="app.p2-p10-1" /> : <FormattedMessage id="app.p2-p10-2" />}
@@ -790,7 +791,7 @@ class ModalUnit extends Component {
               </div>
             </form>
             <div className={styles.buttonWrapper}>
-              <NextPageBtn href="/go-bunny-go">
+              <NextPageBtn href="/rabi5th/go-bunny-go">
                 <FormattedMessage id="app.p2-p8-2" />
                 <i className="fas fa-caret-right"></i>
               </NextPageBtn>

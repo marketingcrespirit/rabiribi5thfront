@@ -96,13 +96,14 @@
 .pic {
   position: relative;
   width: 20%;
+  height: 50%;
 }
 
 .pic img {
   width: 100%;
 }
-.selected img {
-  opacity: 0.1;
+.selected {
+  background-color: rgba(0, 0, 0, 0.7)
 }
 
 .selected:after {
@@ -144,5 +145,6 @@
 @media only screen and (max-width: 1000px) {
   .pic {
     width: 50%;
+    height: 125px;
   }
 }
