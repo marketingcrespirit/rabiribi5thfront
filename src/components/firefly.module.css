@@ -1,6 +1,6 @@
 .bannerTxt {
   position: absolute;
-  top: calc(100vh - 60%);
+  bottom: 0;
   right: 5%;
   background-image: url("../public/assets/images/banner_txt.png");
   width: 700px;
