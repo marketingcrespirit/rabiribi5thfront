@@ -37,6 +37,10 @@ const Root = () => {
         </IntlProvider>
       </Route>
 
+      <Route exact path="/event/rabi5th-contribution">
+        <Redirect to="/rabi5th" />
+      </Route>
+
       <Route exact path="/">
         <Redirect to="/rabi5th" />
       </Route>

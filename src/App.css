@@ -254,7 +254,7 @@ input,
 .gallerybg3 {
   background-image: url('./public/assets/images/members/stripe/3.png');
 }
-/* .gallerybg4 {
+.gallerybg4 {
   background-image: url('./public/assets/images/members/stripe/4.png');
 }
 .gallerybg5 {
@@ -268,7 +268,7 @@ input,
 }
 .gallerybg8 {
   background-image: url('./public/assets/images/members/stripe/8.png');
-} */
+}
 
 .gallerybgUnit {
   background-size: contain;
