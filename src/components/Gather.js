@@ -91,14 +91,14 @@ const Gather = (props) => {
     if (month === 0 && date >= 13 && amountFixed < 5000) {
       amountFixed += 5000;
     } else if (month === 0 && date >= 10 && amountFixed < 3000) {
-      amountFixed += 3000;
+      let diff = (3000 - amountFixed) + 199
+      amountFixed += diff;
     } else if (month === 0 && date > 7 && amountFixed < 1000) {
       
       amountFixed += 1000;
     } else {
       amountFixed = props.amount;
     }
-    console.log(amountFixed);
     setAmount(amountFixed);
   }, [props.amount]);
 

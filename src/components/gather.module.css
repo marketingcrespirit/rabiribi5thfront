@@ -98,7 +98,7 @@
 }
 
 .rabbit {
-  width: 120px;
+  width: 130px;
   height: 130px;
   background-image: url(../public/assets/images/walking.png);
   animation: moveX .5s steps(6) infinite;
