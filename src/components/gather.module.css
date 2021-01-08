@@ -35,7 +35,7 @@
 }
 
 .buttonWrapper a:hover {
-  color: #fff
+  color: #fff;
 }
 
 .spotlight {
@@ -101,7 +101,7 @@
   width: 130px;
   height: 130px;
   background-image: url(../public/assets/images/walking.png);
-  animation: moveX .5s steps(6) infinite;
+  animation: moveX 0.5s steps(6) infinite;
 }
 
 .dancing {
@@ -128,7 +128,6 @@
     background-position-x: -798px;
   }
 }
-
 
 @keyframes dancing {
   from {
@@ -162,11 +161,10 @@
 .coin {
   position: relative;
   left: -38%;
-  
 }
 
 .pillars > div:nth-child(4) > div > div > div > div {
-  animation-delay: .5s;
+  animation-delay: 0.5s;
 }
 .pillars > div:nth-child(6) > div > div > div > div {
   animation-delay: 1s;
@@ -183,12 +181,11 @@
   height: 160%;
   position: absolute;
   z-index: 0;
-  top: 42%;
+  bottom: 0;
   left: 8%;
   background-size: contain;
   background-repeat: no-repeat;
-  transition: all 1s linear;
-  animation: light 0.5s infinite linear;
+  background-position-y: bottom;
 }
 
 .road img {
@@ -282,8 +279,7 @@
   }
 
   .pillars > div:nth-child(4) > img:nth-child(2) {
-    height: 150px
-
+    height: 150px;
   }
 
   .pillars > div:nth-child(1) > img:nth-child(2),
@@ -299,15 +295,11 @@
   .inputArea {
     text-align: left;
   }
-  .coin.active:after {
-    top: 48%;
-  }
+
   .lightWrapper {
     display: none;
   }
 }
-
-
 
 @keyframes moveXmobile {
   from {
@@ -317,7 +309,6 @@
     background-position-x: -443px;
   }
 }
-
 
 @media only screen and (max-width: 500px) {
   .dancing {
