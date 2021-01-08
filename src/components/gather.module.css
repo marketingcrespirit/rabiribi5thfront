@@ -215,7 +215,7 @@
 }
 .rabbit {
   position: absolute;
-  top: calc(67%);
+  bottom: 8.5%;
 }
 .rabbit img {
   width: 100%;
