@@ -2,14 +2,8 @@ import React, { Component } from "react";
 import "../App.css";
 
 import Navbars from "../sections/Navbars";
-// import LessonSlide from "./components/Carousel";
-// import Award from "./components/Award";
-// import FifthVideo from "./components/FifthVideo";
 import Footer from "../components/Footer";
 import Firefly from "../components/Firefly";
-
-import Gather from "../components/Gather";
-import Sticker from "../components/Sticker";
 import Subbanner from "../components/Subbanner";
 import LimitProducts from "../components/LimitProducts";
 import Mvs from "../components/Mvs";
@@ -114,30 +108,19 @@ class App extends Component {
             navs={navs}
           />
         </header>
-
         <main>
           <Firefly />
-
           <Subbanner/>
-          
           <div ref={this.productsRef}></div>
           <LimitProducts/>
-
           <div ref={this.musicRef}></div>
           <Mvs/>
-
           <div ref={this.producerRef}></div>
           <Producers />
-
           <Music/>
-
           <Belt/>
-
           <div ref={this.rulesRef}></div>
           <Buynow/>
-
-        
-
           <Footer />
         </main>
       </div>

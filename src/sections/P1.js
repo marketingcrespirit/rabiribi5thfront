@@ -3,12 +3,10 @@ import "../App.css";
 
 import Navbars from "../sections/Navbars";
 import Standard from "../components/Standard";
-import Sumbit from "../components/Submit";
 import Schedule from "../components/Schedule";
 import DraftIntro from "../components/DraftIntro";
 import Gifts from "../components/Gifts";
 import Footer from "../components/Footer";
-import Firefly from "../components/Firefly";
 import Gallerys from "../components/Gallerys";
 
 const navs = [

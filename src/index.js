@@ -5,14 +5,13 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { IntlProvider } from "react-intl";
 import { useState } from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import P1 from "./sections/P1";
 import P2 from "./sections/P2";
 import P3 from "./sections/P3";
 import en from "./i18n/en";
 import zh from "./i18n/zh";
 import { Redirect } from "react-router-dom";
-// import ja from "./i18n/ja";
 
 const Root = () => {
   const [locale, setLocale] = useState(navigator.language);

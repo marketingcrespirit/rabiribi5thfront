@@ -2,163 +2,84 @@ import React, { Component } from "react";
 import { FormattedMessage } from "react-intl";
 
 import pic000 from "../public/assets/images/members/0.png";
-import pic000m from "../public/assets/images/members/0m.png";
 import pic001 from "../public/assets/images/members/1.png";
-import pic001m from "../public/assets/images/members/1m.png";
 import pic002 from "../public/assets/images/members/2.png";
-import pic002m from "../public/assets/images/members/2m.png";
 import pic003 from "../public/assets/images/members/3.png";
-import pic003m from "../public/assets/images/members/3m.png";
 import pic004 from "../public/assets/images/members/4.png";
-import pic004m from "../public/assets/images/members/4m.png";
 import pic005 from "../public/assets/images/members/5.png";
-import pic005m from "../public/assets/images/members/5m.png";
 import pic006 from "../public/assets/images/members/6.png";
-import pic006m from "../public/assets/images/members/6m.png";
 import pic007 from "../public/assets/images/members/7.png";
-import pic007m from "../public/assets/images/members/7m.png";
 import pic008 from "../public/assets/images/members/8.png";
-import pic008m from "../public/assets/images/members/8m.png";
 import pic009 from "../public/assets/images/members/9.png";
-import pic009m from "../public/assets/images/members/9m.png";
 import pic010 from "../public/assets/images/members/10.png";
-import pic010m from "../public/assets/images/members/10m.png";
 import pic011 from "../public/assets/images/members/11.png";
-import pic011m from "../public/assets/images/members/11m.png";
 import pic012 from "../public/assets/images/members/12.png";
-import pic012m from "../public/assets/images/members/12m.png";
 import pic013 from "../public/assets/images/members/13.png";
-import pic013m from "../public/assets/images/members/13m.png";
 import pic014 from "../public/assets/images/members/14.png";
-import pic014m from "../public/assets/images/members/14m.png";
 import pic015 from "../public/assets/images/members/15.png";
-import pic015m from "../public/assets/images/members/15m.png";
 import pic016 from "../public/assets/images/members/16.png";
-import pic016m from "../public/assets/images/members/16m.png";
 import pic017 from "../public/assets/images/members/17.png";
-import pic017m from "../public/assets/images/members/17m.png";
 import pic018 from "../public/assets/images/members/18.png";
-import pic018m from "../public/assets/images/members/18m.png";
 import pic019 from "../public/assets/images/members/19.png";
-import pic019m from "../public/assets/images/members/19m.png";
 import pic020 from "../public/assets/images/members/20.png";
-import pic020m from "../public/assets/images/members/20m.png";
 import pic021 from "../public/assets/images/members/21.png";
-import pic021m from "../public/assets/images/members/21m.png";
 import pic022 from "../public/assets/images/members/22.png";
-import pic022m from "../public/assets/images/members/22m.png";
 import pic023 from "../public/assets/images/members/23.png";
-import pic023m from "../public/assets/images/members/23m.png";
 import pic024 from "../public/assets/images/members/24.png";
-import pic024m from "../public/assets/images/members/24m.png";
 import pic025 from "../public/assets/images/members/25.png";
-import pic025m from "../public/assets/images/members/25m.png";
 import pic026 from "../public/assets/images/members/26.png";
-import pic026m from "../public/assets/images/members/26m.png";
 import pic027 from "../public/assets/images/members/27.png";
-import pic027m from "../public/assets/images/members/27m.png";
 import pic028 from "../public/assets/images/members/28.png";
-import pic028m from "../public/assets/images/members/28m.png";
 import pic029 from "../public/assets/images/members/29.png";
-import pic029m from "../public/assets/images/members/29m.png";
 import pic030 from "../public/assets/images/members/30.png";
-import pic030m from "../public/assets/images/members/30m.png";
 import pic031 from "../public/assets/images/members/31.png";
-import pic031m from "../public/assets/images/members/31m.png";
 import pic032 from "../public/assets/images/members/32.png";
-import pic032m from "../public/assets/images/members/32m.png";
 import pic033 from "../public/assets/images/members/33.png";
-import pic033m from "../public/assets/images/members/33m.png";
 import pic034 from "../public/assets/images/members/34.png";
-import pic034m from "../public/assets/images/members/34m.png";
 import pic035 from "../public/assets/images/members/35.png";
-import pic035m from "../public/assets/images/members/35m.png";
 import pic036 from "../public/assets/images/members/36.png";
-import pic036m from "../public/assets/images/members/36m.png";
 import pic037 from "../public/assets/images/members/37.png";
-import pic037m from "../public/assets/images/members/37m.png";
 import pic038 from "../public/assets/images/members/38.png";
-import pic038m from "../public/assets/images/members/38m.png";
 import pic039 from "../public/assets/images/members/39.png";
-import pic039m from "../public/assets/images/members/39m.png";
 import pic040 from "../public/assets/images/members/40.png";
-import pic040m from "../public/assets/images/members/40m.png";
 import pic041 from "../public/assets/images/members/41.png";
-import pic041m from "../public/assets/images/members/41m.png";
 import pic042 from "../public/assets/images/members/42.png";
-import pic042m from "../public/assets/images/members/42m.png";
 import pic043 from "../public/assets/images/members/43.png";
-import pic043m from "../public/assets/images/members/43m.png";
 import pic044 from "../public/assets/images/members/44.png";
-import pic044m from "../public/assets/images/members/44m.png";
 import pic045 from "../public/assets/images/members/45.png";
-import pic045m from "../public/assets/images/members/45m.png";
 import pic046 from "../public/assets/images/members/46.png";
-import pic046m from "../public/assets/images/members/46m.png";
 import pic047 from "../public/assets/images/members/47.png";
-import pic047m from "../public/assets/images/members/47m.png";
 import pic048 from "../public/assets/images/members/48.png";
-import pic048m from "../public/assets/images/members/48m.png";
 import pic049 from "../public/assets/images/members/49.png";
-import pic049m from "../public/assets/images/members/49m.png";
 import pic050 from "../public/assets/images/members/50.png";
-import pic050m from "../public/assets/images/members/50m.png";
 import pic051 from "../public/assets/images/members/51.png";
-import pic051m from "../public/assets/images/members/51m.png";
 import pic052 from "../public/assets/images/members/52.png";
-import pic052m from "../public/assets/images/members/52m.png";
 import pic053 from "../public/assets/images/members/53.png";
-import pic053m from "../public/assets/images/members/53m.png";
 import pic054 from "../public/assets/images/members/54.png";
-import pic054m from "../public/assets/images/members/54m.png";
 import pic055 from "../public/assets/images/members/55.png";
-import pic055m from "../public/assets/images/members/55m.png";
 import pic056 from "../public/assets/images/members/56.png";
-import pic056m from "../public/assets/images/members/56m.png";
 import pic057 from "../public/assets/images/members/57.png";
-import pic057m from "../public/assets/images/members/57m.png";
 import pic058 from "../public/assets/images/members/58.png";
-import pic058m from "../public/assets/images/members/58m.png";
 import pic059 from "../public/assets/images/members/59.png";
-import pic059m from "../public/assets/images/members/59m.png";
 import pic060 from "../public/assets/images/members/60.png";
-import pic060m from "../public/assets/images/members/60m.png";
 import pic061 from "../public/assets/images/members/61.png";
-import pic061m from "../public/assets/images/members/61m.png";
 import pic062 from "../public/assets/images/members/62.png";
-import pic062m from "../public/assets/images/members/62m.png";
 import pic063 from "../public/assets/images/members/63.png";
-import pic063m from "../public/assets/images/members/63m.png";
 import pic064 from "../public/assets/images/members/64.png";
-import pic064m from "../public/assets/images/members/64m.png";
 import pic065 from "../public/assets/images/members/65.png";
-import pic065m from "../public/assets/images/members/65m.png";
 import pic066 from "../public/assets/images/members/66.png";
-import pic066m from "../public/assets/images/members/66m.png";
 import pic067 from "../public/assets/images/members/67.png";
-import pic067m from "../public/assets/images/members/67m.png";
 import pic068 from "../public/assets/images/members/68.png";
-import pic068m from "../public/assets/images/members/68m.png";
 import pic069 from "../public/assets/images/members/69.png";
-import pic069m from "../public/assets/images/members/69m.png";
 import pic070 from "../public/assets/images/members/70.png";
-import pic070m from "../public/assets/images/members/70m.png";
 import pic071 from "../public/assets/images/members/71.png";
-import pic071m from "../public/assets/images/members/71m.png";
 import pic072 from "../public/assets/images/members/72.png";
-import pic072m from "../public/assets/images/members/72m.png";
 import pic073 from "../public/assets/images/members/73.png";
-import pic073m from "../public/assets/images/members/73m.png";
 import pic074 from "../public/assets/images/members/74.png";
-import pic074m from "../public/assets/images/members/74m.png";
 import pic075 from "../public/assets/images/members/75.png";
-import pic075m from "../public/assets/images/members/75m.png";
 import pic076 from "../public/assets/images/members/76.png";
-import pic076m from "../public/assets/images/members/76m.png";
 import pic077 from "../public/assets/images/members/77.png";
-import pic077m from "../public/assets/images/members/77m.png";
 import pic078 from "../public/assets/images/members/78.png";
-import pic078m from "../public/assets/images/members/78m.png";
 
 
 import explain1 from "../public/assets/images/explains/explain1.png";
@@ -179,85 +100,85 @@ import Title from "./Title";
 import NextPageBtn from "../components/NextPageBtn";
 
 const pics = [
-  { big: pic000, small: pic000m },
-  { big: pic001, small: pic001m },
-  { big: pic002, small: pic002m },
-  { big: pic003, small: pic003m },
-  { big: pic004, small: pic004m },
-  { big: pic005, small: pic005m },
-  { big: pic006, small: pic006m },
-  { big: pic007, small: pic007m },
-  { big: pic008, small: pic008m },
-  { big: pic009, small: pic009m },
-  { big: pic010, small: pic010m },
-  { big: pic011, small: pic011m },
-  { big: pic012, small: pic012m },
-  { big: pic013, small: pic013m },
-  { big: pic014, small: pic014m },
-  { big: pic015, small: pic015m },
-  { big: pic016, small: pic016m },
-  { big: pic017, small: pic017m },
-  { big: pic018, small: pic018m },
-  { big: pic019, small: pic019m },
-  { big: pic020, small: pic020m },
-  { big: pic021, small: pic021m },
-  { big: pic022, small: pic022m },
-  { big: pic023, small: pic023m },
-  { big: pic024, small: pic024m },
-  { big: pic025, small: pic025m },
-  { big: pic026, small: pic026m },
-  { big: pic027, small: pic027m },
-  { big: pic028, small: pic028m },
-  { big: pic029, small: pic029m },
-  { big: pic030, small: pic030m },
-  { big: pic031, small: pic031m },
-  { big: pic032, small: pic032m },
-  { big: pic033, small: pic033m },
-  { big: pic034, small: pic034m },
-  { big: pic035, small: pic035m },
-  { big: pic036, small: pic036m },
-  { big: pic037, small: pic037m },
-  { big: pic038, small: pic038m },
-  { big: pic039, small: pic039m },
-  { big: pic040, small: pic040m },
-  { big: pic041, small: pic041m },
-  { big: pic042, small: pic042m },
-  { big: pic043, small: pic043m },
-  { big: pic044, small: pic044m },
-  { big: pic045, small: pic045m },
-  { big: pic046, small: pic046m },
-  { big: pic047, small: pic047m },
-  { big: pic048, small: pic048m },
-  { big: pic049, small: pic049m },
-  { big: pic050, small: pic050m },
-  { big: pic051, small: pic051m },
-  { big: pic052, small: pic052m },
-  { big: pic053, small: pic053m },
-  { big: pic054, small: pic054m },
-  { big: pic055, small: pic055m },
-  { big: pic056, small: pic056m },
-  { big: pic057, small: pic057m },
-  { big: pic058, small: pic058m },
-  { big: pic059, small: pic059m },
-  { big: pic060, small: pic060m },
-  { big: pic061, small: pic061m },
-  { big: pic062, small: pic062m },
-  { big: pic063, small: pic063m },
-  { big: pic064, small: pic064m },
-  { big: pic065, small: pic065m },
-  { big: pic066, small: pic066m },
-  { big: pic067, small: pic067m },
-  { big: pic068, small: pic068m },
-  { big: pic069, small: pic069m },
-  { big: pic070, small: pic070m },
-  { big: pic071, small: pic071m },
-  { big: pic072, small: pic072m },
-  { big: pic073, small: pic073m },
-  { big: pic074, small: pic074m },
-  { big: pic075, small: pic075m },
-  { big: pic076, small: pic076m },
-  { big: pic077, small: pic077m },
-  { big: pic078, small: pic078m },
+  { big: pic000 },
+  { big: pic001 },
+  { big: pic002 },
+  { big: pic003 },
+  { big: pic004 },
+  { big: pic005 },
+  { big: pic006 },
+  { big: pic007 },
+  { big: pic008 },
+  { big: pic009 },
+  { big: pic010 },
+  { big: pic011 },
+  { big: pic012 },
+  { big: pic013 },
+  { big: pic014 },
+  { big: pic015 },
+  { big: pic016 },
+  { big: pic017 },
+  { big: pic018 },
+  { big: pic019 },
+  { big: pic020 },
+  { big: pic021 },
+  { big: pic022 },
+  { big: pic023 },
+  { big: pic024 },
+  { big: pic025 },
+  { big: pic026 },
+  { big: pic027 },
+  { big: pic028 },
+  { big: pic029 },
+  { big: pic030 },
+  { big: pic031 },
+  { big: pic032 },
+  { big: pic033 },
+  { big: pic034 },
+  { big: pic035 },
+  { big: pic036 },
+  { big: pic037 },
+  { big: pic038 },
+  { big: pic039 },
+  { big: pic040 },
+  { big: pic041 },
+  { big: pic042 },
+  { big: pic043 },
+  { big: pic044 },
+  { big: pic045 },
+  { big: pic046 },
+  { big: pic047 },
+  { big: pic048 },
+  { big: pic049 },
+  { big: pic050 },
+  { big: pic051 },
+  { big: pic052 },
+  { big: pic053 },
+  { big: pic054 },
+  { big: pic055 },
+  { big: pic056 },
+  { big: pic057 },
+  { big: pic058 },
+  { big: pic059 },
+  { big: pic060 },
+  { big: pic061 },
+  { big: pic062 },
+  { big: pic063 },
+  { big: pic064 },
+  { big: pic065 },
+  { big: pic066 },
+  { big: pic067 },
+  { big: pic068 },
+  { big: pic069 },
+  { big: pic070 },
+  { big: pic071 },
+  { big: pic072 },
+  { big: pic073 },
+  { big: pic074 },
+  { big: pic075 },
+  { big: pic076 },
+  { big: pic077 },
+  { big: pic078 },
 
 ];
 const players = [

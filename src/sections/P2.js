@@ -2,24 +2,10 @@ import React, { Component } from "react";
 import "../App.css";
 
 import Navbars from "../sections/Navbars";
-// import LessonSlide from "./components/Carousel";
-// import Award from "./components/Award";
-// import FifthVideo from "./components/FifthVideo";
-import Firefly from "../components/Firefly";
 import Footer from "../components/Footer";
 import Gather from "../components/Gather";
 import Sticker from "../components/Sticker";
 
-// for p1
-// const navs = [
-//   { tag: "#intro", content: "活動介紹", id: "nav1" },
-//   { tag: "#schedule", content: "時間軸", id: "nav2" },
-//   { tag: "#rule", content: "評選機制", id: "nav3" },
-//   { tag: "#prize", content: "徵稿獎項", id: "nav4" },
-//   { tag: "#join", content: "報名方式", id: "nav5" },
-// ];
-
-// for p2
 const navs = [{ tag: "#unlock", content: "集氣留言", id: "nav6" }];
 
 class App extends Component {
