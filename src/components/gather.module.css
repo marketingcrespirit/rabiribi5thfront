@@ -111,7 +111,7 @@
   background-image: url(../public/assets/images/dancing.png);
   animation: dancing 1s steps(5) infinite;
   left: 40%;
-  top: 62%;
+  bottom: 8.5%;
 }
 
 @keyframes rotateY {
@@ -310,9 +310,9 @@
   }
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 900px) {
   .dancing {
-    top: 68%;
+    bottom: 8.5%;
     animation: moveXmobile 1s steps(6) infinite;
     width: 70px;
     background-size: cover;

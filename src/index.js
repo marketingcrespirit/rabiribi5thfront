@@ -57,7 +57,7 @@ const Root = () => {
         </IntlProvider>
       </Route>
 
-      <Route exact path="/p3">
+      <Route exact path="/rabi5th/clickmeifyoucan">
         <IntlProvider locale={locale} key={locale} defaultLocale="zh" messages={messages}>
           <P3 defaultLocale="zh" changed={changeHandler} locale={locale} setLocale={setLocale} />
         </IntlProvider>
@@ -71,4 +71,5 @@ ReactDOM.render(<Root />, document.getElementById("root"));
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+
 reportWebVitals();

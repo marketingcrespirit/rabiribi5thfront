@@ -6,7 +6,7 @@ export default function JudgeCard(props) {
   return (
     <div className={styles.judgeCard}>
       <div className={styles.imgWrapper}>
-        <a className={props.index === 3 ? "disable" : ""}  href={`${props.href}`}>
+        <a href={`${props.href}`}>
           <img alt="評審照片" className={styles.judgeImg} src={props.el.src} />
         </a>
         <h2>
