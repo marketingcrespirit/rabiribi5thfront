@@ -5,7 +5,7 @@ var Carousel = require("react-responsive-carousel").Carousel;
 const Element = (props) => {
   return (
     <div>
-      <img src={props.el.src} />
+      <img alt="product" src={props.el.src} />
     </div>
   );
 };

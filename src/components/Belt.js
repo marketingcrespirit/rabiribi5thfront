@@ -12,7 +12,7 @@ const Belt = () => {
           </div>
           <h2>01/15-02/15</h2>
         </div>
-        <img src={image} />
+        <img alt="bunny" src={image} />
       </div>
     </div>
   );

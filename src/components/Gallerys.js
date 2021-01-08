@@ -521,32 +521,32 @@ class ModalUnit extends Component {
 
             <div className={styles.explainWrapper}>
               <div className={styles.explainBox}>
-                <img className={styles.circle} src={this.props.locale.includes("zh") ? explain1 : explain1} />
-                <img className={styles.arrow} src={arrow} />
+                <img alt="image" className={styles.circle} src={this.props.locale.includes("zh") ? explain1 : explain1} />
+                <img alt="image" className={styles.arrow} src={arrow} />
                 <p>
                   <span className={styles.number}></span>
                   <FormattedMessage id="app.p2-p5-4" />
                 </p>
               </div>
               <div className={styles.explainBox}>
-                <img className={styles.circle} src={this.props.locale.includes("zh") ? explain2 : explain2_en} />
-                <img className={styles.arrow} src={arrow} />
+                <img alt="image" className={styles.circle} src={this.props.locale.includes("zh") ? explain2 : explain2_en} />
+                <img alt="image" className={styles.arrow} src={arrow} />
                 <p>
                   <span className={styles.number}></span>
                   <FormattedMessage id="app.p2-p5-5" />
                 </p>
               </div>
               <div className={styles.explainBox}>
-                <img className={styles.circle} src={this.props.locale.includes("zh") ? explain3 : explain3_en} />
-                <img className={styles.arrow} src={arrow} />
+                <img alt="image" className={styles.circle} src={this.props.locale.includes("zh") ? explain3 : explain3_en} />
+                <img alt="image" className={styles.arrow} src={arrow} />
                 <p>
                   <span className={styles.number}></span>
                   <FormattedMessage id="app.p2-p5-6" />
                 </p>
               </div>
               <div className={styles.explainBox}>
-                <img className={styles.circle} src={this.props.locale.includes("zh") ? explain4 : explain4_en} />
-                <img className={styles.arrow} src={arrow} />
+                <img alt="image" className={styles.circle} src={this.props.locale.includes("zh") ? explain4 : explain4_en} />
+                <img alt="image" className={styles.arrow} src={arrow} />
                 <p>
                   <span className={styles.number}></span>
                   <FormattedMessage id="app.p2-p5-7" />

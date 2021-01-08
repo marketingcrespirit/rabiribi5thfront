@@ -1,7 +1,6 @@
 import React from "react";
 import Button from "./Button";
 import styles from "./buynow.module.css";
-import Pagebreak_1 from "./Pagebreak_1";
 import Pagebreak_2 from "./Pagebreak_2";
 import ProductCard from "./ProductCard";
 import Title from "./Title";

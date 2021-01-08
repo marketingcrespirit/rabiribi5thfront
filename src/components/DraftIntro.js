@@ -3,7 +3,6 @@ import styles from "./draftintro.module.css";
 import { FormattedMessage } from "react-intl";
 import imageOne from "../public/assets/images/spec_1.png";
 import imageTwo from "../public/assets/images/spec_2.png";
-import line from "../public/assets/images/line.png";
 
 const DraftIntro = () => {
   return (
