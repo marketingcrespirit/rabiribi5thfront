@@ -56,11 +56,11 @@ const Root = () => {
         </IntlProvider>
       </Route>
 
-      <Route exact path="/rabi5th/clickmeifyoucan">
+      {/* <Route exact path="/rabi5th/clickmeifyoucan">
         <IntlProvider locale={locale} key={locale} defaultLocale="zh" messages={messages}>
           <P3 defaultLocale="zh" changed={changeHandler} locale={locale} setLocale={setLocale} />
         </IntlProvider>
-      </Route>
+      </Route> */}
     </Router>
   );
 };
