@@ -88,18 +88,18 @@ const Gather = (props) => {
     const month = day.getMonth();
     const date = day.getDate();
     let amountFixed = props.amount;
-    if (month === 0 && date >= 13 && amountFixed < 5000) {
-      amountFixed += 5000;
-    } else if (month === 0 && date >= 10 && amountFixed < 3000) {
-      let diff = (3000 - amountFixed) + 199
-      amountFixed += diff;
-    } else if (month === 0 && date > 7 && amountFixed < 1000) {
-      
-      amountFixed += 1000;
-    } else {
-      amountFixed = props.amount;
+    if (amountFixed !== 0) {
+      if (month === 0 && date >= 13 && amountFixed < 5000) {
+        amountFixed += 5000;
+      } else if (month === 0 && date >= 10 && amountFixed < 3000) {
+        amountFixed += 2000;
+      } else if (month === 0 && date > 7 && amountFixed < 1000) {
+        amountFixed += 1000;
+      } else {
+        amountFixed = props.amount;
+      }
+      setAmount(amountFixed);
     }
-    setAmount(amountFixed);
   }, [props.amount]);
 
   let stageOne = false;
@@ -171,11 +171,11 @@ const Gather = (props) => {
             <img src={road} />
           </div>
         </div>
-        <div  className={styles.counterContainer} >
+        <div className={styles.counterContainer}>
           <h2 className={amount !== 0 ? null : `${styles.hidden}`}>
             <FormattedMessage id="app.p2-p2-3" />：{amount}/5000
           </h2>
-          <h2 className={amount !== 0 ?  `${styles.hidden}` : null }>
+          <h2 className={amount !== 0 ? `${styles.hidden}` : null}>
             <FormattedMessage id="app.p2-p2-11" />
           </h2>
         </div>
@@ -215,18 +215,28 @@ const Gather = (props) => {
           </form>
         </div>
         <div id="status" className={errorDisplay ? `${styles.errorMessages}` : `${styles.errorMessages} ${styles.hidden}`}>
-          <p className={loading ? `${styles.emailWarning}` : `${styles.emailWarning} ${styles.hidden}`}> <FormattedMessage id="app.p2-w-9" /></p>
-          <p className={nameError ? `${styles.emailWarning}` : `${styles.emailWarning} ${styles.hidden}`}><FormattedMessage id="app.p2-w-10" /></p>
-          <p className={contentError ? `${styles.emailWarning}` : `${styles.emailWarning} ${styles.hidden}`}><FormattedMessage id="app.p2-w-11" /></p>
-          <p className={sendSucceed ? `${styles.emailWarning} ${styles.success}` : `${styles.emailWarning} ${styles.hidden}`}><FormattedMessage id="app.p2-w-12" /></p>
+          <p className={loading ? `${styles.emailWarning}` : `${styles.emailWarning} ${styles.hidden}`}>
+            {" "}
+            <FormattedMessage id="app.p2-w-9" />
+          </p>
+          <p className={nameError ? `${styles.emailWarning}` : `${styles.emailWarning} ${styles.hidden}`}>
+            <FormattedMessage id="app.p2-w-10" />
+          </p>
+          <p className={contentError ? `${styles.emailWarning}` : `${styles.emailWarning} ${styles.hidden}`}>
+            <FormattedMessage id="app.p2-w-11" />
+          </p>
+          <p className={sendSucceed ? `${styles.emailWarning} ${styles.success}` : `${styles.emailWarning} ${styles.hidden}`}>
+            <FormattedMessage id="app.p2-w-12" />
+          </p>
           <button name="clear" id="clear" className={`${styles.buttonL} ${styles.submit}`} onClick={clearMessages}>
             <FormattedMessage id="app.p2-p2-9" />
           </button>
         </div>
         <div className={styles.buttonWrapper}>
-        <NextPageBtn href="/rabi5th/art-contest" >
-          <FormattedMessage id="app.p2-p8-1"/><i className="fas fa-caret-right"></i>
-        </NextPageBtn>
+          <NextPageBtn href="/rabi5th/art-contest">
+            <FormattedMessage id="app.p2-p8-1" />
+            <i className="fas fa-caret-right"></i>
+          </NextPageBtn>
         </div>
       </div>
     </div>
