@@ -84,20 +84,9 @@ const Gather = (props) => {
     }
   };
   useEffect(() => {
-    const day = new Date();
-    const month = day.getMonth();
-    const date = day.getDate();
     let amountFixed = props.amount;
     if (amountFixed !== 0) {
-      if (month === 0 && date >= 13 && amountFixed < 5000) {
-        amountFixed += 5000;
-      } else if (month === 0 && date >= 10 && amountFixed < 3000) {
-        amountFixed += 2000;
-      } else if (month === 0 && date > 7 && amountFixed < 1000) {
-        amountFixed += 1000;
-      } else {
-        amountFixed = props.amount;
-      }
+      amountFixed += 5000;
       setAmount(amountFixed);
     }
   }, [props.amount]);

@@ -154,6 +154,7 @@ const en = {
   "app.p2-w-11": "Message is limited to 1-15 characters.",
   "app.p2-w-12": "Thanks for your message.",
   "app.p2-w-13": "Close",
+  "app.p2-w-14": "The voting event is over. Thanks for your visit.",
 };
 
 export default en;

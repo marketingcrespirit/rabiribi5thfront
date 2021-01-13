@@ -81,7 +81,6 @@ import pic076 from "../public/assets/images/members/76.png";
 import pic077 from "../public/assets/images/members/77.png";
 import pic078 from "../public/assets/images/members/78.png";
 
-
 import explain1 from "../public/assets/images/explains/explain1.png";
 import explain2 from "../public/assets/images/explains/explain2.png";
 import explain3 from "../public/assets/images/explains/explain3.png";
@@ -179,7 +178,6 @@ const pics = [
   { big: pic076 },
   { big: pic077 },
   { big: pic078 },
-
 ];
 const players = [
   "Zavok",
@@ -224,7 +222,7 @@ const players = [
   "篠茶　斜海",
   "篠茶　斜海",
   "Zavok",
- 
+
   "Bg2006 ",
   "Thisdudearound",
   "世子",
@@ -275,7 +273,6 @@ function validateEmail(email) {
 function validateName(name) {
   return name.length < 10 && name.length > 0;
 }
-
 
 // overwrite style
 const modalStyle = {
@@ -335,6 +332,7 @@ class ModalUnit extends Component {
       errorDisplay: false,
       codeSucceed: false,
       succeed: false,
+      tooLate: false,
       page: 1,
     };
 
@@ -351,8 +349,8 @@ class ModalUnit extends Component {
   }
 
   clearMessages = (e) => {
-    e.preventDefault()
-    this.setState({ emailError: false, nameError: false,  codeEmailError: false, voteError: false, codeSucceed: false, succced: false, errorDisplay: false });
+    e.preventDefault();
+    this.setState({ emailError: false, nameError: false, codeEmailError: false, voteError: false, codeSucceed: false, succced: false, errorDisplay: false });
   };
 
   // open modal (set isModalOpen, false)
@@ -366,7 +364,6 @@ class ModalUnit extends Component {
       this.closeBoardModal();
     }
   };
-  
 
   componentDidMount() {
     document.body.addEventListener("keydown", this.keyListener);
@@ -375,80 +372,91 @@ class ModalUnit extends Component {
   componentWillUnmount() {
     document.body.removeEventListener("keydown", this.closeBoardModal);
   }
+  // submitCode = (e) => {
+  //   e.preventDefault();
+  //   this.setState({ errorDisplay: true });
+  //   this.setState({ loading: true });
+
+  //   if (validateEmail(this.state.email)) {
+  //     console.log("send");
+  //     axios({
+  //       method: "post",
+  //       url: NET_SERVER_URL + "/code",
+  //       data: {
+  //         email: this.state.email,
+  //       },
+  //     }).then((response) => {
+  //       console.log(response);
+  //       if (response.status === 201) {
+  //         console.log("succeed");
+  //         this.setState({ loading: false });
+  //         this.setState({ codeSucceed: true });
+  //       } else if (response.status === 204) {
+  //         this.setState({ loading: false });
+  //         this.setState({ emailError: true });
+  //       }
+  //       this.setState({ errorDisplay: true });
+  //     });
+  //   } else {
+  //     this.setState({ emailError: true });
+  //     this.setState({ errorDisplay: true });
+  //   }
+  // };
   submitCode = (e) => {
     e.preventDefault();
     this.setState({ errorDisplay: true });
-    this.setState({ loading: true });
-
-
-    if (validateEmail(this.state.email)) {
-      console.log("send");
-      axios({
-        method: "post",
-        url: NET_SERVER_URL + "/code",
-        data: {
-          email: this.state.email,
-        },
-      }).then((response) => {
-        console.log(response);
-        if (response.status === 201) {
-          console.log("succeed");
-          this.setState({ loading: false });
-          this.setState({ codeSucceed: true });
-        } else if (response.status === 204) {
-          this.setState({ loading: false });
-          this.setState({ emailError: true });
-        }
-        this.setState({ errorDisplay: true });
-      });
-    } else {
-      this.setState({ emailError: true });
-      this.setState({ errorDisplay: true });
-    }
+    this.setState({ tooLate: true });
   };
 
   submitVote = (e) => {
     e.preventDefault();
     this.setState({ errorDisplay: true });
-    this.setState({ loading: true });
-    if (validateEmail(this.state.email) && validateName(this.state.name) &&  this.state.votes.length > 0) {
-      axios({
-        method: "post",
-        url: NET_SERVER_URL + "/vote",
-        data: {
-          email: this.state.email,
-          name: this.state.name,
-          code: this.state.code,
-          votes: this.state.votes,
-        },
-      }).then((response) => {
-        this.setState({ loading: false });
-        if (response.status === 201) {
-          this.setState({ errorDisplay: true });
-          this.setState({ succeed: true });
-          window.location = "/rabi5th/art-contest";
-          const data = response.data;
-          console.log(data);
-        } else if (response.status === 204) {
-          this.setState({ emailError: false, nameError: false, voteError: false });
-          this.setState({ codeEmailError: true });
-          this.setState({ errorDisplay: true });
-        }
-      });
-    } else {
-      this.setState({ loading: false });
-      if (!validateEmail(this.state.email)) {
-        this.setState({ emailError: true });
-      }
-      if (!validateName(this.state.name)) {
-        this.setState({ nameError: true });
-      }
-      if (this.state.votes.length > 5 || this.state.votes.length <= 0) {
-        this.setState({ voteError: true });
-      }
-      this.setState({ errorDisplay: true });
-    }
+    this.setState({ tooLate: true });
+
   };
+
+  // submitVote = (e) => {
+  //   e.preventDefault();
+  //   this.setState({ errorDisplay: true });
+  //   this.setState({ loading: true });
+  //   if (validateEmail(this.state.email) && validateName(this.state.name) &&  this.state.votes.length > 0) {
+  //     axios({
+  //       method: "post",
+  //       url: NET_SERVER_URL + "/vote",
+  //       data: {
+  //         email: this.state.email,
+  //         name: this.state.name,
+  //         code: this.state.code,
+  //         votes: this.state.votes,
+  //       },
+  //     }).then((response) => {
+  //       this.setState({ loading: false });
+  //       if (response.status === 201) {
+  //         this.setState({ errorDisplay: true });
+  //         this.setState({ succeed: true });
+  //         window.location = "/rabi5th/art-contest";
+  //         const data = response.data;
+  //         console.log(data);
+  //       } else if (response.status === 204) {
+  //         this.setState({ emailError: false, nameError: false, voteError: false });
+  //         this.setState({ codeEmailError: true });
+  //         this.setState({ errorDisplay: true });
+  //       }
+  //     });
+  //   } else {
+  //     this.setState({ loading: false });
+  //     if (!validateEmail(this.state.email)) {
+  //       this.setState({ emailError: true });
+  //     }
+  //     if (!validateName(this.state.name)) {
+  //       this.setState({ nameError: true });
+  //     }
+  //     if (this.state.votes.length > 5 || this.state.votes.length <= 0) {
+  //       this.setState({ voteError: true });
+  //     }
+  //     this.setState({ errorDisplay: true });
+  //   }
+  // };
   addPage = () => {
     let newPage = this.state.page;
     newPage++;
@@ -570,7 +578,7 @@ class ModalUnit extends Component {
             </div>
 
             <div className={styles.boardFrame}>
-              <div id="voteArea" className={`${styles.board} gallerybg  gallerybg${this.state.page}`} >
+              <div id="voteArea" className={`${styles.board} gallerybg  gallerybg${this.state.page}`}>
                 <button disabled={this.state.page >= max ? true : false} className={`${styles.button} ${styles.changePageR}`} onClick={this.addPage}>
                   <i className="fas fa-angle-double-right"></i>
                 </button>
@@ -605,9 +613,7 @@ class ModalUnit extends Component {
                               <FormattedMessage id="app.p2-p10-4" />：{players[index]}
                             </p>
                           </div>
-                          <div className={`${styles.fullImageWrapper} gallerybgUnit gallerybgUnit${index}`}>
-                            {/* <img alt={index} src={el.big} /> */}
-                          </div>
+                          <div className={`${styles.fullImageWrapper} gallerybgUnit gallerybgUnit${index}`}>{/* <img alt={index} src={el.big} /> */}</div>
                           <button className={`${styles.buttonL} ${styles.innerVoteButton}`} onClick={() => this.clickHandler(index)}>
                             {this.state.votes.includes(index) ? <FormattedMessage id="app.p2-p10-1" /> : <FormattedMessage id="app.p2-p10-2" />}
                           </button>
@@ -619,7 +625,7 @@ class ModalUnit extends Component {
                 <button disabled={this.state.page <= 1 ? true : false} className={`${styles.button} ${styles.changePageL}`} onClick={this.minusPage}>
                   <i className="fas fa-angle-double-right"></i>
                 </button>
-          
+
                 <div className={styles.page}>
                   <p>{`${this.state.page}/${max}`}</p>
                 </div>
@@ -704,6 +710,9 @@ class ModalUnit extends Component {
                 </p>
                 <p className={this.state.codeSucceed ? `${styles.success}` : `${styles.success} ${styles.hidden}`}>
                   <FormattedMessage id="app.p2-w-8" />
+                </p>
+                <p className={this.state.tooLate ? `${styles.emailWarning}` : `${styles.emailWarning} ${styles.hidden}`}>
+                  <FormattedMessage id="app.p2-w-14" />
                 </p>
 
                 <button id="infoCloseButton" className={`${styles.buttonL} ${styles.verifyCodeButton}`} onClick={this.clearMessages}>
