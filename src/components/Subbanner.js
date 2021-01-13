@@ -1,26 +1,21 @@
 import React from "react";
 import Button from "./Button";
-import Pagebreak_2 from "./Pagebreak_2";
+import Pagebreak_1 from "./Pagebreak_1";
 import styles from "./subbanner.module.css";
+import Title from "./Title";
 
 const Subbanner = () => {
   return (
     <div className={styles.subbannerWrapper}>
-      <div className="buffer" id="products"></div>
-      <div className={styles.subbannerBlock}>
-        <div className={styles.subbannerBlockHead}>
-          <h1>{`期間限定\n預購開始`}</h1>
+      <div className="buffer" id="video"></div>
+      <Title id="阿樂的影片" />
+      <div className={styles.videoWrapper}>
+        <div className={styles.videoContainer}>
+          <iframe width="640" height="360" src="https://www.youtube.com/embed/mMKonMlPy0k" frameborder="0" allowfullscreen></iframe>
         </div>
-        <h2>01/15-02/15</h2>
       </div>
 
-      <div className={styles.buttonwrapper}>
-        <Button>
-          <h2>馬上預購</h2>
-        </Button>
-      </div>
-
-      <Pagebreak_2 />
+      <Pagebreak_1 />
     </div>
   );
 };

@@ -11,28 +11,33 @@ import Producers from "../components/Producers";
 import Music from "../components/Music";
 import Belt from "../components/Belt";
 import Buynow from "../components/Buynow";
+import buyNowImage from "../public/assets/images/icon_loading.png";
+
 
 const navs = [
-  { tag: "#products", id: "app.p3-nav1" },
-  { tag: "#music", id: "app.p3-nav2" },
-  { tag: "#producer", id: "app.p3-nav3" },
-  { tag: "#rules", id: "app.p3-nav4" },
+  { tag: "#video", id: "app.p3-nav1" },
+  { tag: "#limit", id: "app.p3-nav2" },
+  { tag: "#live", id: "app.p3-nav3" },
+  { tag: "#try", id: "app.p3-nav4" },
+  { tag: "https://www.crespirit.com", id: "app.p3-nav5" },
 ];
 
 class App extends Component {
   constructor(props) {
     super(props);
-    this.productsRef = React.createRef();
-    this.musicRef = React.createRef();
-    this.producerRef = React.createRef();
-    this.rulesRef = React.createRef();
+    this.videoRef = React.createRef();
+    this.limitRef = React.createRef();
+    this.liveRef = React.createRef();
+    this.tryRef = React.createRef();
+    this.buynowRef = React.createRef();
   }
   state = {
     windowX: 0,
-    productsTop: 0,
-    musicTop: 0,
-    producerTop: 0,
-    rulesTop: 0,
+    videoTop: 0,
+    limitTop: 0,
+    liveTop: 0,
+    tryTop: 0,
+    buynowTop: 0,
     activatedIndex: "",
     amount: 0,
     locale: "zh",
@@ -46,25 +51,25 @@ class App extends Component {
     window.removeEventListener("scroll", this.listenToScroll);
   }
   amountChange = (amount) => {
-    this.setState({amount: amount})
-  }
+    this.setState({ amount: amount });
+  };
 
   listenToScroll = () => {
     const winScroll = document.documentElement.scrollTop + window.innerHeight;
 
-    if (winScroll >= this.state.rulesTop && this.state.productsTop !== 0) {
+    if (winScroll >= this.state.tryTop && this.state.videoTop !== 0) {
       this.setState({
         activatedIndex: 3,
       });
-    } else if (winScroll >= this.state.producerTop && this.state.productsTop !== 0) {
+    } else if (winScroll >= this.state.liveTop - 2500 && this.state.videoTop !== 0) {
       this.setState({
         activatedIndex: 2,
       });
-    } else if (winScroll >= this.state.musicTop && this.state.productsTop !== 0) {
+    } else if (winScroll >= this.state.limitTop - 1900 && this.state.videoTop !== 0) {
       this.setState({
         activatedIndex: 1,
       });
-    } else if (winScroll >= this.state.productsTop - 200 && this.state.productsTop !== 0) {
+    } else if (winScroll >= this.state.videoTop - 400 && this.state.videoTop !== 0) {
       this.setState({
         activatedIndex: 0,
       });
@@ -80,21 +85,23 @@ class App extends Component {
   };
 
   render() {
-      
-    if (this.productsRef.current !== null && this.state.productsTop === 0) {
-      this.setState({ productsTop: this.productsRef.current.getBoundingClientRect().top + document.documentElement.scrollTop });
+    if (this.videoRef.current !== null && this.state.videoTop === 0) {
+      this.setState({ videoTop: this.videoRef.current.getBoundingClientRect().top + document.documentElement.scrollTop });
     }
 
-    if (this.musicRef.current !== null && this.state.productsTop === 0) {
-      this.setState({ musicTop: this.musicRef.current.getBoundingClientRect().top + document.documentElement.scrollTop });
+    if (this.limitRef.current !== null && this.state.videoTop === 0) {
+      this.setState({ limitTop: this.limitRef.current.getBoundingClientRect().top + document.documentElement.scrollTop });
     }
 
-    if (this.producerRef.current !== null && this.state.productsTop === 0) {
-      this.setState({ producerTop: this.producerRef.current.getBoundingClientRect().top + document.documentElement.scrollTop });
+    if (this.liveRef.current !== null && this.state.videoTop === 0) {
+      this.setState({ liveTop: this.liveRef.current.getBoundingClientRect().top + document.documentElement.scrollTop });
     }
 
-    if (this.rulesRef.current !== null && this.state.productsTop === 0) {
-      this.setState({ rulesTop: this.rulesRef.current.getBoundingClientRect().top + document.documentElement.scrollTop });
+    if (this.tryRef.current !== null && this.state.videoTop === 0) {
+      this.setState({ tryTop: this.tryRef.current.getBoundingClientRect().top + document.documentElement.scrollTop });
+    }
+    if (this.buynowRef.current !== null && this.state.videoTop === 0) {
+      this.setState({ buynowTop: this.buynowRef.current.getBoundingClientRect().top + document.documentElement.scrollTop });
     }
     return (
       <div className="App">
@@ -109,18 +116,25 @@ class App extends Component {
           />
         </header>
         <main>
+          <div className="buynowbutton">
+            <a target="_blank" href="/">
+              <img src={buyNowImage} />
+            </a>
+          </div>
           <Firefly />
-          <Subbanner/>
-          <div ref={this.productsRef}></div>
-          <LimitProducts/>
-          <div ref={this.musicRef}></div>
-          <Mvs/>
-          <div ref={this.producerRef}></div>
-          <Producers />
-          <Music/>
-          <Belt/>
-          <div ref={this.rulesRef}></div>
-          <Buynow/>
+          <Subbanner />
+          <div ref={this.videoRef}></div>
+          <LimitProducts />
+          <div ref={this.limitRef}></div>
+          <Mvs />
+          <div ref={this.liveRef}></div>
+          <Belt />
+          {/* <Producers /> */}
+          <Music />
+          <div ref={this.tryRef}></div>
+          {/* <Buynow/> */}
+          <div ref={this.buynowRef}></div>
+
           <Footer />
         </main>
       </div>

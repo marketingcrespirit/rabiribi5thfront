@@ -12,6 +12,7 @@ import P3 from "./sections/P3";
 import en from "./i18n/en";
 import zh from "./i18n/zh";
 import { Redirect } from "react-router-dom";
+import Rules from "./sections/Rules";
 
 const Root = () => {
   const [locale, setLocale] = useState(navigator.language);
@@ -57,10 +58,15 @@ const Root = () => {
       </Route>
 
       <Route exact path="/rabi5th/clickmeifyoucan">
-        <Redirect to="/rabi5th" />
-        {/* <IntlProvider locale={locale} key={locale} defaultLocale="zh" messages={messages}>
+        <IntlProvider locale={locale} key={locale} defaultLocale="zh" messages={messages}>
           <P3 defaultLocale="zh" changed={changeHandler} locale={locale} setLocale={setLocale} />
-        </IntlProvider> */}
+        </IntlProvider>
+      </Route>
+
+      <Route exact path="/rabi5th/buynow">
+        <IntlProvider locale={locale} key={locale} defaultLocale="zh" messages={messages}>
+          <Rules defaultLocale="zh" changed={changeHandler} locale={locale} setLocale={setLocale} />
+        </IntlProvider>
       </Route>
     </Router>
   );

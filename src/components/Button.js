@@ -4,7 +4,9 @@ import styles from "./button.module.css";
 const Button = (props) => {
   return (
     <div className={styles.button}>
-      <a href="/">{props.children}</a>
+      <a target="_blank" href={props.href}>
+        {props.children}
+      </a>
     </div>
   );
 };

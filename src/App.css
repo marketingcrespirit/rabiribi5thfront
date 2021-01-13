@@ -252,22 +252,22 @@ input,
   background-image: url("./public/assets/images/members/stripe/2.png");
 }
 .gallerybg3 {
-  background-image: url('./public/assets/images/members/stripe/3.png');
+  background-image: url("./public/assets/images/members/stripe/3.png");
 }
 .gallerybg4 {
-  background-image: url('./public/assets/images/members/stripe/4.png');
+  background-image: url("./public/assets/images/members/stripe/4.png");
 }
 .gallerybg5 {
-  background-image: url('./public/assets/images/members/stripe/5.png');
+  background-image: url("./public/assets/images/members/stripe/5.png");
 }
 .gallerybg6 {
-  background-image: url('./public/assets/images/members/stripe/6.png');
+  background-image: url("./public/assets/images/members/stripe/6.png");
 }
 .gallerybg7 {
-  background-image: url('./public/assets/images/members/stripe/7.png');
+  background-image: url("./public/assets/images/members/stripe/7.png");
 }
 .gallerybg8 {
-  background-image: url('./public/assets/images/members/stripe/8.png');
+  background-image: url("./public/assets/images/members/stripe/8.png");
 }
 
 .gallerybgUnit {
@@ -775,7 +775,7 @@ div.note p {
 }
 .carousel {
   position: relative;
-  width: 100%;
+  max-width: 1000px;
 }
 .carousel * {
   -webkit-box-sizing: border-box;
@@ -801,6 +801,7 @@ div.note p {
 .carousel .thumbs-wrapper {
   margin: 20px;
   overflow: hidden;
+  display: none;
 }
 .carousel .thumbs {
   -webkit-transition: all 0.15s ease-in;
@@ -1012,6 +1013,76 @@ div.note p {
   }
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  -webkit-border-radius: 5px;
+  border-radius: 10px;
+  margin: 80px 0 5px 0;
+}
+::-webkit-scrollbar-thumb {
+  background: #a68654;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  background-clip: content-box;
+}
+
+.buynowbutton {
+  position: fixed;
+  bottom: 100px;
+  right: 100px;
+  z-index: 10;
+  animation: bounce 2s infinite;
+}
+
+.yellow {
+  color: #a69654;
+}
+
+.nav-lists > li:nth-child(5) a{
+  color: #a69654;
+  font-weight: 900;
+  font-size: 1.2rem;
+}
+
+.nav-lists > li:nth-child(5) a:hover {
+  animation: heartBeat 1s ;
+  
+}
+
+@keyframes heartBeat {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    font-size: 1.2em;
+  }
+  40% {
+    font-size: 1.8em;
+  }
+  60% {
+    font-size: 1.4em;
+  }
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
 @media only screen and (max-width: 1300px) {
   h1 {
     font-size: 24px;
@@ -1220,5 +1291,12 @@ div.note p {
   }
   .gallerybg8 {
     background-image: url("./public/assets/images/members/stripe/8m.png");
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .buynowbutton {
+    bottom: 50px;
+    right: 20px;
   }
 }

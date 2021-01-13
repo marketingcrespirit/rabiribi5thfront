@@ -17,19 +17,20 @@ const list = [
 export default function Mvs() {
   return (
     <div className={styles.mvsWrapper}>
-      <div className="buffer" id="music"></div>
+      <div className="buffer" id="live"></div>
       <Title id="五週年交響樂介紹" />
-      <div className={styles.mv}>
-        <ReactPlayer url="" width="100%" height="500px" light="" />
+
+      <div className={styles.videoWrapper}>
+        <div className={styles.videoContainer}>
+          <iframe width="640" height="360" src="https://www.youtube.com/embed/mMKonMlPy0k" frameborder="0" allowfullscreen></iframe>
+        </div>
       </div>
 
       <Pagebreak_2 />
 
-      <div className={styles.mv}>
-        <ReactPlayer url="" width="100%" height="500px" light="" />
+      <div className={styles.imgWrapper}>
+        <img src="https://picsum.photos/800/600?random=6" />
       </div>
-
-      <Pagebreak_2 />
 
       <div className={styles.textWrapper}>
         <p>我們挑出票選前25首熱門的遊戲配樂，並委託台北愛樂管弦樂團擔綱演奏錄製，讓原本輕快活潑的電子音樂搖身一變成磅礡優美的交響樂！UPRPRC俱樂部的會員們，一起盡情大飽耳福吧！</p>
@@ -39,7 +40,31 @@ export default function Mvs() {
         <Carousel list={list} />
       </div>
 
-      <Pagebreak_1 />
+      <div className={styles.scrollWrapper}>
+        <ul>
+          <li>
+            <img src="https://picsum.photos/800/600?random=6" />
+          </li>
+          <li>
+            <img src="https://picsum.photos/800/600?random=5" />
+          </li>
+          <li>
+            <img src="https://picsum.photos/800/600?random=4" />
+          </li>
+          <li>
+            <img src="https://picsum.photos/800/600?random=3" />
+          </li>
+          <li>
+            <img src="https://picsum.photos/800/600?random=2" />
+          </li>
+          <li>
+            <img src="https://picsum.photos/800/600?random=1" />
+          </li>
+          <li>
+            <img src="https://picsum.photos/800/600?random=0" />
+          </li>
+        </ul>
+      </div>
     </div>
   );
 }

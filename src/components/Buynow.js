@@ -52,30 +52,6 @@ const Buynow = () => {
       </div>
 
       <Pagebreak_2 />
-
-      <div className="buffer" id="rules"></div>
-      <div className={styles.titleWrapper}>
-        <Title id="訂購流程" />
-      </div>
-
-      <div className={styles.stepsWrapper}>
-        {steps.map((el, index) => {
-          return <Step src={el.src} content={el.content} index={index + 1} key={index} />;
-        })}
-      </div>
-
-      <div className={styles.titleWrapper}>
-        <Title id="預購規章" />
-      </div>
-      <ul className={styles.ul}>
-        {rules.map((el, index) => {
-          return <li key={index}>{el}</li>;
-        })}
-      </ul>
-
-      <Button>
-        <h2>馬上選購</h2>
-      </Button>
     </div>
   );
 };

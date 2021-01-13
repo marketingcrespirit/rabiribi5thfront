@@ -6,8 +6,12 @@
   padding: 1rem 0 1rem 0;
 }
 
+.carouselWrapper {
+  width: 50%;
+}
+
 .limitProducts {
-  display: flex;
+  /* display: flex; */
   max-width: 1200px;
   margin: 5em auto;
   justify-content: space-between;
@@ -16,6 +20,31 @@
   margin-bottom: 8rem;
 }
 
+.music {
+  margin: 3rem auto;
+}
+
+.limitProducts > div:nth-child(2) > div > div.musicLowerTxt,
+.limitProducts > div:nth-child(4) > div > div.musicLowerTxt {
+  padding-left: 2rem;
+}
+
+.limitProducts > div:nth-child(1) > div > div.musicLowerTxt,
+.limitProducts > div:nth-child(3) > div > div.musicLowerTxt {
+  padding-right: 2rem;
+}
+
+.musicLowerTxt {
+  width: 50%;
+}
+
+.music h2 {
+  color: #a68654;
+}
+
+.musicLower {
+  display: flex;
+}
 
 @media only screen and (max-width: 700px) {
   .limitProducts {

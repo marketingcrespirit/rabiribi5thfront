@@ -162,10 +162,12 @@ const zh_TW = {
   "app.p2-p9-5": "UPRPRC俱樂部 會員獎 20名",
   "app.p2-p9-6": "Rabi-Ribi Steam版本 DLC序號乙份： 參加徵稿活動投票，即可參加抽獎。",
 
-  "app.p3-nav1": "限定商品",
-  "app.p3-nav2": "交響樂介紹",
-  "app.p3-nav3": "製作人介紹",
-  "app.p3-nav4": "訂購流程",
+  "app.p3-nav1": "前導影片",
+  "app.p3-nav2": "限定商品",
+  "app.p3-nav3": "現場演奏",
+  "app.p3-nav4": "專輯試聽",
+  "app.p3-nav5": "馬上預購",
+  "app.p3-nav6": "上一頁",
 
   "app.p2-p10-1": "取消",
   "app.p2-p10-2": "投我",

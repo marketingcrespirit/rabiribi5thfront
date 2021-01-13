@@ -3,7 +3,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   color: #fff;
-  padding: 3em 0;
+  padding: 0rem 0 20rem 0;
 }
 
 .mv {
@@ -15,13 +15,81 @@
   width: 100%;
 }
 
+.imgWrapper {
+  margin: auto;
+  max-width: 1200px;
+}
+.imgWrapper img {
+  max-width: 100%;
+  display: block;
+  margin: auto;
+}
+
+.videoWrapper {
+  max-width: 1200px;
+  margin: 5rem auto;
+}
+
+.videoContainer {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+}
+
+.videoContainer iframe,
+.videoContainer object,
+.videoContainer embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 .textWrapper {
   max-width: 1000px;
-  margin: auto;
+  margin: 5rem auto;
 }
 
 .carouselWrapper {
-  max-width: 1200px;
+  max-width: 800px;
   margin: auto;
 }
 
+.scrollWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+  margin: 5rem auto;
+}
+
+.scrollWrapper ul {
+  margin: -2px;
+  margin: 0;
+  flex-wrap: nowrap;
+  display: flex;
+  padding: 0;
+  list-style: none;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+.scrollWrapper li {
+  width: 30%;
+  height: 100%;
+  padding: 2px;
+  max-height: 200px;
+  overflow: visible;
+  margin-right: 12px;
+  margin-bottom: 4px;
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+.scrollWrapper li img {
+  height: 100%;
+  border: 2px solid #a68654;
+}
