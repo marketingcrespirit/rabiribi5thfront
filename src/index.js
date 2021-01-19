@@ -58,23 +58,17 @@ const Root = () => {
         </IntlProvider>
       </Route>
 
-      <Route exact path="/rabi5th/clickmeifyoucan">
+      {/* <Route exact path="/rabi5th/clickmeifyoucan">
         <IntlProvider locale={locale} key={locale} defaultLocale="zh" messages={messages}>
           <P3 defaultLocale="zh" changed={changeHandler} locale={locale} setLocale={setLocale} />
         </IntlProvider>
-      </Route>
+      </Route> */}
 
-      <Route exact path="/rabi5th/buynow">
+      {/* <Route exact path="/rabi5th/buynow">
         <IntlProvider locale={locale} key={locale} defaultLocale="zh" messages={messages}>
           <Rules defaultLocale="zh" changed={changeHandler} locale={locale} setLocale={setLocale} />
         </IntlProvider>
-      </Route>
-
-      <Route exact path="/test">
-        <IntlProvider locale={locale} key={locale} defaultLocale="zh" messages={messages}>
-          <P4 defaultLocale="zh" changed={changeHandler} locale={locale} setLocale={setLocale} />
-        </IntlProvider>
-      </Route>
+      </Route> */}
 
       
     </Router>
