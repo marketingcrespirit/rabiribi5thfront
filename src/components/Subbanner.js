@@ -8,7 +8,7 @@ const Subbanner = () => {
   return (
     <div className={styles.subbannerWrapper}>
       <div className="buffer" id="video"></div>
-      <Title id="阿樂的影片" />
+      <Title id="Rabi-Ribi五週年活動開始!" />
       <div className={styles.videoWrapper}>
         <div className={styles.videoContainer}>
           <iframe width="640" height="360" src="https://www.youtube.com/embed/mMKonMlPy0k" frameborder="0" allowfullscreen></iframe>

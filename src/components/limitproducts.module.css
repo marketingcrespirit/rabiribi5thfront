@@ -7,47 +7,106 @@
 }
 
 .carouselWrapper {
+  width: calc(50% - 2rem);
+  margin-right: 2rem;
+  display: flex;
+}
+
+.musicLower {
   width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.carouselWrapper img {
+  width: 100%;
 }
 
 .limitProducts {
-  /* display: flex; */
-  max-width: 1200px;
-  margin: 5em auto;
+}
+
+.buttonOutterWrapper {
+  display: flex;
+  align-items: flex-end;
   justify-content: space-between;
 }
+
 .buttonWrapper {
-  margin-bottom: 8rem;
+  width: 225px;
+}
+
+.buttonWrapper1 {
+  width: 100%;
 }
 
 .music {
+  display: flex;
+  max-width: 900px;
   margin: 3rem auto;
-}
-
-.limitProducts > div:nth-child(2) > div > div.musicLowerTxt,
-.limitProducts > div:nth-child(4) > div > div.musicLowerTxt {
-  padding-left: 2rem;
-}
-
-.limitProducts > div:nth-child(1) > div > div.musicLowerTxt,
-.limitProducts > div:nth-child(3) > div > div.musicLowerTxt {
-  padding-right: 2rem;
-}
-
-.musicLowerTxt {
-  width: 50%;
 }
 
 .music h2 {
   color: #a68654;
 }
 
-.musicLower {
-  display: flex;
+.musicLowerTxt {
 }
 
-@media only screen and (max-width: 700px) {
-  .limitProducts {
+.music h2 {
+}
+
+.musicLower {
+}
+
+.animeWrapper {
+  width: 100px;
+}
+
+.anime1 {
+  background-size: cover;
+  width: 100px;
+  height: 100px;
+  background-image: url(../public/assets/images/animation_01.png);
+  animation: moveX 0.5s steps(5) infinite;
+}
+.anime2 {
+  background-size: cover;
+  width: 100px;
+  height: 100px;
+  background-image: url(../public/assets/images/animation_02.png);
+  animation: moveX 0.5s steps(5) infinite;
+}
+
+@keyframes moveX {
+  0% {
+    background-position-x: 0px;
+  }
+  100% {
+    background-position-x: -500px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .music {
+    width: 80%;
     display: block;
+  }
+  .limitProducts {
+  }
+  .musicLower {
+    width: 100%;
+    margin: auto;
+  }
+  .musicLowerTxt {
+  }
+  .carouselWrapper {
+    width: 80%;
+  }
+  .buttonWrapper {
+    width: 225px;
+  }
+
+  .music h2 {
   }
 }

@@ -103,7 +103,7 @@ class Player extends React.Component {
       <>
         <div className={styles.mainContainer}>
           <div className={styles.playlist}>{playlist}</div>
-          <div className={styles.dashboard}>
+          {/* <div className={styles.dashboard}>
             <div className={styles.timeContainer}>
               {currentTime} / {duration}
             </div>
@@ -144,7 +144,7 @@ class Player extends React.Component {
                 </button>
               )}
             </div>
-          </div>
+          </div> */}
 
           <audio ref={(ref) => (this.music = ref)} />
         </div>

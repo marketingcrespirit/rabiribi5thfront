@@ -30,58 +30,69 @@ const LimitProducts = () => {
         return <ProductCard key={index} name={el.name} price={el.price} />;
         })} */}
         <div className={styles.music}>
-          <h2>五週年實體版</h2>
+          <div className={styles.carouselWrapper}>
+            <img src="https://picsum.photos/600/400?random=6" />
+          </div>
+
           <div className={styles.musicLower}>
+            <h2>五週年實體版</h2>
             <div className={styles.musicLowerTxt}>
               <p>身為UPRPRC的俱樂部會員…怎麼可以錯過香香的兔子周邊呢？新的一年，帶上露咪親手做的兔子護身符，開啟人生的無敵模式吧！Rabi-Ribi五週年的精美禮盒，讓你一打開就受到滿滿的可愛彈幕攻擊！</p>
             </div>
-            <div className={styles.carouselWrapper}>
-              <Carousel list={list2} />
+            <div className={styles.buttonWrapper}>
+              <Button href="/rabi5th/buynow">
+                <h2>馬上預購</h2>
+              </Button>
             </div>
           </div>
         </div>
 
         <div className={styles.music}>
-          <h2>五週年實體版</h2>
+          <div className={styles.carouselWrapper}>
+            <img src="https://picsum.photos/600/400?random=6" />
+          </div>
+
           <div className={styles.musicLower}>
-            <div className={styles.carouselWrapper}>
-              <Carousel list={list2} />
-            </div>
+            <h2>五週年實體版</h2>
             <div className={styles.musicLowerTxt}>
-              <p>剪裁俐落的演奏服與黑絲襪，可愛靈動，是五週年Erina的專屬衣裝！別忘了還有身穿白色小禮服的Ribbon，優雅腰身配上身後大大的蝴蝶結；Rabi沒有最可愛，只有更可愛！你以為只有這樣嗎？這次還新增了可可亞讓你操控唷！一起來探索地圖的更多可能性吧！Rabi五週年，給你復古的華麗新體驗～</p>
+              <p>身為UPRPRC的俱樂部會員…怎麼可以錯過香香的兔子周邊呢？新的一年，帶上露咪親手做的兔子護身符，開啟人生的無敵模式吧！Rabi-Ribi五週年的精美禮盒，讓你一打開就受到滿滿的可愛彈幕攻擊！</p>
+            </div>
+            <div className={styles.buttonOutterWrapper}>
+              <div className={styles.buttonWrapper}>
+                <Button href="/rabi5th/buynow">
+                  <h2>馬上預購</h2>
+                </Button>
+              </div>
+
+              <div className={styles.animeWrapper}>
+                <div className={styles.anime1}></div>
+              </div>
             </div>
           </div>
         </div>
 
         <div className={styles.music}>
-          <h2>五週年實體版</h2>
+          <div className={styles.carouselWrapper}>
+            <img src="https://picsum.photos/600/400?random=6" />
+          </div>
+
           <div className={styles.musicLower}>
+            <h2>五週年實體版</h2>
             <div className={styles.musicLowerTxt}>
-              <p>剪裁俐落的演奏服與黑絲襪，可愛靈動，是五週年Erina的專屬衣裝！別忘了還有身穿白色小禮服的Ribbon，優雅腰身配上身後大大的蝴蝶結；Rabi沒有最可愛，只有更可愛！你以為只有這樣嗎？這次還新增了可可亞讓你操控唷！一起來探索地圖的更多可能性吧！Rabi五週年，給你復古的華麗新體驗～</p>
+              <p>身為UPRPRC的俱樂部會員…怎麼可以錯過香香的兔子周邊呢？新的一年，帶上露咪親手做的兔子護身符，開啟人生的無敵模式吧！Rabi-Ribi五週年的精美禮盒，讓你一打開就受到滿滿的可愛彈幕攻擊！</p>
             </div>
-            <div className={styles.carouselWrapper}>
-              <Carousel list={list2} />
+            <div className={styles.buttonOutterWrapper}>
+              <div className={styles.buttonWrapper}>
+                <Button href="/rabi5th/buynow">
+                  <h2>馬上預購</h2>
+                </Button>
+              </div>
+              <div className={styles.animeWrapper}>
+                <div className={styles.anime2}></div>
+              </div>
             </div>
           </div>
         </div>
-
-        <div className={styles.music}>
-          <h2>五週年實體版</h2>
-          <div className={styles.musicLower}>
-            <div className={styles.carouselWrapper}>
-              <Carousel list={list2} />
-            </div>
-            <div className={styles.musicLowerTxt}>
-              <p>剪裁俐落的演奏服與黑絲襪，可愛靈動，是五週年Erina的專屬衣裝！別忘了還有身穿白色小禮服的Ribbon，優雅腰身配上身後大大的蝴蝶結；Rabi沒有最可愛，只有更可愛！你以為只有這樣嗎？這次還新增了可可亞讓你操控唷！一起來探索地圖的更多可能性吧！Rabi五週年，給你復古的華麗新體驗～</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className={styles.buttonWrapper}>
-        <Button href="/rabi5th/buynow">
-          <h2>馬上預購</h2>
-        </Button>
       </div>
 
       <Pagebreak_1 />

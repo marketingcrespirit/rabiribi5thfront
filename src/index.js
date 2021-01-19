@@ -9,6 +9,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import P1 from "./sections/P1";
 import P2 from "./sections/P2";
 import P3 from "./sections/P3";
+import P4 from './sections/P4'
 import en from "./i18n/en";
 import zh from "./i18n/zh";
 import { Redirect } from "react-router-dom";
@@ -68,6 +69,14 @@ const Root = () => {
           <Rules defaultLocale="zh" changed={changeHandler} locale={locale} setLocale={setLocale} />
         </IntlProvider>
       </Route>
+
+      <Route exact path="/test">
+        <IntlProvider locale={locale} key={locale} defaultLocale="zh" messages={messages}>
+          <P4 defaultLocale="zh" changed={changeHandler} locale={locale} setLocale={setLocale} />
+        </IntlProvider>
+      </Route>
+
+      
     </Router>
   );
 };

@@ -37,8 +37,11 @@ a,
 input,
 button {
   font-size: 18px;
-  color: #f1eae5;
+  color: #e2d4bd;
   font-weight: 600;
+  line-height: 1.5em;
+  margin-top: 17px;
+  margin-bottom: 17px;
 }
 
 input,
@@ -74,9 +77,10 @@ input,
 
 .bigHeader {
   text-align: center;
-  background: linear-gradient(180deg, rgba(252, 230, 218, 1) 35%, rgba(225, 181, 112, 1) 81%, rgba(134, 117, 208, 1) 100%);
+  /* background: linear-gradient(180deg, rgba(252, 230, 218, 1) 35%, rgba(225, 181, 112, 1) 81%, rgba(134, 117, 208, 1) 100%);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent; */
+  color: #a68654;
 }
 .bigHeader h1 img {
   width: 50px;
@@ -593,11 +597,11 @@ input,
 }
 
 /*# sourceMappingURL=gallery.css.map */
-
+/* 
 table {
   width: 100%;
   margin-top: 20px;
-}
+} */
 
 .tg {
   border-collapse: collapse;
@@ -629,9 +633,9 @@ table {
   font-size: 20px;
 }
 
-tr {
+/* tr {
   height: 50px;
-}
+} */
 
 .note {
   height: 150px;
@@ -1040,16 +1044,6 @@ div.note p {
   color: #a69654;
 }
 
-.nav-lists > li:nth-child(5) a{
-  color: #a69654;
-  font-weight: 900;
-  font-size: 1.2rem;
-}
-
-.nav-lists > li:nth-child(5) a:hover {
-  animation: heartBeat 1s ;
-  
-}
 
 @keyframes heartBeat {
   0%,
@@ -1252,9 +1246,9 @@ div.note p {
 .subtitle_p1 {
   background-color: #181818;
   border-radius: 5px;
-  color: #fff;
+  color: #a68654;
   width: fit-content;
-  padding: 0.5em;
+  padding: 0.5em 1em;
   border: 1px solid #6b5941;
   margin-top: 2em;
 }
@@ -1298,5 +1292,8 @@ div.note p {
   .buynowbutton {
     bottom: 50px;
     right: 20px;
+  }
+  .center {
+    text-align: center;
   }
 }

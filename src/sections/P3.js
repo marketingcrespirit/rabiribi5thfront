@@ -7,7 +7,6 @@ import Firefly from "../components/Firefly";
 import Subbanner from "../components/Subbanner";
 import LimitProducts from "../components/LimitProducts";
 import Mvs from "../components/Mvs";
-import Producers from "../components/Producers";
 import Music from "../components/Music";
 import Belt from "../components/Belt";
 import Buynow from "../components/Buynow";
@@ -126,11 +125,12 @@ class App extends Component {
           <div ref={this.videoRef}></div>
           <LimitProducts />
           <div ref={this.limitRef}></div>
+          <Music />
           <Mvs />
           <div ref={this.liveRef}></div>
           <Belt />
           {/* <Producers /> */}
-          <Music />
+          
           <div ref={this.tryRef}></div>
           {/* <Buynow/> */}
           <div ref={this.buynowRef}></div>

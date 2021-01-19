@@ -1,8 +1,20 @@
 .pageBreak {
-    margin: 2em auto 2em auto;
-    text-align: center;
+  margin: 0 auto;
+  text-align: center;
 }
 
-.pageBreak img {
+@media only screen and (max-width: 700px) {
+}
+
+@media only screen and (min-width: 900px) {
+  .pageBreak img {
     max-width: 100%;
+  }
+  .pageBreak {
+    display: flex;
+    justify-content: center;
+  }
+  .pageBreak img {
+    width: auto;
+  }
 }

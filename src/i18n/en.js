@@ -3,6 +3,7 @@ const en = {
   "app.address": "Address",
   "app.addressContent": "10F., No. 22, Chenggong 13th St., Zhubei City, Hsinchu County 302, Taiwan (R.O.C.)",
   "app.tel": "Email",
+  nav0: "Winner List",
   nav1: "Voting Rule",
   nav2: "Intro",
   nav3: "Key date",
@@ -155,6 +156,23 @@ const en = {
   "app.p2-w-12": "Thanks for your message.",
   "app.p2-w-13": "Close",
   "app.p2-w-14": "The voting event is over. Thanks for your visit.",
+
+  "app.p3-winner-1": "Winner List",
+  "app.p3-winner-2": "Judge Prize (6 people)",
+  "app.p3-winner-3": "Number ",
+  "app.p3-winner-4": "Producer Special",
+  "app.p3-winner-5": "Popularity Prize  (6 people)",
+  "app.p3-winner-6": "Popularity Prize  (6 people)",
+  "app.p3-winner-7": "Words from GEMA, the Producer ",
+  "app.p3-winner-8": "It seems Miriam is still napping when it is her shop's opening time. I hope Syaro do not mind it. This art reminds me that I always wanted characters on Rabi Rabi Island have more interaction between others while I created this game. However, the gameplay has already been very long, I do not want to add too many dialogs that not related to the gameplay to make the game time lengthy. Overall, I feel happy to see an art showing their slice of life. It leading to the thought, “Have Syaro and Cicini already used to the life on Rabi Rabi Island?”",
+  "app.p3-winner-9": "Warning",
+  "app.p3-winner-10": "We will contact winner by Jan. 25, 2021 through the e-mail you submit art. In case we missed the connection in massive information, we are welcome winners contact us for prize. Once we do not get any message from winner by Feb. 17, 2021, we will see the winner give up the right of receiving prize. If the winner does not receive the prize by a month after the prize shipped, please contact CreSpirit. All the date and time are based on the time zone GMT+8.",
+  
+  "app.p3-winner-11": "Producer Special / Judge Price / Popularity Prize",
+  "app.p3-winner-12": "Win a set of Rabi-Ribi 5th Anniversary Orchestra Dulex Box",
+  "app.p3-winner-13": "UPRPRC member Prize",
+  "app.p3-winner-14": "Win a Rabi-Ribi Steam DLC code (Orchestra Music Mode & Skin)",
+
 };
 
 export default en;

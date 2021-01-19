@@ -8,8 +8,10 @@ import DraftIntro from "../components/DraftIntro";
 import Gifts from "../components/Gifts";
 import Footer from "../components/Footer";
 import Gallerys from "../components/Gallerys";
+import Winner from "../components/Winner";
 
 const navs = [
+  { tag: "#winner", content: "得獎名單", id: "nav0" },
   { tag: "#vote", content: "投票說明", id: "nav1" },
   { tag: "#intro", content: "活動介紹", id: "nav2" },
   { tag: "#schedule", content: "時間軸", id: "nav3" },
@@ -113,7 +115,7 @@ class App extends Component {
 
         <main>
           {/* <Firefly /> */}
-
+          <Winner/>
           <div ref={this.voteRef}></div>
           <Gallerys locale={this.props.locale}/>
           <DraftIntro />

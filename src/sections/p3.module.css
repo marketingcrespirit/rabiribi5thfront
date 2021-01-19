@@ -17,8 +17,6 @@
   background-repeat: no-repeat;
   background-size: cover;
   height: fit-content;
-
-  
 }
 
 .formBg {
@@ -26,11 +24,7 @@
   background-size: cover;
   color: #fff;
   position: relative;
-
 }
-
-
-
 
 .center {
   text-align: center;
@@ -151,7 +145,7 @@
 }
 
 .white {
-  color: #e2d4bd;
+  color: #fff;
 }
 
 .board {
@@ -384,10 +378,8 @@
 }
 
 .mobile {
-  display: none
+  display: none;
 }
-
-
 
 .undo {
   top: -15%;
@@ -412,7 +404,6 @@
   text-align: center;
   z-index: 4;
 }
-
 
 .announce {
   margin: 2em 0;
@@ -465,7 +456,7 @@
 }
 
 .buttonWrapper a:hover {
-  color: #fff
+  color: #fff;
 }
 
 .verifyCodeButton {
@@ -536,7 +527,7 @@
   }
   .board {
     width: 70%;
-    height: fit-content
+    height: fit-content;
   }
 }
 
@@ -605,7 +596,7 @@
   .upper {
     position: relative;
     z-index: 1;
-    /* width: 275px; */
+    width: 275px;
     margin: auto;
   }
   .boardFrame {
@@ -618,14 +609,14 @@
   .board {
     width: 250px;
     margin-top: 5em;
-    height: 620px
+    height: 620px;
   }
   .message {
     margin-top: 1em;
   }
 
   .frameWrapper > .upper > :nth-child(2) {
-    width: 90%;
+    width: 75%;
   }
 
   .lowerWrapper img {
@@ -726,10 +717,10 @@
   }
 
   .mobile {
-    display: block
+    display: block;
   }
   .desktop {
-    display: none
+    display: none;
   }
   .button {
     z-index: 4;

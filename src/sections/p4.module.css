@@ -1,0 +1,58 @@
+.scrollWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 1200px;
+  margin: 5rem auto;
+}
+
+.big {
+    position: relative;
+    width: 50%;
+    margin: auto;
+}
+
+.big p {
+    position: absolute;
+    width: 100%;
+    height: 30%;
+    bottom: 0%;
+    background-color: rgba(255, 255, 255, 0.8);
+    margin: 0;
+    color: black;
+    padding: 2rem;
+}
+
+.big img {
+    display: block;
+    width: 100%;
+
+}
+
+.scrollWrapper ul {
+  margin: -2px;
+  margin: 0;
+  flex-wrap: nowrap;
+  display: flex;
+  padding: 0;
+  list-style: none;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+.scrollWrapper li {
+  width: calc(100vh * 80% * 0%);
+  height: 100%;
+  padding: 2px;
+  max-height: 200px;
+  overflow: visible;
+  margin-right: 12px;
+  margin-bottom: 4px;
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+.scrollWrapper li img {
+  height: 100%;
+  border: 2px solid #a68654;
+}

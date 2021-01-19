@@ -39,9 +39,18 @@ const list3 = [
 export default function Music() {
   return (
     <div className={styles.musicWrapper}>
-      <Title id="五週年商品介紹" />
+      <div id="try" className="buffer"></div>
+      <Title id="交響樂試聽專區" />
+      <div className={styles.playWrapper}>
+        <div className={styles.imgWrapper}>
+          <img src="https://picsum.photos/400/400?random=3" />
+        </div>
+        <div className={styles.playerWrapper}>
+          <Player />
+        </div>
+      </div>
       <div className={styles.music}>
-        <h2 className="yellow">交響樂數位版CD</h2>
+        <h2 className="yellow center">五週年交響樂曲目表</h2>
         <div className={styles.musicLower}>
           <div className={styles.musicLeft}>
             <div className={styles.carouselWrapper}>
@@ -74,15 +83,7 @@ export default function Music() {
             </div>
           </div>
         </div>
-        <Pagebreak_1 />
-        <div id="try" className="buffer"></div>
-        <Title id="交響樂試聽專區" />
-        <Player />
       </div>
-
-      <Button href="/rabi5th/buynow">
-        <h2>馬上預購</h2>
-      </Button>
     </div>
   );
 }
