@@ -4,6 +4,37 @@
   background-image: url("../public/assets/images/bg/p2_bg_new.jpg");
   color: #fff;
   padding-top: 2rem;
+  line-height: 3rem;
+  width: 100%;
+}
+
+.widthControler {
+  max-width: 1200px;
+}
+
+.winnerShowroom {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  top: 0;
+  left: 0;
+}
+
+.winnerImage {
+  margin: 10% auto;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.winnerImage img {
+  max-height: 100%;
+}
+
+.hidden {
+  display: none;
 }
 
 .opening {
@@ -12,16 +43,34 @@
   max-width: 700px;
 }
 
+.twoRow {
+  display: flex;
+  max-width: 1200px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.winnerUnit {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin: .3rem auto;
+}
+
+.winnerUnit img {
+  max-width: 267px;
+  cursor: pointer;
+}
+
 .opening p {
   margin: 5px auto;
 }
 
 .formWrapper {
-  max-width: 800px;
+  max-width: 1200px;
   margin: 2rem auto;
   color: #fff;
 }
-
 
 .formWrapper li {
   text-align: left;
@@ -29,7 +78,18 @@
   list-style: none;
 }
 
-.winnerListWrapper li i {
+.memberWrapper {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-evenly;
+}
+
+.memberWrapper li {
+    width: 400px;
+}
+
+.winnerListWrapper li i,
+.wrapperRight li i {
   margin-right: 0.3rem;
   color: #a68654;
 }
@@ -48,28 +108,43 @@
 }
 
 .specialWrapper {
-    max-width: 400px;
-    
+  max-width: 350px;
 }
 
 .specialWrapper img {
-    max-width: 100%;
+  max-width: 100%;
 }
 
-@media only screen and (max-width: 900px) {
-  .tgWinner {
-  }
+@media only screen and (max-width: 1300px) {
   .formWrapper {
     width: 90%;
     margin: auto;
   }
+}
+
+@media only screen and (max-width: 1000px) {
+
   .winnerListWrapper {
     display: block;
-    width: 80%;
+    /* width: 80%; */
     margin: auto;
   }
   .messageWrapper {
-    width: 80%;
     margin: auto;
+  }
+  .widthControler {
+    width: 90%;
+    margin: auto;
+  }
+  .winnerImage {
+    margin: 100px auto 0 auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .winnerImage img {
+    max-width: 90%;
+    max-height: 400px;
   }
 }

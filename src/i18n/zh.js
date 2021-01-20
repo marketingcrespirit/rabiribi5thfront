@@ -194,17 +194,18 @@ const zh_TW = {
   "app.p3-winner-1": "得獎名單",
   "app.p3-winner-2": "評審獎 6名",
   "app.p3-winner-3": "編號",
-  "app.p3-winner-4": "GemaYue (遊戲製作人) 特別獎 1名",
+  "app.p3-winner-4": "GemaYue(遊戲製作人)特別獎 1名",
   "app.p3-winner-5": "人氣獎 6名",
   "app.p3-winner-6": "會員獎 20名",
   "app.p3-winner-7": "遊戲製作人GemaYue的感想",
   "app.p3-winner-8": "已經到開店時間了，但米莉亞姆還在午睡，希望沙蘿不會感到介意?這張作品令我想起在製作遊戲時，一直希望能讓拉比拉比島上的居民有更多的互動。但是遊戲本身的長度已經很長，不是很想再增加跟動作要素沒有關係的內容，讓遊戲時間變得太冗長。非常高興能夠看到描述日常生活的作品，也不禁聯想——紗蘿和茜茜莉是不是已經習慣了這個島上的生活呢？",
   "app.p3-winner-9": "注意事項",
   "app.p3-winner-10": "為避免與得獎者聯繫不上，造成權益受損，得獎者亦可與主辦單位主動聯繫，進行兌獎手續；惟逾兌獎期限2/17(三)未能聯繫上或未完成兌獎手續，則視為得獎者放棄得獎權益，得獎名額不再遞補。",
-  "app.p3-winner-11": "GemaYue (遊戲製作人) 特別獎 / 評審獎 / 人氣獎",
+  "app.p3-winner-11": "GemaYue(遊戲製作人)特別獎 / 評審獎 / 人氣獎",
   "app.p3-winner-12": "獲得Rabi-Ribi 五周年交響樂豪華實體版乙份",
   "app.p3-winner-13": "UPRPRC俱樂部 會員獎",
   "app.p3-winner-14": "獲得Orchestra Music Mode & Skin（Steam序號乙份）",
+  "app.p3-winner-15": "順序以作品編號編排",
 
 };
 export default zh_TW;

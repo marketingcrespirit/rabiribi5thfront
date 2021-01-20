@@ -162,7 +162,7 @@ const en = {
   "app.p3-winner-3": "Number ",
   "app.p3-winner-4": "Producer Special",
   "app.p3-winner-5": "Popularity Prize  (6 people)",
-  "app.p3-winner-6": "Popularity Prize  (6 people)",
+  "app.p3-winner-6": "Lottery Prize  (20 people)",
   "app.p3-winner-7": "Words from GEMA, the Producer ",
   "app.p3-winner-8": "It seems Miriam is still napping when it is her shop's opening time. I hope Syaro do not mind it. This art reminds me that I always wanted characters on Rabi Rabi Island have more interaction between others while I created this game. However, the gameplay has already been very long, I do not want to add too many dialogs that not related to the gameplay to make the game time lengthy. Overall, I feel happy to see an art showing their slice of life. It leading to the thought, “Have Syaro and Cicini already used to the life on Rabi Rabi Island?”",
   "app.p3-winner-9": "Warning",
@@ -171,7 +171,8 @@ const en = {
   "app.p3-winner-11": "Producer Special / Judge Price / Popularity Prize",
   "app.p3-winner-12": "Win a set of Rabi-Ribi 5th Anniversary Orchestra Dulex Box",
   "app.p3-winner-13": "UPRPRC member Prize",
-  "app.p3-winner-14": "Win a Rabi-Ribi Steam DLC code (Orchestra Music Mode & Skin)",
+  "app.p3-winner-14": "Win a Rabi-Ribi Orchestra Music Mode & Skin (Steam DLC code)",
+  "app.p3-winner-15": "List by submission",
 
 };
 
