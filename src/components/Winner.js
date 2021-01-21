@@ -48,8 +48,36 @@ const popular = [
   { name: "56 saltywetspirit", src: pic055, srcM: pic055m },
   { name: "67 プチ", src: pic066, srcM: pic066m },
 ];
-const member = ["takumi_7**@yahoo.com", "shaoyou**@gmail.com", "wcko**@gmail.com", "taikokid**@gmail.com", "caffeinefightersha**@gmail.com", "seanhunter**@gmail.com", "six.shooter0**@gmail.com", "kenny742**@gmail.com", "kirablahete**@gmail.com", "a826239**@gmail.com", "matheussouza01**@gmail.com", "knock36**@yahoo.co.jp", "pshx1**@gmail.com", "ely05**@hotmail.com", "4907517**@qq.com", "samca1**@gmail.com", "darkm**@gmail.com", "garyfong**@gmail.com", "themultitasker98**@gmail.com", "gapt427820**@yahoo.co.jp"];
 const special = [{ name: "26 s.Claw", src: pic025, srcM: pic025m }];
+
+const memberList = ["takumi_748@yahoo.com"
+,"shaoyouru@gmail.com"
+,"wcko87@gmail.com"
+,"taikokid97@gmail.com"
+,"caffeinefightersharo@gmail.com"
+,"seanhuntersp@gmail.com"
+,"six.shooter062@gmail.com"
+,"kenny74242@gmail.com"
+,"kirablahetek1@gmail.com"
+,"a82623993@gmail.com"
+,"matheussouza0199@gmail.com"
+,"knock3621@yahoo.co.jp"
+,"pshx104@gmail.com"
+,"ely0514@hotmail.com"
+,"490751798@qq.com"
+,"samca121@gmail.com"
+,"darkmiz@gmail.com"
+,"garyfongff@gmail.com"
+,"themultitasker9898@gmail.com"
+,"gapt42782000@yahoo.co.jp"]
+
+let finalList = []
+
+memberList.map((el, index) => {
+    let str = el
+    str = str.replace(/...@/g, "***@");
+    finalList.push(str)
+})
 
 const group = [
   { name: "26 s.Claw", src: pic025, srcM: pic025m },
@@ -218,7 +246,7 @@ const Winner = () => {
           </div>
           <div>
             <ul className={styles.memberWrapper}>
-              {member.map((el, index) => {
+              {finalList.map((el, index) => {
                 return (
                   <li>
                     <i class="fas fa-music"></i>
