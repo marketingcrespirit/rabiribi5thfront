@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { FormattedMessage } from "react-intl";
 import Title from "./Title";
 import styles from "./winner.module.css";
-import image from "../public/assets/images/members/25.png";
 
 import pic000 from "../public/assets/images/members/0.png";
 import pic003 from "../public/assets/images/members/3.png";
