@@ -27,6 +27,7 @@ class App extends Component {
     this.ruleRef = React.createRef();
     this.prizeRef = React.createRef();
     this.voteRef = React.createRef();
+    this.winnerRef = React.createRef();
   }
   state = {
     windowX: 0,
@@ -36,6 +37,7 @@ class App extends Component {
     ruleTop: 0,
     prizeTop: 0,
     voteTop: 0,
+    winnerTop: 0,
     activatedIndex: "",
     locale: "zh",
   };
@@ -52,21 +54,25 @@ class App extends Component {
     const winScroll = document.documentElement.scrollTop + window.innerHeight;
     if (winScroll >= this.state.prizeTop  && this.state.voteTop !== 0) {
       this.setState({
-        activatedIndex: 4,
+        activatedIndex: 5,
       });
     } else if (winScroll >= this.state.ruleTop  && this.state.voteTop !== 0) {
       this.setState({
-        activatedIndex: 3,
+        activatedIndex: 4,
       });
     } else if (winScroll >= this.state.scheduleTop && this.state.voteTop !== 0) {
       this.setState({
-        activatedIndex: 2,
+        activatedIndex: 3,
       });
     } else if (winScroll >= this.state.introTop  && this.state.voteTop !== 0) {
       this.setState({
-        activatedIndex: 1,
+        activatedIndex: 2,
       });
     } else if (winScroll >= this.state.voteTop  && this.state.voteTop !== 0) {
+      this.setState({
+        activatedIndex: 1,
+      });
+    } else if (winScroll >= this.state.winnerTop  && this.state.voteTop !== 0) {
       this.setState({
         activatedIndex: 0,
       });
@@ -100,9 +106,13 @@ class App extends Component {
     if (this.voteRef.current !== null && this.state.introTop === 0) {
       this.setState({ voteTop: this.voteRef.current.getBoundingClientRect().top + document.documentElement.scrollTop });
     }
+    if (this.winnerRef.current !== null && this.state.introTop === 0) {
+      this.setState({ winnerTop: this.winnerRef.current.getBoundingClientRect().top + document.documentElement.scrollTop });
+    }
     return (
       <div className="App">
-        <header className="App-header">
+        <header className="App-header" >
+          
           <Navbars
             locale={this.props.locale}
             changed={(e) => {
@@ -112,9 +122,10 @@ class App extends Component {
             navs={navs}
           />
         </header>
-
+        <div id="winner"></div>
         <main>
           {/* <Firefly /> */}
+          <div ref={this.winnerRef}></div>
           <Winner/>
           <div ref={this.voteRef}></div>
           <Gallerys locale={this.props.locale}/>
