@@ -107,11 +107,11 @@ const Winner = () => {
   };
   return (
     <div className={styles.winnerWrapper}>
-      <div className={modal ? `${styles.winnerShowroom}` : `${styles.hidden}`} onClick={toggleModal}>
+      {/* <div className={modal ? `${styles.winnerShowroom}` : `${styles.hidden}`} onClick={toggleModal}>
         <div className={styles.winnerImage}>
           <img src={show !== null ? group[show].src : ""} />
         </div>
-      </div>
+      </div> */}
       <Title id="app.p3-winner-1" />
       <div className={styles.formWrapper}>
         <div className={styles.messageWrapper}>
