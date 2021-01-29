@@ -47,11 +47,6 @@
  text-align: center;
 }
 
-.innerWrapper h2 {
-  color: #a68654;
-  
-}
-
 .innerWrapper ul {
   max-width: 700px;
   margin: auto;
@@ -602,7 +597,7 @@
 }
 
 .innerWrapper a {
-  color: var(--text-color-4);
+  color: #deac5e;
   text-decoration: none;
 }
 
