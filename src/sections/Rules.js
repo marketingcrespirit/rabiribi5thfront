@@ -123,7 +123,7 @@ class Rules extends Component {
               <FormattedMessage id="app.p3-74" />
             </h2>
             <p>
-              <FormattedMessage id="app.p3-75-1" /><a href="https://www.crespirit.com/contact-us/"><FormattedMessage id="app.p3-133" /></a><FormattedMessage id="app.p3-75-2" />
+              <FormattedMessage id="app.p3-75-1" /><a href="https://www.crespirit.com/contact-us/" target="_blank" rel="noreferrer"><FormattedMessage id="app.p3-133" /></a><FormattedMessage id="app.p3-75-2" />
             </p>
 
             <h2 className={styles.yellow}>
@@ -211,7 +211,7 @@ class Rules extends Component {
               <FormattedMessage id="app.p3-101" />
             </p>
             <p>
-              <FormattedMessage id="app.p3-102-1" /><a href="https://www.crespirit.com/contact-us/"><FormattedMessage id="app.p3-133" /></a><FormattedMessage id="app.p3-102-2" />
+              <FormattedMessage id="app.p3-102-1" /><a href="https://www.crespirit.com/contact-us/" target="_blank" rel="noreferrer"><FormattedMessage id="app.p3-133" /></a><FormattedMessage id="app.p3-102-2" />
             </p>
 
             {/* <h2 className={styles.yellow}>
@@ -293,7 +293,7 @@ class Rules extends Component {
             </h2>
             <p>
               <FormattedMessage id="app.p3-125" />
-              <a className={styles.link} href="https://www.crespirit.com/prods-list/">
+              <a className={styles.link} target="_blank" rel="noreferrer" href="https://www.crespirit.com/contact-us/">
                 <FormattedMessage id="app.p3-126" />
               </a>
               <FormattedMessage id="app.p3-127" />
@@ -315,7 +315,7 @@ class Rules extends Component {
             </h2>
             <p>
               <FormattedMessage id="app.p3-132" />
-              <a className={styles.link} href="/">
+              <a className={styles.link} href="https://www.crespirit.com/contact-us/" target="_blank" rel="noreferrer">
                 <FormattedMessage id="app.p3-133" />
               </a>
               <FormattedMessage id="app.p3-134" />
