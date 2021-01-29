@@ -3,56 +3,41 @@
   background-repeat: no-repeat;
   background-size: cover;
   color: #fff;
-  padding: 3rem 0;
+  padding-bottom: 143px;
+}
+
+.headWrapper {
+  padding-top: 93px;
+  margin-bottom: 56px;
 }
 
 .music {
-  max-width: 1000px;
-  margin: 4rem auto;
+  max-width: 750px;
+  margin: 35px auto;
 }
 
 .musicLower {
   display: flex;
-  flex-direction: row;
-  margin: 2rem auto 5rem auto;
+  margin: 25px auto 0 auto;
+  padding-left: 12px;
+  color: #e2d4bd;
+  font-size: 24px;
 }
 
 .musicLeft {
-  display: flex;
-  flex-direction: column-reverse;
-  justify-content: space-between;
 }
 
 .musicLeft,
 .musicRight {
   width: 50%;
-  height: 725px;
-}
-
-.musicRight > .musicLowerTxt {
-  margin-left: 20%;
-}
-
-.song {
-  border: 1px solid #a68654;
-  margin-bottom: 5px;
-
-}
-
-.song span {
-  background-color: #a68654;
-  display: inline-block;
-  padding: 0.3rem;
-  margin-right: 1rem;
-  width: 30px;
 }
 
 .carouselWrapper {
   width: 80%;
 }
 
-.musicLowerTxt {
-  width: 80%;
+.musicLowerTxt div span {
+  margin-right: 0.5rem;
 }
 
 .musicLower p {
@@ -64,37 +49,51 @@
 }
 
 .animeWrapper {
-  
 }
 
 .playWrapper {
   display: flex;
-  max-width: 900px;
-  margin: 3rem auto;
-  box-sizing: border-box;
+  margin: auto;
+  box-sizing: content-box;
   justify-content: center;
-  
 }
 
 .imgWrapper {
-  border: 2px solid #a68654;
   box-sizing: content-box;
+  border-right: none;
 }
-.imgWrapper img {
-  max-width: 100%;
-}
-
 
 .playerWrapper {
   width: 50%;
 }
 
-
-
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 700px) {
+  .playerWrapper {
+    width: 100%;
+    margin: auto;
+  }
+  .music h2 {
+    font-size: 14px;
+  }
+  .musicWrapper {
+    padding-bottom: 90px;
+  }
+  .imgWrapper {
+    margin: auto;
+    width: 100%;
+  }
+  .imgWrapper img {
+    width: 100%;
+  }
+  .playWrapper {
+    display: block;
+  }
+  .musicLowerTxt div {
+    font-size: 14px;
+  }
   .musicLower {
     display: block;
-    height: fit-content;
+    margin-top: 15px;
   }
   .musicLeft {
     flex-direction: column;
@@ -102,8 +101,7 @@
   }
   .musicLeft,
   .musicRight {
-    width: 90%;
-    margin: auto;
+    width: 100%;
   }
   .musicLowerTxt {
     width: 100%;
@@ -118,17 +116,11 @@
   .musicRight > .musicLowerTxt {
     margin-left: 0;
   }
-  .playWrapper {
-    display: block;
+  .musicLowerTxt div span {
+    margin-right: 0;
   }
-  .imgWrapper {
-    max-width: 400px;
-    margin: auto;
-  }
-  .playWrapper {
-    max-width: 400px;
-  }
-  .playerWrapper {
-   width: 100%;
+  .headWrapper {
+    padding-top: 50px;
+    margin-bottom: 25px;
   }
 }

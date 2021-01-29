@@ -6,21 +6,11 @@ import Footer from "./components/Footer";
 import Firefly from "./components/Firefly";
 import Intro from "./components/Intro";
 
-const navs = [
-  
-];
+const navs = [];
 
 class App extends Component {
   constructor(props) {
     super(props);
-    //p1
-    // this.introRef = React.createRef();
-    // this.scheduleRef = React.createRef();
-    // this.judgeRef = React.createRef();
-    // this.ruleRef = React.createRef();
-    // this.prizeRef = React.createRef();
-    // this.joinRef = React.createRef();
-    //p2
     this.introRef = React.createRef();
     this.gatherRef = React.createRef();
     this.voteRef = React.createRef();
@@ -37,6 +27,8 @@ class App extends Component {
     activatedIndex: "",
     amount: 0,
     locale: "zh",
+    navStyle: "none",
+    prevScrollpos: window.pageYOffset,
   };
 
   componentDidMount() {
@@ -47,32 +39,22 @@ class App extends Component {
     window.removeEventListener("scroll", this.listenToScroll);
   }
   amountChange = (amount) => {
-    this.setState({amount: amount})
-  }
+    this.setState({ amount: amount });
+  };
 
   listenToScroll = () => {
-    const winScroll = document.documentElement.scrollTop + window.innerHeight;
-    if (winScroll >= this.state.timelineTop && this.state.introTop !== 0) {
-      this.setState({
-        activatedIndex: 3,
-      });
-    } else if (winScroll >= this.state.voteTop && this.state.introTop !== 0) {
-      this.setState({
-        activatedIndex: 2,
-      });
-    } else if (winScroll >= this.state.gatherTop && this.state.introTop !== 0) {
-      this.setState({
-        activatedIndex: 1,
-      });
-    } else if (winScroll >= this.state.introTop && this.state.introTop !== 0) {
-      this.setState({
-        activatedIndex: 0,
-      });
-    } else if (winScroll > 969) {
-      this.setState({
-        activatedIndex: "",
-      });
+    var currentScrollPos = window.pageYOffset;
+    if (this.state.prevScrollpos > currentScrollPos) {
+      document.getElementById("navbar").style.top = "0";
+    } else {
+      document.getElementById("navbar").style.top = "-90px";
     }
+    if (currentScrollPos > 10) {
+      this.setState({ navStyle: "blue" });
+    } else {
+      this.setState({ navStyle: "none" });
+    }
+    this.setState({ prevScrollpos: currentScrollPos });
   };
   handleChange = (e) => {
     this.setState({ locale: e.target.value });
@@ -80,21 +62,6 @@ class App extends Component {
   };
 
   render() {
-    if (this.introRef.current !== null && this.state.introTop === 0) {
-      this.setState({ introTop: this.introRef.current.getBoundingClientRect().top + document.documentElement.scrollTop });
-    }
-
-    if (this.gatherRef.current !== null && this.state.introTop === 0) {
-      this.setState({ gatherTop: this.gatherRef.current.getBoundingClientRect().top + document.documentElement.scrollTop });
-    }
-
-    if (this.voteRef.current !== null && this.state.introTop === 0) {
-      this.setState({ voteTop: this.voteRef.current.getBoundingClientRect().top + document.documentElement.scrollTop });
-    }
-
-    if (this.timelineRef.current !== null && this.state.introTop === 0) {
-      this.setState({ timelineTop: this.timelineRef.current.getBoundingClientRect().top + document.documentElement.scrollTop });
-    }
     return (
       <div className="App">
         <header className="App-header">
@@ -105,13 +72,19 @@ class App extends Component {
             }}
             activatedIndex={this.state.activatedIndex}
             navs={navs}
+            bg={this.state.navStyle === "none" ? true : false}
           />
         </header>
 
         <main>
           <Firefly />
           <Intro />
-          <Footer />
+          <Footer
+            locale={this.props.locale}
+            changed={(e) => {
+              this.props.changed(e);
+            }}
+          />
         </main>
       </div>
     );

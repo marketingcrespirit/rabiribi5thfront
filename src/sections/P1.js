@@ -20,15 +20,6 @@ const navs = [
 ];
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.introRef = React.createRef();
-    this.scheduleRef = React.createRef();
-    this.ruleRef = React.createRef();
-    this.prizeRef = React.createRef();
-    this.voteRef = React.createRef();
-    this.winnerRef = React.createRef();
-  }
   state = {
     windowX: 0,
     introTop: 0,
@@ -40,6 +31,7 @@ class App extends Component {
     winnerTop: 0,
     activatedIndex: "",
     locale: "zh",
+    navStyle: "none",
   };
 
   componentDidMount() {
@@ -51,36 +43,19 @@ class App extends Component {
   }
 
   listenToScroll = () => {
-    const winScroll = document.documentElement.scrollTop + window.innerHeight;
-    if (winScroll >= this.state.prizeTop  && this.state.voteTop !== 0) {
-      this.setState({
-        activatedIndex: 5,
-      });
-    } else if (winScroll >= this.state.ruleTop  && this.state.voteTop !== 0) {
-      this.setState({
-        activatedIndex: 4,
-      });
-    } else if (winScroll >= this.state.scheduleTop && this.state.voteTop !== 0) {
-      this.setState({
-        activatedIndex: 3,
-      });
-    } else if (winScroll >= this.state.introTop  && this.state.voteTop !== 0) {
-      this.setState({
-        activatedIndex: 2,
-      });
-    } else if (winScroll >= this.state.voteTop  && this.state.voteTop !== 0) {
-      this.setState({
-        activatedIndex: 1,
-      });
-    } else if (winScroll >= this.state.winnerTop  && this.state.voteTop !== 0) {
-      this.setState({
-        activatedIndex: 0,
-      });
-    } else if (winScroll > 969) {
-      this.setState({
-        activatedIndex: "",
-      });
+    var currentScrollPos = window.pageYOffset;
+    if (this.state.prevScrollpos > currentScrollPos) {
+      document.getElementById("navbar").style.top = "0";
+    } else {
+      document.getElementById("navbar").style.top = "-90px";
     }
+    if (currentScrollPos > 10) {
+      this.setState({ navStyle: "blue" });
+    } else {
+      this.setState({ navStyle: "none" });
+    }
+    this.setState({ prevScrollpos: currentScrollPos });
+   
   };
   handleChange = (e) => {
     this.setState({ locale: e.target.value });
@@ -88,27 +63,8 @@ class App extends Component {
   };
 
   render() {
-    if (this.prizeRef.current !== null && this.state.introTop === 0) {
-      this.setState({ prizeTop: this.prizeRef.current.getBoundingClientRect().top + document.documentElement.scrollTop });
-    }
-
-    if (this.ruleRef.current !== null && this.state.introTop === 0) {
-      this.setState({ ruleTop: this.ruleRef.current.getBoundingClientRect().top + document.documentElement.scrollTop - 500 });
-    }
-
-    if (this.scheduleRef.current !== null && this.state.introTop === 0) {
-      this.setState({ scheduleTop: this.scheduleRef.current.getBoundingClientRect().top + document.documentElement.scrollTop - 300 });
-    }
-
-    if (this.introRef.current !== null && this.state.introTop === 0) {
-      this.setState({ introTop: this.introRef.current.getBoundingClientRect().top + document.documentElement.scrollTop });
-    }
-    if (this.voteRef.current !== null && this.state.introTop === 0) {
-      this.setState({ voteTop: this.voteRef.current.getBoundingClientRect().top + document.documentElement.scrollTop });
-    }
-    if (this.winnerRef.current !== null && this.state.introTop === 0) {
-      this.setState({ winnerTop: this.winnerRef.current.getBoundingClientRect().top + document.documentElement.scrollTop });
-    }
+    
+   
     return (
       <div className="App">
         <header className="App-header" >
@@ -116,10 +72,14 @@ class App extends Component {
           <Navbars
             locale={this.props.locale}
             changed={(e) => {
+              document.querySelector("body").style.height = "auto";
+              document.querySelector("body").style.overflow = "auto";
               this.props.changed(e);
             }}
             activatedIndex={this.state.activatedIndex}
             navs={navs}
+            bg={this.state.navStyle === "none" ? true : false}
+
           />
         </header>
         <div id="winner"></div>
@@ -138,7 +98,12 @@ class App extends Component {
           <Gifts />
           <div ref={this.prizeRef}></div>
           
-          <Footer />
+          <Footer
+            locale={this.props.locale}
+            changed={(e) => {
+              this.props.changed(e);
+            }}
+          />
           
         </main>
       </div>

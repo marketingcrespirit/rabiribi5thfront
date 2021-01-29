@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Bulletin from "./Bulletin";
 import axios from "axios";
 import styles from './sticker.module.css'
 import Test from "./Test";

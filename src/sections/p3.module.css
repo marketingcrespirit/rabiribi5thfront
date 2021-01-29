@@ -1,3 +1,82 @@
+:root {
+  --text-color-1: #f1eae5;
+  --text-color-2: #e2d4bd;
+  --text-color-3: #a68654;
+  --text-color-4: #deac5e;
+  --text-color-5: #110e0a;
+}
+
+.main {
+  position: relative;
+}
+.modalWrapper {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 999;
+}
+
+.blueNav {
+  
+}
+
+.blackNav {
+  
+}
+
+.hidden {
+  display: none;
+}
+
+.innerWrapper {
+  border: 1px solid #deac5e;
+  max-width: 900px;
+  margin: 15vh auto;
+  padding: 2rem;
+  background-color: #110e0a;
+  overflow: scroll;
+}
+
+.innerWrapper h1 {
+ color: #deac5e;
+ margin-bottom: 63px;
+ text-align: center;
+}
+
+.innerWrapper h2 {
+  color: #a68654;
+  
+}
+
+.innerWrapper ul {
+  max-width: 700px;
+  margin: auto;
+  list-style-type: none;
+}
+
+.innerWrapper li h2:before {
+  width: 5px;
+  content: '•';
+  color: #a68654;
+  display: inline-flex;
+  margin-right: 10px
+}
+
+
+.innerWrapper p {
+  color: #f1eae5
+}
+
+.buttonWrapper {
+  width: 300px;
+  margin: auto
+}
+
+
+
 .outerWrapper {
   position: relative;
   text-align: center;
@@ -519,6 +598,16 @@
 
 .mobileButton {
   display: none;
+}
+
+.innerWrapper a {
+  color: var(--text-color-4);
+  text-decoration: none;
+}
+
+.innerWrapper a:hover {
+  color: var(--text-color-1);
+  font-weight: 700;
 }
 
 @media only screen and (max-width: 1100px) {

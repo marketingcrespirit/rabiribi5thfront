@@ -87,6 +87,7 @@ class ColoredRect extends React.Component {
   fliesMove = () => {
     this.state.activating.map((el) => {
       el.move();
+      return true
     });
   };
 
@@ -108,7 +109,7 @@ class Banner extends Component {
     return (
       <div className={styles.gatherWrapper}>
         <div className={ this.props.count !== 0 ? `${styles.hidden}` : `${styles.loading}`}>
-          <img src={image}/>
+          <img alt="loading" src={image}/>
         </div>
         <div id="gather" className="buffer"></div>
         <div className={styles.headWrapper}>

@@ -10,7 +10,7 @@ import { FormattedMessage } from "react-intl";
 const judge = [
   { src: image1, name: "app.p2-p1-2", title: "app.p2-p1-3", content: "selfintro", href:"/rabi5th/go-bunny-go" },
   { src: image2, name: "app.p2-p1-4", title: "app.p2-p1-5", content: "selfintro", href:"/rabi5th/art-contest" },
-  { src: image3, name: "app.p2-p1-6", title: "app.p2-p1-7", content: "selfintro", href:"/" },
+  { src: image3, name: "app.p2-p1-6", title: "app.p2-p1-7", content: "selfintro", href:"/rabi5th/happy5th-anniversary" },
 ];
 
 const Judge = (props) => {

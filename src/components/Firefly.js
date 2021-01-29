@@ -3,7 +3,10 @@ import { Stage, Layer, Image } from "react-konva";
 import firefly from "../public/assets/icons/firefly.png";
 import useImage from "use-image";
 import styles from "./firefly.module.css";
-import bug from "../public/assets/images/bug.png";
+import Button from "./Button";
+import bannerTxt from "../public/assets/images/text_banner.png";
+import { FormattedMessage } from "react-intl";
+
 
 const w_left = window.innerWidth * 0.15;
 const w_right = window.innerWidth * 0.4;
@@ -123,6 +126,7 @@ class ColoredRectL extends React.Component {
     this.state.flies.map((el) => {
       el.move();
       newArray.push(el);
+      return true
     });
     this.setState({ flies: newArray });
   };
@@ -155,6 +159,7 @@ class ColoredRectR extends React.Component {
     this.state.flies.map((el) => {
       el.move();
       newArray.push(el);
+      return true
     });
     this.setState({ flies: newArray });
   };
@@ -171,7 +176,18 @@ class Banner extends Component {
   render() {
     return (
       <div className="bannerWrapper">
-        <div className={styles.bannerTxt}></div>
+        <div className={styles.bannerTxtWrapper}>
+          <div className={styles.bannerTxt}>
+            <div className={styles.bannerInner}>
+              <img alt="5th anniversity" src={bannerTxt} />
+              <div className={styles.buttonWrapper}>
+                <Button href="https://www.crespirit.com/prods-list/">
+                  <h2><FormattedMessage id="app.p3-28"></FormattedMessage></h2>
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
         <div className="banner">
           <Stage className={styles.flyleft} width={window.innerWidth * 0.2} height={window.innerHeight}>
             <Layer className="bannerImg">
@@ -183,9 +199,6 @@ class Banner extends Component {
               <ColoredRectR />
             </Layer>
           </Stage>
-          <div className={styles.bug}>
-            <img src={bug} />
-          </div>
         </div>
       </div>
     );

@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import styles from "./gifts.module.css";
 
 import { FormattedMessage } from "react-intl";

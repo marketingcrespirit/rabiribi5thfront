@@ -170,10 +170,6 @@
   animation-delay: 1s;
 }
 
-.coin img {
-  /* animation: rotateY 3s infinite linear; */
-}
-
 .coin.active:after {
   content: "";
   background-image: url("../public/assets/images/coin_after.png");
@@ -261,7 +257,6 @@
 @media only screen and (max-width: 900px) {
   .wrapper {
     height: fit-content;
-    background-image: url("../public/assets/images/bg/p2_bg_mobile.jpg");
   }
   .pillar {
     width: 20%;

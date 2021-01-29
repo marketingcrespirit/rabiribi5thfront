@@ -7,6 +7,9 @@ import steam from "../public/assets/icons/steam.png";
 import logo from "../public/assets/icons/logo_t.png";
 
 class Footer extends Component {
+  state = {
+    locale: this.props.locale,
+  }
   getMenuItemTitle = (menuItem, index, depthLevel) => {
     return menuItem.breadcrumbName;
   };
@@ -44,22 +47,23 @@ class Footer extends Component {
           <div className={`${styles.navSocial}`}>
             <div className={`${styles.navSocialIcon}`}>
               <a target="_blank" rel="noreferrer" href="https://www.facebook.com/gaming/RabiRibiGame">
-                <img  alt="facebook logo"  src={facebook} />
+                <img alt="facebook logo" src={facebook} />
               </a>
             </div>
 
             <div className={`${styles.navSocialIcon}`}>
               <a target="_blank" rel="noreferrer" href="https://store.steampowered.com/app/400910/RabiRibi/">
-                <img  alt="steam logo"  src={steam} />
+                <img alt="steam logo" src={steam} />
               </a>
             </div>
             <div className={`${styles.navSocialIcon}`}>
               <a target="_blank" rel="noreferrer" href="https://twitter.com/rabiribigame">
-                <img  alt="twitter logo"  src={twitter} />
+                <img alt="twitter logo" src={twitter} />
               </a>
             </div>
+
+            
           </div>
-         
         </div>
         <div className={`${styles.footerCopyright}`}>
           <p className={`${styles.footerCopy}`}>

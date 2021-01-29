@@ -9,7 +9,6 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import P1 from "./sections/P1";
 import P2 from "./sections/P2";
 import P3 from "./sections/P3";
-import P4 from './sections/P4'
 import en from "./i18n/en";
 import zh from "./i18n/zh";
 import { Redirect } from "react-router-dom";
@@ -58,19 +57,17 @@ const Root = () => {
         </IntlProvider>
       </Route>
 
-      {/* <Route exact path="/rabi5th/clickmeifyoucan">
+      <Route exact path="/rabi5th/happy5th-anniversary">
         <IntlProvider locale={locale} key={locale} defaultLocale="zh" messages={messages}>
           <P3 defaultLocale="zh" changed={changeHandler} locale={locale} setLocale={setLocale} />
         </IntlProvider>
-      </Route> */}
+      </Route>
 
-      {/* <Route exact path="/rabi5th/buynow">
+      <Route exact path="/rabi5th/buynow">
         <IntlProvider locale={locale} key={locale} defaultLocale="zh" messages={messages}>
           <Rules defaultLocale="zh" changed={changeHandler} locale={locale} setLocale={setLocale} />
         </IntlProvider>
-      </Route> */}
-
-      
+      </Route>  
     </Router>
   );
 };

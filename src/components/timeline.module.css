@@ -39,13 +39,6 @@
   animation-delay: 3s;
 }
 
-.bugWrapper {
-  position: absolute;
-  top: -65%;
-  left: -5vw;
-  z-index: 1;
-}
-
 .lightWrapper {
   position: relative;
   text-align: center;
@@ -138,9 +131,6 @@
 }
 
 @media only screen and (max-width: 900px) {
-  .wrapper {
-    background-image: url("../public/assets/images/bg/p2_bg_mobile.jpg");
-  }
   .stepsWrapper {
     display: block;
     margin: 4em 0;

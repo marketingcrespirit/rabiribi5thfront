@@ -94,7 +94,7 @@ import arrow from "../public/assets/images/explains/arrow.png";
 
 import styles from "./gallerys.module.css";
 import Gallery from "./Gallery";
-import axios from "axios";
+// import axios from "axios";
 import Title from "./Title";
 import NextPageBtn from "../components/NextPageBtn";
 
@@ -262,17 +262,17 @@ const players = [
   "Red Rain",
 ];
 
-const NET_SERVER_URL = "https://rabiribi5thserver.herokuapp.com";
+// const NET_SERVER_URL = "https://rabiribi5thserver.herokuapp.com";
 // const NET_SERVER_URL = "http://localhost:3001";
 const max = 8;
-function validateEmail(email) {
-  var re = /\S+@\S+\.\S+/;
-  return re.test(email);
-}
+// function validateEmail(email) {
+//   var re = /\S+@\S+\.\S+/;
+//   return re.test(email);
+// }
 
-function validateName(name) {
-  return name.length < 10 && name.length > 0;
-}
+// function validateName(name) {
+//   return name.length < 10 && name.length > 0;
+// }
 
 // overwrite style
 const modalStyle = {
@@ -496,16 +496,16 @@ class ModalUnit extends Component {
 
   // render app
   render() {
-    let message;
-    if (this.state.votes.length === 0) {
-      message = <FormattedMessage id="app.p2-p6-7" />;
-    } else if (this.state.votes.length < 5 && this.state.votes.length > 0) {
-      // message = `${<FormattedMessage id="app.p2-p6-7"/>} ${5 - this.state.votes.length} ${<FormattedMessage id="app.p2-p6-7"/>}`
-    } else if (this.state.votes.length > 5) {
-      message = `你多選了${this.state.votes.length - 5}個喔！！！`;
-    } else if (this.state.votes.length === 5) {
-      message = `很好 你投完了！ 把下方的表格填完就可以送出了！`;
-    }
+    // let message;
+    // if (this.state.votes.length === 0) {
+    //   message = <FormattedMessage id="app.p2-p6-7" />;
+    // } else if (this.state.votes.length < 5 && this.state.votes.length > 0) {
+    //   // message = `${<FormattedMessage id="app.p2-p6-7"/>} ${5 - this.state.votes.length} ${<FormattedMessage id="app.p2-p6-7"/>}`
+    // } else if (this.state.votes.length > 5) {
+    //   message = `你多選了${this.state.votes.length - 5}個喔！！！`;
+    // } else if (this.state.votes.length === 5) {
+    //   message = `很好 你投完了！ 把下方的表格填完就可以送出了！`;
+    // }
     return (
       <div className={styles.outerWrapper}>
         <div className="wrapper oneblock">
@@ -529,32 +529,32 @@ class ModalUnit extends Component {
 
             <div className={styles.explainWrapper}>
               <div className={styles.explainBox}>
-                <img alt="image" className={styles.circle} src={this.props.locale.includes("zh") ? explain1 : explain1} />
-                <img alt="image" className={styles.arrow} src={arrow} />
+                <img alt="explanation" className={styles.circle} src={this.props.locale.includes("zh") ? explain1 : explain1} />
+                <img alt="arrow" className={styles.arrow} src={arrow} />
                 <p>
                   <span className={styles.number}></span>
                   <FormattedMessage id="app.p2-p5-4" />
                 </p>
               </div>
               <div className={styles.explainBox}>
-                <img alt="image" className={styles.circle} src={this.props.locale.includes("zh") ? explain2 : explain2_en} />
-                <img alt="image" className={styles.arrow} src={arrow} />
+                <img alt="explanation" className={styles.circle} src={this.props.locale.includes("zh") ? explain2 : explain2_en} />
+                <img alt="arrow" className={styles.arrow} src={arrow} />
                 <p>
                   <span className={styles.number}></span>
                   <FormattedMessage id="app.p2-p5-5" />
                 </p>
               </div>
               <div className={styles.explainBox}>
-                <img alt="image" className={styles.circle} src={this.props.locale.includes("zh") ? explain3 : explain3_en} />
-                <img alt="image" className={styles.arrow} src={arrow} />
+                <img alt="explanation" className={styles.circle} src={this.props.locale.includes("zh") ? explain3 : explain3_en} />
+                <img alt="arrow" className={styles.arrow} src={arrow} />
                 <p>
                   <span className={styles.number}></span>
                   <FormattedMessage id="app.p2-p5-6" />
                 </p>
               </div>
               <div className={styles.explainBox}>
-                <img alt="image" className={styles.circle} src={this.props.locale.includes("zh") ? explain4 : explain4_en} />
-                <img alt="image" className={styles.arrow} src={arrow} />
+                <img alt="explanation" className={styles.circle} src={this.props.locale.includes("zh") ? explain4 : explain4_en} />
+                <img alt="arrow" className={styles.arrow} src={arrow} />
                 <p>
                   <span className={styles.number}></span>
                   <FormattedMessage id="app.p2-p5-7" />
@@ -666,7 +666,7 @@ class ModalUnit extends Component {
                   <FormattedMessage id="app.p2-p6-13" />
                   <span className={styles.warning}>*</span>
                 </label>
-                <input id="name" required value={this.state.name} onChange={this.nameInputHandler} type="text" className="form-control" id="exampleFormControlInput2" placeholder="" />
+                <input id="name" required value={this.state.name} onChange={this.nameInputHandler} type="text" className="form-control" placeholder="" />
               </div>
 
               <div className="form-group">
@@ -674,7 +674,7 @@ class ModalUnit extends Component {
                   <FormattedMessage id="app.p2-p6-15" />
                   <span className={styles.warning}>*</span>
                 </label>
-                <input id="code" required value={this.state.code} onChange={this.codeInputHandler} type="text" className="form-control" id="exampleFormControlInput4" placeholder="" />
+                <input id="code" required value={this.state.code} onChange={this.codeInputHandler} type="text" className="form-control" placeholder="" />
               </div>
 
               <div className="form-group">

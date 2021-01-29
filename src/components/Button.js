@@ -4,7 +4,7 @@ import styles from "./button.module.css";
 const Button = (props) => {
   return (
     <div className={styles.button}>
-      <a target="_blank" href={props.href}>
+      <a target="_blank" rel="noreferrer" href={props.href}>
         {props.children}
       </a>
     </div>

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Navbar from "../components/Navbar";
-import logo from "../public/assets/icons/logo_b.png";
+import logo from "../public/assets/images/logo.png";
 
 class Navbars extends Component {
   state = {
@@ -9,17 +9,44 @@ class Navbars extends Component {
     locale: this.props.locale,
   };
 
-  toggleHandler = () => {
+  toggleHandler = (e) => {
+    let width = window.innerWidth;
+    if (width < 1100) {
+      if (this.state.showPanel) {
+        document.querySelector("body").style.height = "auto";
+        document.querySelector("body").style.overflow = "auto";
+      } else {
+        document.querySelector("body").style.height = "100vh";
+        document.querySelector("body").style.overflow = "hidden";
+      }
+
+      // if (this.state.showPanel && e.target.className.includes("nav-open")) {
+      //   document.querySelector("body").style.height = "auto";
+      //   document.querySelector("body").style.overflow = "auto";
+      //   console.log(1)
+      // }else if (this.state.showPanel && e.target.className.includes("inner")) {
+      //   console.log(2)
+      //   document.querySelector("body").style.height = "auto";
+      //   document.querySelector("body").style.overflow = "auto";
+      // }else if (!this.state.showPanel) {
+      //   document.querySelector("body").style.height = "100vh";
+      //   document.querySelector("body").style.overflow = "hidden";
+      //   console.log(3)
+      // } else if (this.state.showPanel && e.target.className.includes("link")) {
+      //   document.querySelector("body").style.height = "auto";
+      //   document.querySelector("body").style.overflow = "auto";
+      //   console.log(4)
+      // }
+    }
+
     const newState = !this.state.showPanel;
     this.setState({ showPanel: newState });
   };
 
   clickHandler = (index) => {
     this.setState({ activeIndex: index });
-    console.log(index);
   };
   handleChange = (e) => {
-    console.log(e.target.value)
     this.setState({ locale: e.target.value });
     this.props.locale = e.target.value;
   };
@@ -30,7 +57,7 @@ class Navbars extends Component {
     let style = "nav-open " + open;
     let barStyle = "navbar-menu " + toggle;
     return (
-      <div className="navbar">
+      <div id="navbar" className={this.props.bg ? "navbar navBarNone" : "navbar navBarBlack"}>
         <div className="fixed-width-nav">
           <div className="brand mobile-brand mobile">
             <a href="/">
@@ -53,7 +80,7 @@ class Navbars extends Component {
                 return <Navbar clicked={this.toggleHandler} key={index} activated={index === this.props.activatedIndex} tag={el.tag} content={el.content} id={el.id} />;
               })}
               <div className="select-wrapper">
-                <select className="select-css" onChange={this.props.changed} value={this.state.locale.includes('zh')? 'zh': 'en-US'}>
+                <select className="select-css" onChange={this.props.changed} value={this.state.locale.includes("zh") ? "zh" : "en-US"}>
                   <option value="zh">中文</option>
                   <option value="en-US">English</option>
                 </select>
@@ -67,7 +94,3 @@ class Navbars extends Component {
 }
 
 export default Navbars;
-
-
-
-

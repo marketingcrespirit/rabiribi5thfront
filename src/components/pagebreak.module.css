@@ -1,20 +1,32 @@
 .pageBreak {
   margin: 0 auto;
   text-align: center;
+  transform: rotate(180deg);
+  background-size: contain;
+  background-size: 100% 40px;
+}
+
+.pageBreak img {
+}
+
+.pageBreak1 {
+  max-width: 960px;
+  height: 40px;
+  background-image: url('../public/assets/images/pb_01.png');
+}
+
+.pageBreak2 {
+  max-width: 960px;
+  background-image: url('../public/assets/images/pb_02.png');
 }
 
 @media only screen and (max-width: 700px) {
 }
 
-@media only screen and (min-width: 900px) {
-  .pageBreak img {
-    max-width: 100%;
-  }
+@media only screen and (max-width: 900px) {
   .pageBreak {
-    display: flex;
-    justify-content: center;
-  }
-  .pageBreak img {
-    width: auto;
+    background-position: center;
+    background-size: auto;
+
   }
 }

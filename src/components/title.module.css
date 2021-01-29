@@ -1,0 +1,17 @@
+.bigHeader {
+  text-align: center;
+  color: #deac5e;
+}
+.bigHeader h1 img {
+  width: 50px;
+}
+
+.right {
+    transform: rotate(180deg);
+}
+
+@media only screen and (max-width: 700px) {
+  .bigHeader img {
+    display: none;
+  }
+}

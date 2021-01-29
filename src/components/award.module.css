@@ -79,9 +79,6 @@
 }
 
 @media only screen and (max-width: 900px) {
-  .wrapper {
-    background-image: url("../public/assets/images/bg/p2_bg_mobile.jpg");
-  }
   .stepsWrapper {
     display: block;
   }
@@ -99,5 +96,7 @@
   }
 
   .txtHeadWrapper {
+    padding-top: 50px;
+    margin-bottom: 25px;
   }
 }

@@ -8,28 +8,21 @@ import Subbanner from "../components/Subbanner";
 import LimitProducts from "../components/LimitProducts";
 import Mvs from "../components/Mvs";
 import Music from "../components/Music";
-import Belt from "../components/Belt";
-import Buynow from "../components/Buynow";
-import buyNowImage from "../public/assets/images/icon_loading.png";
+import Button from "../components/Button";
 
+import styles from "./p3.module.css";
+import { FormattedMessage } from "react-intl";
 
 const navs = [
   { tag: "#video", id: "app.p3-nav1" },
   { tag: "#limit", id: "app.p3-nav2" },
   { tag: "#live", id: "app.p3-nav3" },
   { tag: "#try", id: "app.p3-nav4" },
-  { tag: "https://www.crespirit.com", id: "app.p3-nav5" },
+  { tag: "#rule", id: "app.p3-nav5" },
 ];
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.videoRef = React.createRef();
-    this.limitRef = React.createRef();
-    this.liveRef = React.createRef();
-    this.tryRef = React.createRef();
-    this.buynowRef = React.createRef();
-  }
+  
   state = {
     windowX: 0,
     videoTop: 0,
@@ -39,7 +32,9 @@ class App extends Component {
     buynowTop: 0,
     activatedIndex: "",
     amount: 0,
-    locale: "zh",
+    modal: false,
+    prevScrollpos: window.pageYOffset,
+    navStyle: "none",
   };
 
   componentDidMount() {
@@ -54,85 +49,119 @@ class App extends Component {
   };
 
   listenToScroll = () => {
-    const winScroll = document.documentElement.scrollTop + window.innerHeight;
-
-    if (winScroll >= this.state.tryTop && this.state.videoTop !== 0) {
-      this.setState({
-        activatedIndex: 3,
-      });
-    } else if (winScroll >= this.state.liveTop - 2500 && this.state.videoTop !== 0) {
-      this.setState({
-        activatedIndex: 2,
-      });
-    } else if (winScroll >= this.state.limitTop - 1900 && this.state.videoTop !== 0) {
-      this.setState({
-        activatedIndex: 1,
-      });
-    } else if (winScroll >= this.state.videoTop - 400 && this.state.videoTop !== 0) {
-      this.setState({
-        activatedIndex: 0,
-      });
-    } else if (winScroll > 969) {
-      this.setState({
-        activatedIndex: "",
-      });
+    var currentScrollPos = window.pageYOffset;
+    if (this.state.prevScrollpos > currentScrollPos) {
+      document.getElementById("navbar").style.top = "0";
+    } else {
+      document.getElementById("navbar").style.top = "-90px";
     }
+    if (currentScrollPos > 10) {
+      this.setState({ navStyle: "blue" });
+      // document.getElementById("navbar").style.backgroundImage = "none";
+      // document.getElementById("navbar").style.backgroundColor = "#000";
+    } else {
+      this.setState({ navStyle: "none" });
+      // document.getElementById("navbar").style.backgroundImage = navbar;
+      // document.getElementById("navbar").style.backgroundColor = "transparent";
+    }
+    this.setState({ prevScrollpos: currentScrollPos });
+    if (this.state.prevScrollpos !== currentScrollPos) {
+      this.toggleModal();
+    }
+    // if (winScroll >= this.state.tryTop && this.state.videoTop !== 0) {
+    //   this.setState({
+    //     activatedIndex: 3,
+    //   });
+    // } else if (winScroll >= this.state.liveTop - 2500 && this.state.videoTop !== 0) {
+    //   this.setState({
+    //     activatedIndex: 2,
+    //   });
+    // } else if (winScroll >= this.state.limitTop - 1900 && this.state.videoTop !== 0) {
+    //   this.setState({
+    //     activatedIndex: 1,
+    //   });
+    // } else if (winScroll >= this.state.videoTop - 400 && this.state.videoTop !== 0) {
+    //   this.setState({
+    //     activatedIndex: 0,
+    //   });
+    // } else if (winScroll > 969) {
+    //   this.setState({
+    //     activatedIndex: "",
+    //   });
+    // }
   };
   handleChange = (e) => {
     this.setState({ locale: e.target.value });
     this.props.locale = e.target.value;
   };
 
+  toggleModal = () => {
+    let newModal = this.state.modal;
+    newModal = !newModal;
+    this.setState({ modal: newModal });
+  };
   render() {
-    if (this.videoRef.current !== null && this.state.videoTop === 0) {
-      this.setState({ videoTop: this.videoRef.current.getBoundingClientRect().top + document.documentElement.scrollTop });
-    }
-
-    if (this.limitRef.current !== null && this.state.videoTop === 0) {
-      this.setState({ limitTop: this.limitRef.current.getBoundingClientRect().top + document.documentElement.scrollTop });
-    }
-
-    if (this.liveRef.current !== null && this.state.videoTop === 0) {
-      this.setState({ liveTop: this.liveRef.current.getBoundingClientRect().top + document.documentElement.scrollTop });
-    }
-
-    if (this.tryRef.current !== null && this.state.videoTop === 0) {
-      this.setState({ tryTop: this.tryRef.current.getBoundingClientRect().top + document.documentElement.scrollTop });
-    }
-    if (this.buynowRef.current !== null && this.state.videoTop === 0) {
-      this.setState({ buynowTop: this.buynowRef.current.getBoundingClientRect().top + document.documentElement.scrollTop });
-    }
     return (
       <div className="App">
+        <div id="top"></div>
         <header className="App-header">
           <Navbars
             locale={this.props.locale}
             changed={(e) => {
+              document.querySelector("body").style.height = "auto";
+              document.querySelector("body").style.overflow = "auto";
               this.props.changed(e);
             }}
             activatedIndex={this.state.activatedIndex}
             navs={navs}
+            bg={this.state.navStyle === "none" ? true : false}
           />
         </header>
-        <main>
-          <div className="buynowbutton">
-            <a target="_blank" href="/">
-              <img src={buyNowImage} />
-            </a>
+        <main className={styles.main}>
+          <div className={this.state.prevScrollpos === 0 ? "hidden" : "buynowbutton"}>
+            <a href="#top"></a>
+          </div>
+
+          <div className={this.state.modal ? `${styles.modalWrapper}` : `${styles.hidden}`} onClick={this.toggleModal}>
+            <div className="widthController">
+              <div className={styles.innerWrapper}>
+                <h1> <FormattedMessage id="app.p3-136"></FormattedMessage></h1>
+                <ul>
+                  <li>
+                    <h2><FormattedMessage id="app.p3-137"></FormattedMessage></h2>
+                    <p><FormattedMessage id="app.p3-138"></FormattedMessage></p>
+                  </li>
+                  <li>
+                    <h2><FormattedMessage id="app.p3-139"></FormattedMessage></h2>
+                    <p><FormattedMessage id="app.p3-140"></FormattedMessage></p>
+                  </li>
+                  <li>
+                    <h2><FormattedMessage id="app.p3-141"></FormattedMessage></h2>
+                    <p><FormattedMessage id="app.p3-141-1"></FormattedMessage></p>
+                    <p><FormattedMessage id="app.p3-142"></FormattedMessage><a target="_blank"  rel="noreferrer" href="https://google.com"><FormattedMessage id="app.p3-143"></FormattedMessage></a></p>
+                  </li>
+                  <li>
+                    <h2><FormattedMessage id="app.p3-144"></FormattedMessage></h2>
+                    <p><FormattedMessage id="app.p3-145"></FormattedMessage></p>
+                  </li>
+                </ul>
+                <div className={styles.buttonWrapper}>
+                  <Button href="https://www.crespirit.com/prods-list/">
+                    <h2><FormattedMessage id="app.p3-146"></FormattedMessage></h2>
+                  </Button>
+                </div>
+              </div>
+            </div>
           </div>
           <Firefly />
-          <Subbanner />
+          <Subbanner locale={this.props.locale} />
           <div ref={this.videoRef}></div>
-          <LimitProducts />
+          <LimitProducts clicked={this.toggleModal} />
           <div ref={this.limitRef}></div>
           <Music />
           <Mvs />
           <div ref={this.liveRef}></div>
-          <Belt />
-          {/* <Producers /> */}
-          
           <div ref={this.tryRef}></div>
-          {/* <Buynow/> */}
           <div ref={this.buynowRef}></div>
 
           <Footer />

@@ -3,11 +3,16 @@
   background-repeat: no-repeat;
   background-size: cover;
   color: #fff;
+  padding-top: 100px;
+}
+
+.ruleWrapper a {
+  color: #a68654;
 }
 
 .innerWrapper {
-  max-width: 1200px;
-  margin: 5em auto;
+  max-width: 1060px;
+  margin: 50px auto;
   justify-content: space-between;
   border: 2px solid #a68654;
   padding: 4rem;
@@ -18,7 +23,7 @@
   display: flex;
   max-width: 1200px;
   justify-content: space-between;
-  margin: 3em auto;
+  margin: 0 auto 163px auto;
 }
 
 .lightWrapper {
@@ -43,12 +48,13 @@
 
 .arrow {
   position: absolute;
-  top: 30%;
-  left: 90%;
+  top: 25%;
+  left: 86%;
 }
 
 .buttonWrapper {
-    display: flex;
+    width: 250px;
+    margin: 63px auto 93px auto;
 }
 
 .stepsWrapper > div:nth-child(4) > .arrow {
@@ -56,12 +62,12 @@
 }
 
 .ul {
-  width: 95%;
-  margin: 1rem auto 1rem auto;
+  margin: 1rem auto 1rem 2rem;
+  color: #e2d4bd;;
 }
 
 .ul li {
-  color: #f1eae5;
+  color: #e2d4bd;;
   font-size: 18px;
   font-weight: 600;
 }
@@ -72,19 +78,25 @@
 }
 
 .innerWrapper p {
-    margin: 0
+    margin: 0;
+    font-size:18px;
 }
 
 .titleWrapper {
-  margin: 1rem 0 1rem 0;
+  margin: 93px 0 55px 0;
 }
 
 @media only screen and (max-width: 1100px) {
+  .ruleWrapper {
+    padding: 0 24px;
+  }
   .lightWrapper h1 {
     font-size: 2rem;
+    margin: 10px auto;
   }
   .stepsWrapper {
       display: block;
+      margin: 90px auto 55px auto;
   }
   .lightWrapper {
       width: 100%;
@@ -93,10 +105,19 @@
   .arrow {
     display: none;
   }
+  .titleWrapper {
+    margin: 55px auto 25px auto;
+  }
   .limitProducts {
     display: block;
   }
   .buttonWrapper {
       display: block;
+  }
+  .innerWrapper {
+    padding: 1em;
+  }
+  .step {
+    width: auto;
   }
 }

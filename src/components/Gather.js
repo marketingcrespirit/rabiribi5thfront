@@ -133,31 +133,31 @@ const Gather = (props) => {
             <div style={style} className={amount >= 5000 ? `${styles.dancing} ` : `${styles.dancing} ${styles.hidden}`} />
           </div>
           <div className={styles.pillars}>
-            <img className={styles.spotlight} src={spotlight} />
+            <img alt="spotlight" className={styles.spotlight} src={spotlight} />
             <div className={styles.pillar}>
               <div className={stageOne ? `${styles.coin} ${styles.active}` : `${styles.coin}`}>
                 <Coin bg={stageOne ? 1 : 0} />
               </div>
-              <img className="" src={tree} />
+              <img alt="pillar" className="" src={tree} />
             </div>
-            <img className={styles.spotlight} src={spotlight} />
+            <img alt="spotlight" className={styles.spotlight} src={spotlight} />
             <div className={styles.pillar}>
               <div className={stageTwo ? `${styles.coin} ${styles.active}` : `${styles.coin}`}>
                 <Coin bg={stageTwo ? 2 : 0} />
               </div>
-              <img className="" src={tree} />
+              <img alt="pillar" className="" src={tree} />
             </div>
-            <img className={styles.spotlight} src={spotlight} />
+            <img alt="spotlight" className={styles.spotlight} src={spotlight} />
             <div className={styles.pillar}>
               <div className={stageThree ? `${styles.coin} ${styles.active}` : `${styles.coin}`}>
                 <Coin bg={stageThree ? 3 : 0} />
               </div>
-              <img className="" src={tree} />
+              <img alt="pillar" className="" src={tree} />
             </div>
-            <img className={styles.spotlight} src={spotlight} />
+            <img alt="spotlight" className={styles.spotlight} src={spotlight} />
           </div>
           <div className={styles.road}>
-            <img src={road} />
+            <img alt="road" src={road} />
           </div>
         </div>
         <div className={styles.counterContainer}>

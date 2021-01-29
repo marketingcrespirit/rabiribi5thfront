@@ -3,38 +3,7 @@
   overflow: hidden;
   background-image: url("../public/assets/images/bg/p2_bg_new.jpg");
   color: #fff;
-  padding-top: 2rem;
-  line-height: 3rem;
-  width: 100%;
-}
-
-.widthControler {
-  max-width: 1200px;
-}
-
-.winnerShowroom {
-  position: fixed;
-  height: 100vh;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-  top: 0;
-  left: 0;
-}
-
-.winnerImage {
-  margin: 10% auto;
-  height: 80%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.winnerImage img {
-  max-height: 100%;
-}
-
-.hidden {
-  display: none;
+  padding-top: 120px;
 }
 
 .opening {
