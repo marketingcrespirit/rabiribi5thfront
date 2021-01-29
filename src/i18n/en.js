@@ -180,7 +180,7 @@ const en = {
   "app.p3-nav5": "Demo",
   "app.p3-nav6": "Pre-order",
 
-  "app.p3-21": "《Get on with it!》Orchestra  Live",
+  "app.p3-21": "Get on with it!",
   "app.p3-22": "We elaborately selected 25 songs from Rabi-Ribi OST, and invited well-known Taipei Philharmonic Orchestra to performed and recorded.  Turn the lively electronic music to majestic orchestra. Let's join us and enjoy this brand-new feast for the ears.",
   "app.p3-23": "5th Anniversary limited edition",
   "app.p3-24": "【Limited 1000 sets】",

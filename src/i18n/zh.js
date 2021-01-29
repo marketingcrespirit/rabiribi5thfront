@@ -206,7 +206,7 @@ const zh_TW = {
   "app.p3-winner-14": "獲得Orchestra Music Mode & Skin（Steam序號乙份）",
   "app.p3-winner-15": "順序以作品編號編排",
 
-  "app.p3-21": "Get on with it! 現場演奏",
+  "app.p3-21": "Get on with it!",
   "app.p3-22": "我們精選了25首最受玩家喜愛的遊戲音樂，邀請台北愛樂管弦樂團進行現場演奏，並由音響聲學家Michele Paciulli進行收錄，以磅礡的交響樂，重新演繹Rabi配樂中最受歡迎的25首曲目；希望玩家在熟悉的樂聲中能獲得新的感動。",
   "app.p3-23": "五週年限定商品",
   "app.p3-24": "【限量1000套】",
