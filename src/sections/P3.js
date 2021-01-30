@@ -138,7 +138,7 @@ class App extends Component {
                   <li>
                     <h2><FormattedMessage id="app.p3-141"></FormattedMessage></h2>
                     <p><FormattedMessage id="app.p3-141-1"></FormattedMessage></p>
-                    <p><FormattedMessage id="app.p3-142"></FormattedMessage><a target="_blank" rel="noreferrer" href="https://sekaiproject.com/products/rabi-ribi-5th-anniversary-symphony-deluxe-box%E2%80%8B"><FormattedMessage id="app.p3-143"></FormattedMessage></a></p>
+                    <p><FormattedMessage id="app.p3-142"></FormattedMessage><a target="_blank" rel="noreferrer" href="https://sekaiproject.com/products/rabi-ribi-5th-anniversary-symphony-deluxe-box"><FormattedMessage id="app.p3-143"></FormattedMessage></a></p>
                   </li>
                   <li>
                     <h2><FormattedMessage id="app.p3-144"></FormattedMessage></h2>
