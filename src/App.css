@@ -757,6 +757,10 @@ div.note p {
   cursor: default;
 }
 
+::-webkit-scrollbar-corner {
+  background: rgba(0,0,0,0);
+}
+
 ::-webkit-scrollbar {
   width: 10px;
 }
