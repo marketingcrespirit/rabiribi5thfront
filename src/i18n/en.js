@@ -177,7 +177,7 @@ const en = {
   "app.p3-nav2": "Limited Items",
   "app.p3-nav3": "Demo",
   "app.p3-nav4": "Live Record",
-  "app.p3-nav5": "Demo",
+  "app.p3-nav5": "Note",
   "app.p3-nav6": "Pre-order",
 
   "app.p3-21": "Get on with it!",
